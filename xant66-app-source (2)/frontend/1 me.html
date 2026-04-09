@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>信安暖驿-首页</title>
+  <!-- 引用公共CSS文件 -->
+  <link rel="stylesheet" href="css/common_styles.css">
+  <!-- 引用外部CSS文件 -->
+  <link rel="stylesheet" href="css/me_styles.css">
+  <!-- 添加sdk_utils.js引用，使用module方式 -->
+  <script src="js/sdk_utils.js" type="module"></script>
+  <!-- 添加utils.js引用，因为api.js依赖它 -->
+  <script src="js/utils.js" type="module"></script>
+  <!-- 添加api.js引用，因为ai_sidebar.js依赖它 -->
+  <script src="js/api.js" type="module"></script>
+  <!-- 添加ai_sidebar.js引用，使用module方式 -->
+  <script src="js/ai_sidebar.js" type="module"></script>
+  <!-- 添加me_script.js引用，使用module方式 -->
+  <script src="js/me_script.js" type="module"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <a href="1 me.html" class="nav-btn">🏠 网站首页</a>
+    <a href="5 welcome.html" class="nav-btn">📷 互助论坛</a>
+    <a href="3 writing.html" class="nav-btn">✨ 帖子上传</a>
+    <a href="13 myspace.html" class="nav-btn">👤 个人主页</a>
+    <a href="4 login.html" class="nav-btn">🔑 重新登录</a>
+  </nav>
+  <div class="header">
+    <img src="./images/logo0.jpg" alt="信安暖驿 logo" style="vertical-align: middle; margin-right: 20px; height: 60px;">
+    <img src="./images/xany.png" alt="信安暖驿 新图片标题" style="vertical-align: middle; height: 60px;">
+    <p style="font-size: 1.3em; color: var(--secondary); opacity: 0.9;">一个注重保护个人隐私的互助交流网站</p>
+    <p style="font-size: 1.05em; color: #495057; margin-top: 10px;">我们致力于保护病人隐私，让他们可以互相交流心得，让病情好的更快，从而早日康复，重享美好生活</p>
+  </div>
+
+  <div class="profile">
+    <div class="divider"></div>
+
+    <h2>简介</h2>
+    <p style="font-size: 0.92em; color: #495057; line-height: 1.9; text-indent: 2em; margin: 10px 0 20px;">
+      信安暖驿是一个基于信息保护的医患交流分享平台，平台中采用信息保护系统，为了满足医疗领域患者隐私保护需求，针对传统交流平台信息泄露风险，采用加密存储、匿名化处理及区块链存证等技术，搭建安全可信的患者专属交流社区，支持病情讨论、经验分享等功能，同步实现权限分级管理的功能。此外开设认证模式，医生能够在其中分享一些小贴士与建议，帮助用户了解情况，为智慧医疗信息安全提供创新解决方案。
+    </p>
+
+    <div class="intro-slider">
+      <div class="slides">
+        <img src="images/苍穹1.png" alt="图1">
+        <img src="images/苍穹2.png" alt="图2">
+        <img src="images/苍穹3.png" alt="图3">
+        <img src="images/苍穹4.png" alt="图4">
+        <img src="images/苍穹5.png" alt="图5">
+      </div>
+    </div>
+    <h2>老年抑郁评估系统</h2>
+    <a href="19 psychology.html" target="_blank" class="portfolio-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+      </svg>
+      点击进行免费分析
+    </a>
+    
+  </div>
+  <div id="position_demo"></div>
+
+  <script>
+      // 全局错误处理
+      window.addEventListener('error', function(event) {
+          console.error('全局错误:', event.error);
+          console.error('错误脚本:', event.filename);
+          console.error('错误行号:', event.lineno);
+          console.error('错误列号:', event.colno);
+      });
+  
+      // 全局未捕获的Promise拒绝处理
+      window.addEventListener('unhandledrejection', function(event) {
+          console.error('未处理的Promise拒绝:', event.reason);
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!-- 5 welcome.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信安暖驿-欢迎</title>
+    <!-- 引用公共CSS文件 -->
+    <link rel="stylesheet" href="css/common_styles.css">
+    <!-- 引用外部CSS文件 -->
+    <link rel="stylesheet" href="css/welcome_styles.css">
+    
+    <!-- 保留基础脚本，移除AI相关脚本 -->
+    <script type="module" src="js/sdk_utils.js"></script>
+</head>
+<body>
+<!-- 保留一个导航栏 -->
+<nav class="navbar">
+    <a href="1 me.html" class="nav-btn">🏠 网站首页</a>
+    <a href="5 welcome.html" class="nav-btn">📷 互助论坛</a>
+    <a href="3 writing.html" class="nav-btn">✨ 帖子上传</a>
+    <a href="13 myspace.html" class="nav-btn">👤 个人主页</a>
+    <a href="4 login.html" class="nav-btn">🔑 重新登录</a>
+  </nav>
+  <div class="container">
+        <h1 style="border-bottom: 3px solid var(--primary); padding-bottom: 15px; color: var(--secondary);">
+           互助论坛
+        </h1>
+        <!-- 添加到帖子分类页面的跳转按钮 -->
+        <div class="category-link-container mt-4 mb-6">
+            <a href="16 post_category.html" class="category-jump-btn">
+                <i class="fas fa-folder-open mr-2"></i>按疾病分类浏览帖子
+            </a>
+        </div>
+        <div class="search-bar">
+            <input 
+                type="text" 
+                placeholder="输入关键词后按回车搜索..." 
+                class="search-input" 
+                id="searchInput"
+            >
+        </div>
+        <div class="article-list">
+            <div class="loading">正在加载文章列表...</div>
+        </div>
+    </div>
+    
+    <!-- 加载非AI相关脚本 -->
+    <script type="module" src="./js/welcome_script.js"></script>
+    
+    <!-- 以模块方式加载AI侧边栏脚本 -->
+    <script type="module" src="./js/ai_sidebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{
+    "appName": "AI对话助手",
+    "defaultModel": "gpt-5-all",
+    "theme": "light",
+    "api": {
+        "baseUrl": "http://localhost:8001",
+        "timeout": 30000,
+        "retryCount": 2
+    },
+    "chat": {
+        "maxHistoryCount": 50,
+        "defaultTemperature": 0.7,
+        "defaultMaxTokens": 1024,
+        "showTimestamps": true,
+        "enableAutoScroll": true
+    },
+    "ui": {
+        "sidebarWidth": 280,
+        "showAvatars": true,
+        "animationSpeed": 300,
+        "messageFontSize": 16
+    },
+    "models": [
+        {
+            "id": "deepseek-chat",
+            "name": "DeepSeek 通用模型",
+            "description": "适用于日常对话和一般知识问答"
+        },
+        {
+            "id": "deepseek-coder",
+            "name": "DeepSeek 代码模型",
+            "description": "专注于代码生成和编程相关问题"
+        },
+        {
+            "id": "deepseek-reasoner",
+            "name": "DeepSeek 推理模型",
+            "description": "擅长数学推理和问题求解"
+        }
+    ],
+    "shortcuts": {
+        "sendMessage": "Ctrl+Enter",
+        "newChat": "Ctrl+N",
+        "toggleTheme": "Ctrl+Shift+T"
+    }
+}
+    

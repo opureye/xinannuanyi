@@ -1,0 +1,229 @@
+/* 导入通用样式 */
+@import url('common_styles.css');
+
+/* 评审页面特定样式 */
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('../images/苍穹4.png') center/cover fixed;
+}
+
+/* 响应式设计补充 */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.audit-status {
+    display: none;
+}
+
+.article {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.article h1 {
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.article-meta {
+    color: #6c757d;
+    margin: 15px 0;
+    font-size: 0.95em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.article-meta::before {
+    content: "📅";
+    font-size: 1.1em;
+}
+
+.article-content {
+    color: #495057;
+    font-size: 1.05em;
+    line-height: 1.8;
+}
+
+.article-content p {
+    margin-bottom: 1.2em;
+    text-indent: 2em;
+}
+
+.audit-controls {
+    margin-top: 40px;
+    padding: 25px;
+    background: rgba(248, 249, 250, 0.9);
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    backdrop-filter: blur(5px);
+}
+
+.audit-controls h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.audit-controls h3::before {
+    content: "📝";
+    font-size: 1.2em;
+}
+
+/* 响应式设计补充 */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .article {
+        padding: 20px;
+    }
+    
+    .audit-btn {
+        margin-bottom: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.audit-status {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+/* 添加举报信息样式 */
+.complaints-section {
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+}
+.complaints-section h3 {
+    color: #856404;
+    margin-top: 0;
+}
+.complaints-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.complaints-section li {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ffeaa7;
+}
+.complaints-section li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    display: none;
+    animation: fadeIn 0.3s ease;
+    align-items: center;
+    gap: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.status-approved {
+    background: rgba(223, 240, 216, 0.9);
+    color: #3c763d;
+}
+
+.status-rejected {
+    background: rgba(242, 222, 222, 0.9);
+    color: #a94442;
+}
+
+/* 文章导航控件样式 */
+.article-navigation {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.article-counter {
+    font-weight: 600;
+    color: #495057;
+    font-size: 14px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn-small {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-btn-small:hover {
+    background: #0056b3;
+}
+
+.nav-btn-small:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+    .article-navigation {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .nav-btn-small {
+        flex: 1;
+        max-width: 120px;
+    }
+}

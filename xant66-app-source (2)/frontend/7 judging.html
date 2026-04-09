@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>信安暖驿-帖子审核</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引用公共CSS文件 -->
+    <link rel="stylesheet" href="css/common_styles.css">
+    <!-- 添加sdk_utils.js引用 -->
+    <script type="module" src="js/sdk_utils.js"></script>
+    <!-- 引入外部CSS文件 -->
+    <link rel="stylesheet" href="css/judging_styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="1 me.html" class="nav-btn">🏠 网站首页</a>
+        <a href="5 welcome.html" class="nav-btn">📷 互助论坛</a>
+        <a href="3 writing.html" class="nav-btn">✨ 帖子上传</a>
+        <a href="13 myspace.html" class="nav-btn">👤 个人主页</a>
+        <a href="4 login.html" class="nav-btn">🔑 重新登录</a>
+    </nav>
+    <a href="9 audit_home.html" class="nav-btn" style="position: fixed; top: 20px; left: 20px;">← 返回</a>
+    <article class="article">
+        <h1>加载中...</h1>
+        <div class="article-meta">
+            正在加载文章信息...
+        </div>
+        <div class="article-content">
+            <p>正在加载文章内容，请稍候...</p>
+        </div>
+        <div class="audit-controls">
+            <h3>帖子审核</h3>
+            <!-- 文章导航控件 -->
+            <div class="article-navigation">
+                <div id="article-counter" class="article-counter">第 1 篇，共 1 篇</div>
+                <div class="nav-buttons">
+                    <button id="prev-article" class="nav-btn-small">← 上一篇</button>
+                    <button id="next-article" class="nav-btn-small">下一篇 →</button>
+                </div>
+            </div>
+            <!-- 添加举报信息容器 -->
+            <div id="complaints-container"></div>
+            <button class="audit-btn approve">
+                <span>✅</span>允许发布
+            </button>
+            <button class="audit-btn reject">
+                <span>❌</span>禁止发布
+            </button>
+            <div id="audit-status" class="audit-status"></div>
+        </div>
+    </article>
+    <!-- 加载页面特定脚本 -->
+    <script src="js/judging_script.js"></script>
+    
+    <!-- 以模块方式加载AI侧边栏脚本 -->
+    <script type="module" src="./js/ai_sidebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,527 @@
+/* 修复变量定义 - 只保留需要覆盖的变量 */
+:root {
+    --secondary: #264653;
+}
+
+/* 导入通用样式 */
+@import url('common_styles.css');
+
+/* 我的空间页面特定样式 */
+body {
+    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
+                url('../images/苍穹4.png') center/cover fixed;
+}
+
+/* 成就区域样式 */
+.achievements {
+    padding: 40px 32px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+}
+
+/* 操作按钮区域 */
+.action-buttons {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* 个人信息弹窗样式 */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: var(--glass-bg);
+    border-radius: 16px;
+    padding: 24px;
+    width: 90%;
+    max-width: 520px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.full-row {
+    grid-column: 1 / -1;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+    justify-content: flex-end;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+.gender-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.gender-row > label {
+    display: inline-block;
+    margin: 0;
+}
+.gender-row .radio-group {
+    flex-wrap: nowrap;
+}
+.radio-group label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--secondary);
+}
+.radio-group input[type="radio"] {
+    width: auto;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background: rgba(42,157,143,0.1);
+    color: var(--secondary);
+    border: 1px solid rgba(42,157,143,0.2);
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* 帖子统计样式 */
+.post-stats {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+/* 访问时间样式 */
+.visit-time {
+    font-size: 0.875em;
+    color: #666;
+    margin-top: 12px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 10px;
+    }
+    
+    body {
+        background-attachment: scroll;
+    }
+    
+    .header {
+        padding: 40px 20px;
+        margin: 60px 0 20px;
+    }
+    
+    .profile {
+        padding: 30px;
+    }
+    
+    h1 {
+        font-size: 2.2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .achievements-list {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .achievements-list li {
+        margin-bottom: 12px;
+        text-align: center;
+    }
+    
+    .audit-btn {
+        display: block;
+        margin: 10px auto;
+        justify-content: center;
+    }
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 等级进度条样式 */
+.level-progress {
+    width: 200px;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    margin: 10px auto 20px;
+    overflow: hidden;
+}
+
+.level-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile, .achievements, .posts, .collections {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.post:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.post:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.collection-item:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+/* 图片容器样式 */
+.post-image-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 比例 */
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 16px 0;
+}
+
+.post-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.post-image-container:hover img {
+    transform: scale(1.05);
+}
+
+/* 按钮活跃状态 */
+.nav-btn.active {
+    background: var(--primary);
+    color: white;
+}
+
+/* 关注列表样式 */
+.following {
+    padding: 40px 32px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+    backdrop-filter: blur(10px);
+}
+
+.following h2 {
+    color: var(--secondary);
+    margin-bottom: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.following h2::before {
+    content: "👥";
+    font-size: 1.2em;
+}
+
+.following-list {
+    display: grid;
+    gap: 16px;
+}
+
+.following-user {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.following-user::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.following-user:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.following-user:hover::before {
+    transform: scaleX(1);
+}
+
+.following-user .flex {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.following-user img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(59, 130, 246, 0.1);
+    transition: all 0.3s ease;
+}
+
+.following-user:hover img {
+    border-color: var(--primary);
+    transform: scale(1.05);
+}
+
+.following-user .flex-1 {
+    flex: 1;
+    min-width: 0;
+}
+
+.following-user h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--secondary);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.following-user h3::after {
+    content: "✓";
+    background: var(--primary);
+    color: white;
+    font-size: 0.7em;
+    padding: 2px 4px;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+.following-user p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.following-user p:first-of-type {
+    color: #64748b;
+    font-size: 0.9em;
+    margin-bottom: 6px;
+}
+
+.following-user p:last-of-type {
+    color: #94a3b8;
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.following-user p:last-of-type::before {
+    content: "📅";
+    font-size: 0.9em;
+}
+
+.following-user a {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+    white-space: nowrap;
+}
+
+.following-user a:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+}
+
+/* 空状态样式 */
+.following-list .text-gray-500 {
+    text-align: center;
+    padding: 60px 20px;
+    color: #94a3b8;
+    font-size: 1.1em;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 16px;
+    border: 2px dashed #cbd5e1;
+    position: relative;
+}
+
+.following-list .text-gray-500::before {
+    content: "👤";
+    font-size: 3em;
+    display: block;
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+.following-list .text-gray-500::after {
+    content: "去关注一些有趣的人吧！";
+    display: block;
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #64748b;
+}
+
+/* 加载占位符样式 */
+.following-placeholder {
+    text-align: center;
+    padding: 40px 20px;
+    color: #94a3b8;
+    font-size: 1em;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 16px;
+    position: relative;
+    animation: pulse 2s infinite;
+}
+
+.following-placeholder::before {
+    content: "⏳";
+    font-size: 2em;
+    display: block;
+    margin-bottom: 12px;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* 关注列表动画效果 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.following-user {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* 空状态样式 */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+}
+
+.empty-state::before {
+    content: "👥";
+    font-size: 48px;
+    display: block;
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+.empty-state p {
+    font-size: 16px;
+    margin: 0;
+    color: #666;
+}
+
+/* 响应式设计 - 关注列表 */
+@media (max-width: 768px) {
+    .following {
+        padding: 24px 16px;
+        margin-bottom: 24px;
+    }
+    
+    .following-user {
+        padding: 16px;
+    }
+    
+    .following-user .flex {
+        gap: 12px;
+    }
+    
+    .following-user img {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .following-user h3 {
+        font-size: 1em;
+    }
+    
+    .following-user a {
+        padding: 8px 16px;
+        font-size: 0.85em;
+    }
+}

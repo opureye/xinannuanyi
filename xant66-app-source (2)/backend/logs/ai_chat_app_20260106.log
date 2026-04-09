@@ -1,0 +1,350 @@
+2026-01-06 01:11:56,635 - backend.utils.db_core - INFO - 密码学库导入成功
+2026-01-06 01:11:56,649 - auth_routes - INFO - UserDatabase imported from: C:\Users\94954\Desktop\xant6.4\backend\utils\db_users_core.py
+2026-01-06 01:11:56,651 - auth_routes - INFO - UserDatabase methods: ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__firstlineno__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__static_attributes__', '__str__', '__subclasshook__', '__weakref__', '_get_connection', '_init_db', '_kdf', '_load_or_generate_system_keys', 'add_user', 'ban_user', 'delete_user', 'disable_connection_pool', 'enable_connection_pool', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2026-01-06 01:11:56,665 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:11:56,667 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:11:56,668 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:11:56,669 - auth_routes - INFO - user_db instance type: <class 'backend.utils.db_users_core.ExtendedUserDatabase'>
+2026-01-06 01:11:56,670 - auth_routes - INFO - user_db methods: ['add_user', 'ban_user', 'db_path', 'delete_user', 'disable_connection_pool', 'enable_connection_pool', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'private_key', 'public_key', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2026-01-06 01:11:56,720 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:11:56,722 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:11:56,725 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:11:56,725 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:11:56,728 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:11:56,729 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:11:56,732 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:11:56,732 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:11:56,736 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:11:56,736 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:11:56,753 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:11:56,754 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:11:56,754 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:11:56,759 - lock_manager - INFO - [lock_manager] 锁表初始化成功
+2026-01-06 01:11:56,759 - lock_manager - INFO - [lock_manager] 初始化锁管理器，使用的数据库路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:11:57,528 - backend.utils.database - INFO - 创建主数据库实例，使用路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:11:57,531 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:11:57,532 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:11:57,534 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:11:57,580 - backend.utils.db_core - INFO - 已启用数据库连接池，大小: 5
+2026-01-06 01:11:57,581 - backend.utils.db_integration - INFO - 数据库连接池已启用
+2026-01-06 01:11:57,586 - backend.utils.db_integration - INFO - 成就管理器已初始化
+2026-01-06 01:11:57,587 - backend.utils.db_integration - INFO - 数据库功能集成完成
+2026-01-06 01:11:57,587 - backend.utils.database - INFO - 关注表初始化成功
+2026-01-06 01:11:57,588 - backend.utils.database - INFO - 开始初始化示例用户...
+2026-01-06 01:11:57,590 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:11:57,590 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:11:57,590 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:11:57,590 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:11:57,593 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2026-01-06 01:11:57,597 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2026-01-06 01:11:57,602 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2026-01-06 01:11:57,605 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2026-01-06 01:11:57,609 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2026-01-06 01:11:57,611 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2026-01-06 01:11:57,784 - __main__ - INFO - 启动AI对话助手 v1.0.0
+2026-01-06 01:11:57,784 - __main__ - INFO - 服务地址: http://0.0.0.0:8001
+2026-01-06 01:11:57,958 - backend.utils.database - INFO - 开始初始化示例用户...
+2026-01-06 01:11:57,960 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:11:57,961 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:11:57,962 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:11:57,962 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:11:57,967 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2026-01-06 01:11:57,971 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2026-01-06 01:11:57,978 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2026-01-06 01:11:57,983 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2026-01-06 01:11:57,987 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2026-01-06 01:11:57,993 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2026-01-06 01:12:20,271 - backend.utils.db_core - INFO - [db_users] 找到用户 石皓文 的密码哈希，开始验证
+2026-01-06 01:12:20,271 - backend.utils.db_core - INFO - [db_users] 密码哈希: {"version": 2, "mode": "aes_gc...
+2026-01-06 01:12:20,271 - backend.utils.db_core - INFO - 密码验证 - 版本: 2
+2026-01-06 01:12:20,272 - backend.utils.db_core - INFO - 使用高级加密验证方法
+2026-01-06 01:12:20,272 - backend.utils.db_core - INFO - 使用AES-GCM加密模式验证
+2026-01-06 01:12:20,274 - backend.utils.db_core - INFO - AES-GCM解密验证结果: True
+2026-01-06 01:12:20,274 - auth_routes - INFO - User 石皓文 logged in successfully
+2026-01-06 01:12:27,825 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-01-06 01:12:27,828 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:12:27,829 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:12:27,832 - backend.api.article_routes - INFO - [文章列表成功] 返回 5 篇文章，总计 5 篇
+2026-01-06 01:12:33,345 - backend.api.article_routes - INFO - [文章详情] 获取文章详情 - ID: 16
+2026-01-06 01:12:33,348 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:12:33,349 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:12:33,356 - backend.api.article_routes - INFO - [文章详情成功] 返回文章详情 - ID: 16, 标题: 健康生活小贴士
+2026-01-06 01:12:33,376 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 16
+2026-01-06 01:12:33,399 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:12:33,400 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:12:33,403 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:12:33,404 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:12:33,406 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:12:33,410 - comment_routes - INFO - [获取评论成功] 文章ID: 16, 评论数量: 0
+2026-01-06 01:12:33,425 - utils.db_core - INFO - 密码学库导入成功
+2026-01-06 01:12:33,431 - utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:12:33,432 - utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:12:33,432 - utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:12:33,433 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:12:33,435 - follow_routes - INFO - 检查关注状态 - 关注者: 石皓文, 被关注者: health_expert
+2026-01-06 01:12:33,436 - follow_routes - INFO - 关注状态检查结果: False
+2026-01-06 01:12:35,148 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-01-06 01:12:35,153 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:12:35,154 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:12:35,157 - backend.api.article_routes - INFO - [文章列表成功] 返回 5 篇文章，总计 5 篇
+2026-01-06 01:12:42,052 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:12:42,053 - backend.api.article_routes - INFO - [文章提交] 收到新的文章提交请求 - 用户名: 石皓文, 角色: 管理员
+2026-01-06 01:12:42,053 - backend.api.article_routes - INFO - [文章提交] 文章信息 - 标题: 's...', 长度: 1, 内容长度: 1, 分类: 外科互助分享
+2026-01-06 01:12:42,055 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:12:42,056 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:12:42,057 - backend.api.article_routes - INFO - [文章存储] 准备添加文章到数据库 - 用户: 石皓文
+2026-01-06 01:12:42,060 - backend.utils.db_articles - INFO - 成功添加文章: s (ID: 19) - 作者: 石皓文 - 分类: 外科互助分享
+2026-01-06 01:12:42,061 - backend.api.article_routes - INFO - [文章存储成功] 文章已成功添加到数据库 - ID: 19, 用户: 石皓文
+2026-01-06 01:12:44,110 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-01-06 01:12:44,125 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:12:44,126 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:12:44,128 - backend.api.article_routes - INFO - [文章列表成功] 返回 5 篇文章，总计 5 篇
+2026-01-06 01:12:46,706 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-01-06 01:12:46,708 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:12:46,709 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:12:46,711 - backend.api.article_routes - INFO - [文章列表成功] 返回 5 篇文章，总计 5 篇
+2026-01-06 01:12:53,729 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:12:53,730 - backend.api.article_routes - INFO - [文章提交] 收到新的文章提交请求 - 用户名: 石皓文, 角色: 管理员
+2026-01-06 01:12:53,730 - backend.api.article_routes - INFO - [文章提交] 文章信息 - 标题: '11...', 长度: 2, 内容长度: 3, 分类: 皮肤科互助分享
+2026-01-06 01:12:53,733 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:12:53,734 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:12:53,734 - backend.api.article_routes - INFO - [文章存储] 准备添加文章到数据库 - 用户: 石皓文
+2026-01-06 01:12:53,736 - backend.utils.db_articles - INFO - 成功添加文章: 11 (ID: 20) - 作者: 石皓文 - 分类: 皮肤科互助分享
+2026-01-06 01:12:53,737 - backend.api.article_routes - INFO - [文章存储成功] 文章已成功添加到数据库 - ID: 20, 用户: 石皓文
+2026-01-06 01:12:54,905 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-01-06 01:12:54,929 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:12:54,931 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:12:54,934 - backend.api.article_routes - INFO - [文章列表成功] 返回 5 篇文章，总计 5 篇
+2026-01-06 01:13:02,866 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:13:02,884 - auth_routes - INFO - User profile requested: 石皓文
+2026-01-06 01:13:02,974 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:13:02,975 - follow_routes - INFO - 获取关注列表 - 用户: 石皓文
+2026-01-06 01:13:02,977 - follow_routes - INFO - 获取关注列表成功，共 0 个关注
+2026-01-06 01:13:03,006 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:13:03,014 - auth_routes - INFO - User posts requested: 石皓文, page: 1
+2026-01-06 01:13:03,764 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:13:03,776 - auth_routes - INFO - User profile requested: 石皓文
+2026-01-06 01:13:06,627 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:13:06,639 - user_routes - ERROR - 更新用户资料时发生错误: 'UserDatabase' object has no attribute 'update_user_profile'
+2026-01-06 01:13:17,253 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-01-06 01:13:17,257 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:13:17,259 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:13:17,262 - backend.api.article_routes - INFO - [文章列表成功] 返回 5 篇文章，总计 5 篇
+2026-01-06 01:13:26,350 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-01-06 01:13:26,354 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:13:26,356 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:13:26,359 - backend.api.article_routes - INFO - [文章列表成功] 返回 5 篇文章，总计 5 篇
+2026-01-06 01:13:33,438 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:13:33,439 - backend.api.article_routes - INFO - [文章提交] 收到新的文章提交请求 - 用户名: 石皓文, 角色: 管理员
+2026-01-06 01:13:33,440 - backend.api.article_routes - INFO - [文章提交] 文章信息 - 标题: 's...', 长度: 1, 内容长度: 1, 分类: 外科互助分享
+2026-01-06 01:13:33,443 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:13:33,443 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:13:33,444 - backend.api.article_routes - INFO - [文章存储] 准备添加文章到数据库 - 用户: 石皓文
+2026-01-06 01:13:33,446 - backend.utils.db_articles - INFO - 成功添加文章: s (ID: 21) - 作者: 石皓文 - 分类: 外科互助分享
+2026-01-06 01:13:33,447 - backend.api.article_routes - INFO - [文章存储成功] 文章已成功添加到数据库 - ID: 21, 用户: 石皓文
+2026-01-06 01:13:35,556 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-01-06 01:13:35,576 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:13:35,577 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:13:35,579 - backend.api.article_routes - INFO - [文章列表成功] 返回 5 篇文章，总计 5 篇
+2026-01-06 01:13:41,940 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:13:41,963 - auth_routes - INFO - User profile requested: 石皓文
+2026-01-06 01:13:41,998 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:13:41,999 - follow_routes - INFO - 获取关注列表 - 用户: 石皓文
+2026-01-06 01:13:42,003 - follow_routes - INFO - 获取关注列表成功，共 0 个关注
+2026-01-06 01:13:42,107 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:13:42,119 - auth_routes - INFO - User posts requested: 石皓文, page: 1
+2026-01-06 01:13:44,765 - backend.api.article_routes - INFO - [文章详情] 获取文章详情 - ID: 20
+2026-01-06 01:13:44,768 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:13:44,768 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:13:44,771 - backend.api.article_routes - INFO - [文章详情成功] 返回文章详情 - ID: 20, 标题: 11
+2026-01-06 01:13:44,774 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 20
+2026-01-06 01:13:44,795 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:13:44,796 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:13:44,799 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:13:44,800 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:13:44,800 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:13:44,803 - comment_routes - INFO - [获取评论成功] 文章ID: 20, 评论数量: 0
+2026-01-06 01:13:47,102 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:13:47,118 - auth_routes - INFO - User profile requested: 石皓文
+2026-01-06 01:13:47,140 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:13:47,140 - follow_routes - INFO - 获取关注列表 - 用户: 石皓文
+2026-01-06 01:13:47,143 - follow_routes - INFO - 获取关注列表成功，共 0 个关注
+2026-01-06 01:13:47,155 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:13:47,162 - auth_routes - INFO - User posts requested: 石皓文, page: 1
+2026-01-06 01:14:11,919 - backend.utils.db_core - INFO - [db_users] 找到用户 石皓文 的密码哈希，开始验证
+2026-01-06 01:14:11,919 - backend.utils.db_core - INFO - [db_users] 密码哈希: {"version": 2, "mode": "aes_gc...
+2026-01-06 01:14:11,919 - backend.utils.db_core - INFO - 密码验证 - 版本: 2
+2026-01-06 01:14:11,920 - backend.utils.db_core - INFO - 使用高级加密验证方法
+2026-01-06 01:14:11,920 - backend.utils.db_core - INFO - 使用AES-GCM加密模式验证
+2026-01-06 01:14:11,920 - backend.utils.db_core - INFO - AES-GCM解密验证结果: True
+2026-01-06 01:14:11,920 - auth_routes - INFO - User 石皓文 logged in successfully
+2026-01-06 01:14:15,578 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:14:15,580 - lock_manager - INFO - [lock_manager] 清理了 1 个过期锁
+2026-01-06 01:14:15,581 - lock_manager - INFO - [lock_manager] 用户 石皓文 成功获取锁 account_audit_lock
+2026-01-06 01:14:15,597 - admin_routes - INFO - All users requested by admin: 石皓文, page: 1
+2026-01-06 01:14:22,225 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:14:22,226 - comment_routes - INFO - [获取待审核评论] 用户: 石皓文
+2026-01-06 01:14:22,229 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:22,230 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:14:22,231 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:22,235 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:22,237 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:14:22,239 - comment_routes - INFO - [获取待审核评论成功] 找到 0 条待审核评论
+2026-01-06 01:14:31,313 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:14:31,314 - backend.api.article_routes - INFO - [文章提交] 收到新的文章提交请求 - 用户名: 石皓文, 角色: 管理员
+2026-01-06 01:14:31,315 - backend.api.article_routes - INFO - [文章提交] 文章信息 - 标题: '2...', 长度: 1, 内容长度: 1, 分类: 内科互助分享
+2026-01-06 01:14:31,317 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:31,318 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:14:31,318 - backend.api.article_routes - INFO - [文章存储] 准备添加文章到数据库 - 用户: 石皓文
+2026-01-06 01:14:31,321 - backend.utils.db_articles - INFO - 成功添加文章: 2 (ID: 22) - 作者: 石皓文 - 分类: 内科互助分享
+2026-01-06 01:14:31,322 - backend.api.article_routes - INFO - [文章存储成功] 文章已成功添加到数据库 - ID: 22, 用户: 石皓文
+2026-01-06 01:14:33,461 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-01-06 01:14:33,479 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:33,480 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:14:33,481 - backend.api.article_routes - INFO - [文章列表成功] 返回 5 篇文章，总计 5 篇
+2026-01-06 01:14:37,780 - backend.api.article_routes - INFO - [文章详情] 获取文章详情 - ID: 15
+2026-01-06 01:14:37,784 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:37,785 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:14:37,788 - backend.api.article_routes - INFO - [文章详情成功] 返回文章详情 - ID: 15, 标题: Python编程入门指南
+2026-01-06 01:14:37,791 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 15
+2026-01-06 01:14:37,812 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:37,813 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:14:37,816 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:37,817 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:14:37,818 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:37,824 - comment_routes - INFO - [获取评论成功] 文章ID: 15, 评论数量: 0
+2026-01-06 01:14:37,831 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:14:37,832 - follow_routes - INFO - 检查关注状态 - 关注者: 石皓文, 被关注者: tech_user
+2026-01-06 01:14:37,835 - follow_routes - INFO - 关注状态检查结果: False
+2026-01-06 01:14:41,783 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:14:41,784 - backend.api.article_routes - INFO - [文章没帮助] 用户标记文章没帮助 - 用户: 石皓文, 文章ID: 15
+2026-01-06 01:14:41,786 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:41,787 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:14:41,788 - backend.api.article_routes - INFO - [文章没帮助成功] 文章ID: 15, 新没帮助数: 1
+2026-01-06 01:14:42,455 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:14:42,455 - backend.api.article_routes - INFO - [文章没帮助] 用户标记文章没帮助 - 用户: 石皓文, 文章ID: 15
+2026-01-06 01:14:42,457 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:42,458 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:14:42,459 - backend.api.article_routes - INFO - [文章没帮助成功] 文章ID: 15, 新没帮助数: 2
+2026-01-06 01:14:44,268 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:14:44,269 - backend.api.article_routes - INFO - [文章有帮助] 用户标记文章有帮助 - 用户: 石皓文, 文章ID: 15
+2026-01-06 01:14:44,271 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:44,272 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:14:44,273 - backend.api.article_routes - INFO - [文章有帮助成功] 文章ID: 15, 新有帮助数: 1
+2026-01-06 01:14:44,877 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:14:44,878 - backend.api.article_routes - INFO - [文章点赞] 用户点赞文章 - 用户: 石皓文, 文章ID: 15
+2026-01-06 01:14:44,879 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:44,880 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:14:44,882 - backend.api.article_routes - INFO - [文章点赞成功] 文章ID: 15, 新点赞数: 1
+2026-01-06 01:14:45,435 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:14:45,436 - backend.api.article_routes - INFO - [文章点赞] 用户点赞文章 - 用户: 石皓文, 文章ID: 15
+2026-01-06 01:14:45,438 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:45,438 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:14:45,450 - backend.api.article_routes - INFO - [文章点赞成功] 文章ID: 15, 新点赞数: 2
+2026-01-06 01:14:46,008 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:14:46,009 - backend.api.article_routes - INFO - [文章点赞] 用户点赞文章 - 用户: 石皓文, 文章ID: 15
+2026-01-06 01:14:46,010 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:46,011 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:14:46,012 - backend.api.article_routes - INFO - [文章点赞成功] 文章ID: 15, 新点赞数: 3
+2026-01-06 01:14:46,177 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:14:46,177 - backend.api.article_routes - INFO - [文章点赞] 用户点赞文章 - 用户: 石皓文, 文章ID: 15
+2026-01-06 01:14:46,179 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:46,180 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:14:46,181 - backend.api.article_routes - INFO - [文章点赞成功] 文章ID: 15, 新点赞数: 4
+2026-01-06 01:14:46,356 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:14:46,356 - backend.api.article_routes - INFO - [文章点赞] 用户点赞文章 - 用户: 石皓文, 文章ID: 15
+2026-01-06 01:14:46,358 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:46,359 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:14:46,360 - backend.api.article_routes - INFO - [文章点赞成功] 文章ID: 15, 新点赞数: 5
+2026-01-06 01:14:47,635 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-01-06 01:14:47,636 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:47,637 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:14:47,638 - backend.api.article_routes - INFO - [文章列表成功] 返回 5 篇文章，总计 5 篇
+2026-01-06 01:14:51,804 - backend.api.article_routes - INFO - [文章详情] 获取文章详情 - ID: 18
+2026-01-06 01:14:51,808 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:51,809 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:14:51,814 - backend.api.article_routes - INFO - [文章详情成功] 返回文章详情 - ID: 18, 标题: 学习方法分享
+2026-01-06 01:14:51,818 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 18
+2026-01-06 01:14:51,854 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:51,856 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:14:51,860 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:51,862 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:14:51,863 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:51,869 - comment_routes - INFO - [获取评论成功] 文章ID: 18, 评论数量: 0
+2026-01-06 01:14:51,875 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:14:51,876 - follow_routes - INFO - 检查关注状态 - 关注者: 石皓文, 被关注者: study_master
+2026-01-06 01:14:51,878 - follow_routes - INFO - 关注状态检查结果: False
+2026-01-06 01:14:52,844 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:14:52,845 - backend.api.article_routes - INFO - [文章有帮助] 用户标记文章有帮助 - 用户: 石皓文, 文章ID: 18
+2026-01-06 01:14:52,847 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:52,847 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:14:52,849 - backend.api.article_routes - INFO - [文章有帮助成功] 文章ID: 18, 新有帮助数: 1
+2026-01-06 01:14:53,040 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:14:53,040 - backend.api.article_routes - INFO - [文章有帮助] 用户标记文章有帮助 - 用户: 石皓文, 文章ID: 18
+2026-01-06 01:14:53,042 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:14:53,043 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:14:53,045 - backend.api.article_routes - INFO - [文章有帮助成功] 文章ID: 18, 新有帮助数: 2
+2026-01-06 01:14:55,699 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:14:55,715 - auth_routes - INFO - User profile requested: 石皓文
+2026-01-06 01:14:55,732 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:14:55,733 - follow_routes - INFO - 获取关注列表 - 用户: 石皓文
+2026-01-06 01:14:55,736 - follow_routes - INFO - 获取关注列表成功，共 0 个关注
+2026-01-06 01:14:55,805 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:14:55,817 - auth_routes - INFO - User posts requested: 石皓文, page: 1
+2026-01-06 01:14:56,541 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:14:56,558 - auth_routes - INFO - User profile requested: 石皓文
+2026-01-06 01:14:59,413 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:14:59,414 - user_routes - ERROR - 更新用户资料时发生错误: 'UserDatabase' object has no attribute 'update_user_profile'
+2026-01-06 01:15:03,009 - backend.api.article_routes - INFO - [文章详情] 获取文章详情 - ID: 22
+2026-01-06 01:15:03,011 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:15:03,012 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:15:03,013 - backend.api.article_routes - INFO - [文章详情成功] 返回文章详情 - ID: 22, 标题: 2
+2026-01-06 01:15:03,017 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 22
+2026-01-06 01:15:03,036 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:15:03,036 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:15:03,038 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:15:03,039 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:15:03,039 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:15:03,042 - comment_routes - INFO - [获取评论成功] 文章ID: 22, 评论数量: 0
+2026-01-06 01:15:10,142 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-01-06 01:15:10,145 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:15:10,145 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:15:10,147 - backend.api.article_routes - INFO - [文章列表成功] 返回 5 篇文章，总计 5 篇
+2026-01-06 01:15:16,231 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-01-06 01:15:16,234 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:15:16,235 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:15:16,238 - backend.api.article_routes - INFO - [文章列表成功] 返回 5 篇文章，总计 5 篇
+2026-01-06 01:15:19,416 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:15:19,434 - auth_routes - INFO - User profile requested: 石皓文
+2026-01-06 01:15:19,456 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:15:19,458 - follow_routes - INFO - 获取关注列表 - 用户: 石皓文
+2026-01-06 01:15:19,461 - follow_routes - INFO - 获取关注列表成功，共 0 个关注
+2026-01-06 01:15:19,480 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:15:19,490 - auth_routes - INFO - User posts requested: 石皓文, page: 1
+2026-01-06 01:15:22,267 - backend.api.article_routes - INFO - [文章详情] 获取文章详情 - ID: 19
+2026-01-06 01:15:22,273 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:15:22,274 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:15:22,279 - backend.api.article_routes - INFO - [文章详情成功] 返回文章详情 - ID: 19, 标题: s
+2026-01-06 01:15:22,303 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 19
+2026-01-06 01:15:22,334 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:15:22,336 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:15:22,339 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:15:22,340 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:15:22,341 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:15:22,348 - comment_routes - INFO - [获取评论成功] 文章ID: 19, 评论数量: 0
+2026-01-06 01:15:30,650 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-01-06 01:15:30,652 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:15:30,652 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:15:30,654 - backend.api.article_routes - INFO - [文章列表成功] 返回 5 篇文章，总计 5 篇
+2026-01-06 01:16:30,698 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-01-06 01:16:30,699 - backend.api.article_routes - INFO - [文章提交] 收到新的文章提交请求 - 用户名: 石皓文, 角色: 管理员
+2026-01-06 01:16:30,699 - backend.api.article_routes - INFO - [文章提交] 文章信息 - 标题: 's...', 长度: 1, 内容长度: 1, 分类: 皮肤科互助分享
+2026-01-06 01:16:30,701 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:16:30,702 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:16:30,702 - backend.api.article_routes - INFO - [文章存储] 准备添加文章到数据库 - 用户: 石皓文
+2026-01-06 01:16:30,704 - backend.utils.db_articles - INFO - 成功添加文章: s (ID: 23) - 作者: 石皓文 - 分类: 皮肤科互助分享
+2026-01-06 01:16:30,705 - backend.api.article_routes - INFO - [文章存储成功] 文章已成功添加到数据库 - ID: 23, 用户: 石皓文
+2026-01-06 01:16:32,811 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-01-06 01:16:32,840 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: C:\Users\94954\Desktop\xant6.4\backend\database\forum.db
+2026-01-06 01:16:32,841 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-01-06 01:16:32,844 - backend.api.article_routes - INFO - [文章列表成功] 返回 5 篇文章，总计 5 篇

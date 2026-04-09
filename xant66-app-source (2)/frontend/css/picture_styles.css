@@ -1,0 +1,116 @@
+/* 引入公共样式 */
+@import url('common_styles.css');
+
+/* 页面特定样式 */
+body {
+    background: linear-gradient(rgba(25, 25, 35, 0.93), rgba(25, 25, 35, 0.93)),
+                url('../images/苍穹4.png') center/cover fixed;
+    font-family: '微软雅黑', 'Segoe UI', sans-serif;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 2rem 0;
+    background: linear-gradient(45deg, #83C5BE, #E9C46A);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--accent);
+    margin: 1.5rem auto;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.img-box {
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.img-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.img-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, 
+        rgba(0, 0, 0, 0) 60%, 
+        rgba(0, 0, 0, 0.8) 100%);
+    z-index: 1;
+}
+
+.img-box img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.img-box:hover img {
+    transform: scale(1.05);
+}
+
+.img-box figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    color: white;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.img-box:hover figcaption {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    .gallery-container {
+        padding: 1rem;
+        border-radius: 12px;
+    }
+    h1 {
+        font-size: 2.2rem;
+    }
+}

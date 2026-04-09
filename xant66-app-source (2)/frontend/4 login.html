@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信安暖驿-登录</title>
+    <!-- 引用公共CSS文件 -->
+    <link rel="stylesheet" href="css/common_styles.css">
+    <!-- 引用外部CSS文件 -->
+    <link rel="stylesheet" href="css/login_styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>欢迎登录</h2>
+        <div class="register-link-container">
+            没有账号？<a href="8 register.html" class="register-link">立即注册</a>
+        </div>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">用户名</label>
+                <input type="text" id="username" required placeholder="请输入用户名">
+            </div>
+            <div class="form-group">
+                <label for="password">密码</label>
+                <input type="password" id="password" required placeholder="请输入密码">
+            </div>
+            <!-- 添加ID属性到按钮 -->
+            <button type="submit" id="loginButton">立即登录</button>
+        </form>
+    </div>
+
+    <!-- 只保留一个脚本引用，并放在body末尾 -->
+    <script type="module" src="js/login_script.js"></script>
+</body>
+</html>

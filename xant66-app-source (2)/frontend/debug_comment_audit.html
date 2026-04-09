@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>评论审核调试页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .debug-section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .debug-section h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .comment-item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+        .button-group {
+            margin-top: 10px;
+        }
+        .approve-btn, .reject-btn {
+            padding: 8px 16px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .approve-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        .reject-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+        .log-area {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 10px;
+            height: 200px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 12px;
+        }
+        .test-btn {
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>评论审核调试页面</h1>
+        
+        <div class="debug-section">
+            <h3>1. 认证状态检查</h3>
+            <button class="test-btn" onclick="checkAuth()">检查认证状态</button>
+            <div id="auth-status"></div>
+        </div>
+
+        <div class="debug-section">
+            <h3>2. 获取待审核评论</h3>
+            <button class="test-btn" onclick="loadComments()">加载待审核评论</button>
+            <div id="comments-container"></div>
+        </div>
+
+        <div class="debug-section">
+            <h3>3. 测试审核功能</h3>
+            <button class="test-btn" onclick="testApprove()">测试通过功能</button>
+            <button class="test-btn" onclick="testReject()">测试拒绝功能</button>
+        </div>
+
+        <div class="debug-section">
+            <h3>4. 调试日志</h3>
+            <button class="test-btn" onclick="clearLog()">清空日志</button>
+            <div id="debug-log" class="log-area"></div>
+        </div>
+    </div>
+
+    <script>
+        let currentComments = [];
+        
+        function log(message) {
+            const logArea = document.getElementById('debug-log');
+            const timestamp = new Date().toLocaleTimeString();
+            logArea.innerHTML += `[${timestamp}] ${message}\n`;
+            logArea.scrollTop = logArea.scrollHeight;
+            console.log(message);
+        }
+
+        function clearLog() {
+            document.getElementById('debug-log').innerHTML = '';
+        }
+
+        function checkAuth() {
+            log('检查认证状态...');
+            const token = sessionStorage.getItem('auth_token') || localStorage.getItem('token');
+            const authStatus = document.getElementById('auth-status');
+            
+            if (token) {
+                log(`找到认证token: ${token.substring(0, 20)}...`);
+                authStatus.innerHTML = `<p style="color: green;">已认证 - Token: ${token.substring(0, 20)}...</p>`;
+                
+                // 测试token有效性
+                fetch('/api/comments/pending', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => {
+                    log(`认证测试响应状态: ${response.status}`);
+                    if (response.ok) {
+                        log('认证token有效');
+                        authStatus.innerHTML += '<p style="color: green;">Token有效</p>';
+                    } else {
+                        log('认证token无效');
+                        authStatus.innerHTML += '<p style="color: red;">Token无效</p>';
+                    }
+                })
+                .catch(error => {
+                    log(`认证测试错误: ${error.message}`);
+                    authStatus.innerHTML += `<p style="color: red;">测试错误: ${error.message}</p>`;
+                });
+            } else {
+                log('未找到认证token');
+                authStatus.innerHTML = '<p style="color: red;">未认证 - 未找到token</p>';
+            }
+        }
+
+        function loadComments() {
+            log('开始加载待审核评论...');
+            const token = sessionStorage.getItem('auth_token') || localStorage.getItem('token');
+            
+            if (!token) {
+                log('错误: 未找到认证token');
+                return;
+            }
+
+            fetch('/api/comments/pending', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => {
+                log(`获取评论响应状态: ${response.status}`);
+                return response.json();
+            })
+            .then(data => {
+                log(`获取到评论数据: ${JSON.stringify(data)}`);
+                currentComments = data.comments || [];
+                displayComments(currentComments);
+            })
+            .catch(error => {
+                log(`加载评论错误: ${error.message}`);
+            });
+        }
+
+        function displayComments(comments) {
+            const container = document.getElementById('comments-container');
+            
+            if (!comments || comments.length === 0) {
+                container.innerHTML = '<p>没有待审核的评论</p>';
+                return;
+            }
+
+            let html = '';
+            comments.forEach(comment => {
+                html += `
+                    <div class="comment-item">
+                        <p><strong>评论ID:</strong> ${comment.id}</p>
+                        <p><strong>内容:</strong> ${comment.content}</p>
+                        <p><strong>作者:</strong> ${comment.author}</p>
+                        <p><strong>状态:</strong> ${comment.status}</p>
+                        <div class="button-group">
+                            <button class="approve-btn" onclick="auditComment(${comment.id}, 'approve')">通过</button>
+                            <button class="reject-btn" onclick="auditComment(${comment.id}, 'reject')">拒绝</button>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+            log(`显示了 ${comments.length} 条评论`);
+        }
+
+        function auditComment(commentId, action) {
+            log(`开始审核评论 - ID: ${commentId}, 操作: ${action}`);
+            
+            const token = sessionStorage.getItem('auth_token') || localStorage.getItem('token');
+            if (!token) {
+                log('错误: 未找到认证token');
+                return;
+            }
+
+            const requestData = { action: action };
+            log(`发送审核请求 - 数据: ${JSON.stringify(requestData)}`);
+
+            fetch(`/api/comments/${commentId}/audit`, {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(requestData)
+            })
+            .then(response => {
+                log(`审核响应状态: ${response.status}`);
+                return response.json();
+            })
+            .then(data => {
+                log(`审核响应数据: ${JSON.stringify(data)}`);
+                if (data.status === 'success') {
+                    log(`审核成功: ${data.message}`);
+                    // 重新加载评论列表
+                    loadComments();
+                } else {
+                    log(`审核失败: ${data.message || '未知错误'}`);
+                }
+            })
+            .catch(error => {
+                log(`审核请求错误: ${error.message}`);
+            });
+        }
+
+        function testApprove() {
+            if (currentComments.length > 0) {
+                auditComment(currentComments[0].id, 'approve');
+            } else {
+                log('没有可测试的评论，请先加载评论');
+            }
+        }
+
+        function testReject() {
+            if (currentComments.length > 0) {
+                auditComment(currentComments[0].id, 'reject');
+            } else {
+                log('没有可测试的评论，请先加载评论');
+            }
+        }
+
+        // 页面加载时自动检查认证状态
+        window.onload = function() {
+            log('页面加载完成，开始调试...');
+            checkAuth();
+        };
+    </script>
+</body>
+</html>

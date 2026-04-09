@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信安暖驿-收藏</title>
+    <!-- 外部资源引入 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="assets/font-awesome/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- 引用公共CSS文件 -->
+    <link rel="stylesheet" href="css/common_styles.css">
+    <!-- 引入外部CSS文件 -->
+    <link rel="stylesheet" href="css/collection_styles.css">
+    <!-- 添加api.js引用（需要先于collection_script.js引入） -->
+    <script type="module" src="js/api.js"></script>
+    <!-- 添加sdk_utils.js引用 -->
+    <script type="module" src="js/sdk_utils.js"></script>
+    <!-- 添加工具函数引用 -->
+    <script type="module" src="js/utils.js"></script>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <a href="1 me.html" class="nav-btn">🏠 网站首页</a>
+        <a href="5 welcome.html" class="nav-btn">📷 互助论坛</a>
+        <a href="3 writing.html" class="nav-btn">✨ 帖子上传</a>
+        <a href="13 myspace.html" class="nav-btn">👤 个人主页</a>
+        <a href="4 login.html" class="nav-btn">🔑 重新登录</a>
+    </nav>
+
+    <!-- 主内容区域 -->
+    <div class="container mx-auto p-8 pt-20">
+        <div class="collection-card flex flex-col items-center text-center">
+            <i class="fa-solid fa-star text-5xl text-yellow-500 mb-4"></i>
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">收藏</h1>
+            <p class="text-gray-600 mb-8">这里展示你收藏的帖子。</p>
+            <ul class="collection-list">
+                <!-- 收藏列表将通过JavaScript动态填充 -->
+                <li class="text-gray-500 italic text-center py-8">加载收藏中...</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 引入外部JavaScript文件 -->
+    <script type="module" src="js/collection_script.js"></script>
+    
+    <!-- 以模块方式加载AI侧边栏脚本 -->
+    <script type="module" src="./js/ai_sidebar.js"></script>
+</body>
+
+</html>
+    

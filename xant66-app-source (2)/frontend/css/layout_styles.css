@@ -1,0 +1,145 @@
+/* 统一导航栏样式 */
+.navbar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    gap: 15px;
+    padding: 12px 20px;
+    background: var(--glass-bg);
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+}
+
+.nav-btn {
+    padding: 8px 20px;
+    border-radius: 25px;
+    background: rgba(42, 157, 143, 0.1);
+    color: var(--secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-btn:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* 统一容器样式 */
+.glass-container {
+    background: var(--glass-bg);
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+    width: 90%;
+    max-width: 400px;
+    transform: translateY(-5px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-container:hover {
+    transform: translateY(0);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.22);
+}
+
+/* 头部样式 */
+.header {
+    text-align: center;
+    padding: 80px 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    margin: 40px 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* 个人资料容器样式 */
+.profile {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(8px);
+    margin-bottom: 40px;
+}
+
+/* 布局工具类 */
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .navbar {
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+        left: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    
+    .nav-btn {
+        padding: 6px 15px;
+        font-size: 0.9em;
+    }
+    
+    .glass-container {
+        padding: 2rem 1.5rem;
+        border-radius: 16px;
+    }
+    
+    .title {
+        font-size: 1.8em;
+    }
+    
+    input {
+        padding: 1rem;
+    }
+    
+    .article {
+        padding: 20px;
+    }
+    
+    .audit-btn {
+        margin-bottom: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .glass-container {
+        padding: 1.5rem 1rem;
+    }
+    
+    .title {
+        font-size: 1.6em;
+    }
+}

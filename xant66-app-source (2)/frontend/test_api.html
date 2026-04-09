@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API测试页面</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .result { margin: 10px 0; padding: 10px; border: 1px solid #ccc; }
+        .success { background-color: #d4edda; }
+        .error { background-color: #f8d7da; }
+        button { padding: 10px 20px; margin: 5px; }
+    </style>
+</head>
+<body>
+    <h1>API测试页面</h1>
+    <button onclick="testAPI()">测试API调用</button>
+    <button onclick="testConsole()">测试控制台</button>
+    <div id="result"></div>
+
+    <script>
+        function testConsole() {
+            console.log('控制台测试 - 这条消息应该在浏览器控制台中显示');
+            document.getElementById('result').innerHTML = '<div class="success">控制台测试完成，请查看浏览器控制台</div>';
+        }
+
+        async function testAPI() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '<div>正在测试API...</div>';
+            
+            try {
+                console.log('开始API测试...');
+                const response = await fetch('http://localhost:8000/api/articles');
+                console.log('API响应状态:', response.status);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP错误: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                console.log('API响应数据:', data);
+                
+                if (data.status === 'success') {
+                    resultDiv.innerHTML = `
+                        <div class="success">
+                            <h3>API调用成功！</h3>
+                            <p>状态: ${data.status}</p>
+                            <p>文章数量: ${data.articles ? data.articles.length : 0}</p>
+                            <p>总计: ${data.pagination ? data.pagination.total_count : 'N/A'}</p>
+                        </div>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `<div class="error">API返回错误状态: ${data.status}</div>`;
+                }
+            } catch (error) {
+                console.error('API测试失败:', error);
+                resultDiv.innerHTML = `<div class="error">API测试失败: ${error.message}</div>`;
+            }
+        }
+    </script>
+</body>
+</html>

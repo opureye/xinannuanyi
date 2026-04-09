@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>认证状态测试</title>
+</head>
+<body>
+    <h1>认证状态测试</h1>
+    <div id="auth-info"></div>
+    <button onclick="testAuth()">测试认证</button>
+    <button onclick="loginAsAdmin()">以管理员身份登录</button>
+    
+    <script>
+        function checkAuthStatus() {
+            const token = sessionStorage.getItem('auth_token');
+            const authInfo = document.getElementById('auth-info');
+            
+            if (token) {
+                authInfo.innerHTML = `<p>认证令牌存在: ${token.substring(0, 20)}...</p>`;
+                return token;
+            } else {
+                authInfo.innerHTML = '<p>未找到认证令牌</p>';
+                return null;
+            }
+        }
+        
+        async function testAuth() {
+            const token = checkAuthStatus();
+            if (!token) return;
+            
+            try {
+                const response = await fetch('http://localhost:8000/api/admin/articles/pending', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+                
+                const result = await response.json();
+                document.getElementById('auth-info').innerHTML += `<p>API调用结果: ${response.status} - ${JSON.stringify(result)}</p>`;
+            } catch (error) {
+                document.getElementById('auth-info').innerHTML += `<p>API调用错误: ${error.message}</p>`;
+            }
+        }
+        
+        async function loginAsAdmin() {
+            try {
+                const response = await fetch('http://localhost:8000/api/auth/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        username: 'admin',
+                        password: '123456'
+                    })
+                });
+                
+                const result = await response.json();
+                if (response.ok && result.access_token) {
+                    sessionStorage.setItem('auth_token', result.access_token);
+                    document.getElementById('auth-info').innerHTML = '<p>管理员登录成功！</p>';
+                    checkAuthStatus();
+                } else {
+                    document.getElementById('auth-info').innerHTML = `<p>登录失败: ${JSON.stringify(result)}</p>`;
+                }
+            } catch (error) {
+                document.getElementById('auth-info').innerHTML = `<p>登录错误: ${error.message}</p>`;
+            }
+        }
+        
+        // 页面加载时检查认证状态
+        window.addEventListener('DOMContentLoaded', checkAuthStatus);
+    </script>
+</body>
+</html>

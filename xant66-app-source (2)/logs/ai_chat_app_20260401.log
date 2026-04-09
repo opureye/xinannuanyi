@@ -1,0 +1,22 @@
+2026-04-01 10:31:01,422 - auth_routes - INFO - UserDatabase imported from: E:\信安暖驿——基于信息保护的医患交流分享平台\源码\xant66-app-source~\xant66-app-source\.\backend\utils\db_users_core.py
+2026-04-01 10:31:01,422 - auth_routes - INFO - UserDatabase methods: ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_connection', '_init_db', '_kdf', '_load_or_generate_system_keys', 'add_user', 'ban_user', 'delete_user', 'disable_connection_pool', 'enable_connection_pool', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2026-04-01 10:31:01,461 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: E:\信安暖驿——基于信息保护的医患交流分享平台\源码\xant66-app-source~\xant66-app-source\database\forum.db
+2026-04-01 10:31:01,475 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-04-01 10:31:01,475 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: E:\信安暖驿——基于信息保护的医患交流分享平台\源码\xant66-app-source~\xant66-app-source\database\forum.db
+2026-04-01 10:31:01,475 - auth_routes - INFO - user_db instance type: <class 'backend.utils.db_users_core.ExtendedUserDatabase'>
+2026-04-01 10:31:01,475 - auth_routes - INFO - user_db methods: ['add_user', 'ban_user', 'db_path', 'delete_user', 'disable_connection_pool', 'enable_connection_pool', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'private_key', 'public_key', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2026-04-01 10:31:01,483 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: E:\信安暖驿——基于信息保护的医患交流分享平台\源码\xant66-app-source~\xant66-app-source\database\forum.db
+2026-04-01 10:31:01,483 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-04-01 10:31:01,485 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: E:\信安暖驿——基于信息保护的医患交流分享平台\源码\xant66-app-source~\xant66-app-source\database\forum.db
+2026-04-01 10:31:01,485 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-04-01 10:31:01,488 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: E:\信安暖驿——基于信息保护的医患交流分享平台\源码\xant66-app-source~\xant66-app-source\database\forum.db
+2026-04-01 10:31:01,488 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-04-01 10:31:01,490 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: E:\信安暖驿——基于信息保护的医患交流分享平台\源码\xant66-app-source~\xant66-app-source\database\forum.db
+2026-04-01 10:31:01,490 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-04-01 10:31:01,493 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: E:\信安暖驿——基于信息保护的医患交流分享平台\源码\xant66-app-source~\xant66-app-source\database\forum.db
+2026-04-01 10:31:01,493 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-04-01 10:31:01,505 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: E:\信安暖驿——基于信息保护的医患交流分享平台\源码\xant66-app-source~\xant66-app-source\database\forum.db
+2026-04-01 10:31:01,507 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-04-01 10:31:01,507 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: E:\信安暖驿——基于信息保护的医患交流分享平台\源码\xant66-app-source~\xant66-app-source\database\forum.db
+2026-04-01 10:31:01,509 - lock_manager - INFO - [lock_manager] 锁表初始化成功
+2026-04-01 10:31:01,510 - lock_manager - INFO - [lock_manager] 初始化锁管理器，使用的数据库路径: E:\信安暖驿——基于信息保护的医患交流分享平台\源码\xant66-app-source~\xant66-app-source\database\forum.db

@@ -1,0 +1,83 @@
+/* 保留评论审核特有样式 */
+/* 评论审核特有样式 */
+.comment-container {
+    background: white;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comment-item {
+    border: 1px solid #e2e8f0;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.comment-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.comment-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.approve-btn {
+    background-color: #10b981;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.approve-btn:hover {
+    background-color: #059669;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
+}
+
+.reject-btn {
+    background-color: #ef4444;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.reject-btn:hover {
+    background-color: #dc2626;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3);
+}
+
+/* 响应式设计补充 */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 10px;
+    }
+    body {
+        background-attachment: scroll;
+    }
+    .header {
+        padding: 40px 20px;
+        margin: 60px 0 20px;
+    }
+    .profile {
+        padding: 30px;
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+}

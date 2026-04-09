@@ -1,0 +1,10 @@
+project/
+├── chat_utils.py          # 新增：聊天记录工具模块
+├── privacy_guard.py       # 隐私保护模块
+├── gds_tester.py          # GDS-30 测试模块
+├── openai_analyzer.py     # OpenAI API 调用模块
+├── report_generator.py    # 报告生成模块
+├── data_loader.py         # 负责加载/筛选聊天数据
+├── psychology_cli.py      # 命令行工具入口（原main.py）
+├── example/               # 示例数据目录
+│   └── *.json            # 聊天记录文件

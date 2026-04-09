@@ -1,0 +1,151 @@
+:root {
+    --primary: #2A9D8F;
+    --secondary: #264653;
+    --accent: #E9C46A;
+    --text-light: #F8F9FA;
+    --glass-bg: rgba(255, 255, 255, 0.95);
+}
+
+/* 全局样式 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', 'Noto Sans SC', '微软雅黑', sans-serif;
+    line-height: 1.6;
+    color: var(--secondary);
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* 标题通用样式 */
+.title {
+    text-align: center;
+    color: var(--primary);
+    margin: 0 0 2.5rem;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--accent);
+    margin: 1.2rem auto 0;
+    border-radius: 2px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--primary);
+    margin: 0 0 2.5rem;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--accent);
+    margin: 1.2rem auto 0;
+    border-radius: 2px;
+}
+
+/* 章节标题样式 */
+.article-content h2 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin: 2.5rem 0 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid var(--accent);
+    position: relative;
+}
+
+/* 通知样式 */
+.notification {
+    position: fixed;
+    bottom: 4rem;
+    right: 20px;
+    background: rgba(38, 70, 83, 0.95);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    max-width: 300px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 加载动画 */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(42, 157, 143, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--primary);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* 加载动画样式 */
+.loading-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 分割线样式 */
+.divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--accent) 50%, transparent 100%);
+    margin: 50px 0;
+}
+
+/* 空状态提示 */
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #6c757d;
+}
+
+.empty-state i {
+    font-size: 4em;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+/* 主容器样式 */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}

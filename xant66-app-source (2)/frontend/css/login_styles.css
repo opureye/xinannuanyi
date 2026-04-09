@@ -1,0 +1,151 @@
+:root {
+    --primary: #2A9D8F;
+    --secondary: #264653;
+    --accent: #E9C46A;
+    --glass-bg: rgba(255, 255, 255, 0.95);
+}
+
+/* 引入公共样式 */
+@import url('common_styles.css');
+
+/* 登录页面特定样式 */
+body {
+    background: linear-gradient(135deg, rgba(42, 157, 143, 0.15), rgba(42, 157, 143, 0.25)),
+                url('../images/苍穹4.png') center/cover fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.login-container {
+    background: var(--glass-bg);
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+    width: 90%;
+    max-width: 400px;
+    transform: translateY(-5px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.login-container:hover {
+    transform: translateY(0);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.22);
+}
+
+.register-link-container {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+button {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.register-link {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+    color: var(--primary);
+    margin: 0 0 2.5rem;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--accent);
+    margin: 1.2rem auto 0;
+    border-radius: 2px;
+}
+
+.form-group {
+    margin-bottom: 1.8rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: var(--secondary);
+    font-weight: 500;
+    font-size: 0.95em;
+    letter-spacing: 0.5px;
+}
+
+input {
+    width: 100%;
+    padding: 1.1rem 1.5rem;
+    border: 2px solid rgba(42, 157, 143, 0.2);
+    border-radius: 12px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.15);
+    background: white;
+}
+
+button {
+    width: 100%;
+    padding: 1.2rem;
+    background: linear-gradient(135deg, var(--primary), #2386f5);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #217D6D, #1a73e8);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(42, 157, 143, 0.3);
+}
+
+.register-link-container {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.register-link {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 2rem 1.5rem;
+        border-radius: 16px;
+    }
+    
+    h2 {
+        font-size: 1.8em;
+    }
+    
+    input {
+        padding: 1rem;
+    }
+}

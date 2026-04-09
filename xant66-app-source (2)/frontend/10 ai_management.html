@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信安暖驿-AI管理</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="assets/font-awesome/css/all.min.css" rel="stylesheet">
+    <!-- 引用公共CSS文件 -->
+    <link rel="stylesheet" href="css/common_styles.css">
+    <!-- 引入外部CSS文件 -->
+    <link rel="stylesheet" href="css/ai_management_styles.css">
+</head>
+
+<body class="bg-gradient-to-r from-blue-100 to-cyan-100 font-sans">
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800">审核系统</h1>
+            <nav class="navbar">
+                <a href="1 me.html" class="nav-btn">🏠 网站首页</a>
+                <a href="5 welcome.html" class="nav-btn">📷 互助论坛</a>
+                <a href="3 writing.html" class="nav-btn">✨ 帖子上传</a>
+                <a href="13 myspace.html" class="nav-btn">👤 个人主页</a>
+                <a href="4 login.html" class="nav-btn">🔑 重新登录</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- 返回按钮，使用class替代内联style -->
+    <a href="9 audit_home.html" class="nav-btn back-button">← 返回</a>
+    
+    <main class="container mx-auto p-8 animate-fadeIn" style="margin-top: 150px; position: relative; z-index: 1;">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">AI管理</h2>
+        <p class="text-gray-600 mb-8">在这里你可以更新AI个人访问令牌。</p>
+        <div class="bg-white p-8 rounded-lg shadow-xl">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">更新AI个人访问令牌</h3>
+            <input type="text" class="token-input mb-4" placeholder="输入个人访问令牌">
+            <button class="submit-btn">确定</button>
+        </div>
+    </main>
+    
+    <!-- 引入Coze SDK和外部JavaScript文件 -->
+    <script type="module" src="js/sdk_utils.js"></script>
+    <script src="js/ai_management_script.js" type="module"></script>
+    
+    <!-- 以模块方式加载AI侧边栏脚本 -->
+    <script type="module" src="./js/ai_sidebar.js"></script>
+    <script>
+(function () {
+  function extractReply(data) {
+    if (!data || typeof data !== 'object') return '';
+    var c = data.choices && data.choices[0];
+    if (c && c.message && c.message.content != null) return String(c.message.content);
+    if (data.reply != null) return String(data.reply);
+    if (data.response != null) return String(data.response);
+    return '';
+  }
+  function patch(sidebar) {
+    if (!sidebar || sidebar.__poloaiChatPatched) return;
+    var orig = sidebar.handleSendMessage.bind(sidebar);
+    sidebar.handleSendMessage = async function () {
+      if (!this.elements.input || !this.elements.sendBtn) return;
+      var message = this.elements.input.value.trim();
+      if (!message || this.isProcessing) return;
+      this.elements.input.value = '';
+      if (this.adjustInputHeight) this.adjustInputHeight();
+      this.addMessageToUI('user', message);
+      this.isProcessing = true;
+      this.elements.sendBtn.disabled = true;
+      this.elements.sendBtn.innerHTML =
+        '<svg class="loading-spinner" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg>思考中';
+      try {
+        var apiMessages = (this.messages || []).map(function (m) {
+          return {
+            role: m.sender === 'user' ? 'user' : 'assistant',
+            content: m.content
+          };
+        });
+        var res = await fetch(window.location.origin + '/api/ai/chat', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            model: 'gpt-5-all',
+            messages: apiMessages
+          })
+        });
+        var text = '';
+        var raw = await res.text();
+        var data = null;
+        try {
+          data = raw ? JSON.parse(raw) : null;
+        } catch (e) {
+          data = null;
+        }
+        if (!res.ok) {
+          var detail = (data && (data.detail != null || data.message != null))
+            ? (data.detail != null ? data.detail : data.message)
+            : raw;
+          throw new Error(typeof detail === 'string' ? detail : JSON.stringify(detail));
+        }
+        text = extractReply(data);
+        if (!text) text = JSON.stringify(data);
+        this.addMessageToUI('ai', text);
+      } catch (err) {
+        console.error('AI 回复出错:', err);
+        this.addMessageToUI('ai', '抱歉，获取AI回复失败: ' + (err && err.message ? err.message : String(err)));
+      } finally {
+        this.isProcessing = false;
+        this.elements.sendBtn.disabled = false;
+        this.elements.sendBtn.innerHTML =
+          '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>发送';
+      }
+    };
+    sidebar.__poloaiChatPatched = true;
+  }
+  function tryPatch() {
+    if (window.aiSidebar && window.aiSidebar.elements && window.aiSidebar.elements.chatContainer) {
+      patch(window.aiSidebar);
+      return true;
+    }
+    return false;
+  }
+  if (tryPatch()) return;
+  var n = 0;
+  var id = setInterval(function () {
+    if (tryPatch() || ++n > 150) clearInterval(id);
+  }, 100);
+})();
+    </script>
+</body>
+
+</html>

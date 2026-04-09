@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信安暖驿-账号审核</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="assets/font-awesome/css/all.min.css" rel="stylesheet">
+    <!-- 引用公共CSS文件 -->
+    <link rel="stylesheet" href="css/common_styles.css">
+    <!-- 引入外部CSS文件 -->
+    <link rel="stylesheet" href="css/account_audit_styles.css">
+    <!-- 添加sdk_utils.js引用，必须添加type="module"属性 -->
+    <script src="js/sdk_utils.js" type="module"></script>
+    <!-- 添加account_audit_script.js引用 -->
+    <script src="js/account_audit_script.js" type="module"></script>
+</head>
+
+<body class="bg-gradient-to-r from-blue-100 to-cyan-100 font-sans">
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800">审核系统</h1>
+            <nav class="navbar">
+                <a href="1 me.html" class="nav-btn">🏠 网站首页</a>
+                <a href="5 welcome.html" class="nav-btn">📷 互助论坛</a>
+                <a href="3 writing.html" class="nav-btn">✨ 帖子上传</a>
+                <a href="13 myspace.html" class="nav-btn">👤 个人主页</a>
+                <a href="4 login.html" class="nav-btn">🔑 重新登录</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- 返回按钮，使用class替代内联style -->
+    <a href="9 audit_home.html" class="nav-btn back-button">← 返回</a>
+    
+    <main class="container mx-auto p-8 animate-fadeIn">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">账号审核</h2>
+        <p class="text-gray-600 mb-8">管理和审核网站所有用户账号，包括查看、搜索和强制注销功能。</p>
+        
+        <!-- 搜索区域 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+            <div class="flex flex-col md:flex-row gap-4">
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="搜索用户名..."
+                    class="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                <button
+                    id="search-button"
+                    class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition duration-300"
+                >
+                    <i class="fas fa-search mr-2"></i> 
+                </button>
+            </div>
+        </div>
+        
+        <!-- 用户列表 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">用户列表</h3>
+            <div class="overflow-x-auto">
+                <table id="user-table" class="min-w-full bg-white border border-gray-200">
+                    <thead>
+                      <tr>
+                        <th>用户名</th>
+                        <th>手机号</th>
+                        <th>邮箱</th>
+                        <th>角色</th>
+                        <th>注册时间</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 用户列表将通过JavaScript动态加载 -->
+                        <tr>
+                            <td colspan="7" class="text-center py-10">加载中...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+        <!-- 添加AI侧边栏模块 -->
+    <script src="./js/ai_sidebar.js" type="module"></script>
+</body>
+
+</html>

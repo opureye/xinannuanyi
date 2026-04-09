@@ -1,0 +1,850 @@
+2025-11-16 16:41:06,360 - backend.utils.db_core - INFO - 密码学库导入成功
+2025-11-16 16:41:06,368 - auth_routes - INFO - UserDatabase imported from: D:\接单\1000\论坛网站第4版(1)\backend\utils\db_users_core.py
+2025-11-16 16:41:06,369 - auth_routes - INFO - UserDatabase methods: ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_connection', '_init_db', '_kdf', '_load_or_generate_system_keys', 'add_user', 'ban_user', 'delete_user', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2025-11-16 16:41:06,387 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:41:06,400 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:41:06,400 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:41:06,401 - auth_routes - INFO - user_db instance type: <class 'backend.utils.db_users_core.ExtendedUserDatabase'>
+2025-11-16 16:41:06,401 - auth_routes - INFO - user_db methods: ['add_user', 'ban_user', 'db_path', 'delete_user', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'private_key', 'public_key', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2025-11-16 16:41:06,425 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:41:06,426 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:41:06,435 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:41:06,437 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:41:06,444 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:41:06,445 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:41:06,451 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:41:06,453 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:41:06,456 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:41:06,457 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:41:06,483 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:41:06,485 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:41:06,486 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:41:07,170 - backend.utils.database - INFO - 创建主数据库实例，使用路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:41:07,174 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:41:07,177 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:41:07,177 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:41:07,179 - backend.utils.database - INFO - 关注表初始化成功
+2025-11-16 16:41:07,180 - backend.utils.database - INFO - 开始初始化示例用户...
+2025-11-16 16:41:07,184 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:41:07,186 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:41:07,186 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:41:07,187 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:41:07,188 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2025-11-16 16:41:07,190 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2025-11-16 16:41:07,191 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2025-11-16 16:41:07,192 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2025-11-16 16:41:07,197 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2025-11-16 16:41:07,201 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2025-11-16 16:41:07,692 - __main__ - INFO - 启动AI对话助手 v1.0.0
+2025-11-16 16:41:07,692 - __main__ - INFO - 服务地址: http://0.0.0.0:8000
+2025-11-16 16:41:08,150 - backend.utils.database - INFO - 开始初始化示例用户...
+2025-11-16 16:41:08,154 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:41:08,156 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:41:08,157 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:41:08,157 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:41:08,159 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2025-11-16 16:41:08,161 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2025-11-16 16:41:08,162 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2025-11-16 16:41:08,164 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2025-11-16 16:41:08,165 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2025-11-16 16:41:08,166 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2025-11-16 16:42:12,793 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2025-11-16 16:42:12,805 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:42:12,806 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:42:12,808 - backend.api.article_routes - INFO - [文章列表成功] 返回 10 篇文章，总计 12 篇
+2025-11-16 16:49:19,779 - backend.utils.db_core - INFO - 密码学库导入成功
+2025-11-16 16:49:19,792 - auth_routes - INFO - UserDatabase imported from: D:\接单\1000\论坛网站第4版(1)\backend\utils\db_users_core.py
+2025-11-16 16:49:19,793 - auth_routes - INFO - UserDatabase methods: ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_connection', '_init_db', '_kdf', '_load_or_generate_system_keys', 'add_user', 'ban_user', 'delete_user', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2025-11-16 16:49:19,803 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:49:19,810 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:49:19,810 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:49:19,810 - auth_routes - INFO - user_db instance type: <class 'backend.utils.db_users_core.ExtendedUserDatabase'>
+2025-11-16 16:49:19,811 - auth_routes - INFO - user_db methods: ['add_user', 'ban_user', 'db_path', 'delete_user', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'private_key', 'public_key', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2025-11-16 16:49:19,827 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:49:19,828 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:49:19,832 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:49:19,834 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:49:19,839 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:49:19,844 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:49:19,850 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:49:19,852 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:49:19,858 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:49:19,859 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:49:19,895 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:49:19,898 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:49:19,900 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:49:20,404 - backend.utils.database - INFO - 创建主数据库实例，使用路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:49:20,408 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:49:20,409 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:49:20,409 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:49:20,413 - backend.utils.database - INFO - 关注表初始化成功
+2025-11-16 16:49:20,415 - backend.utils.database - INFO - 开始初始化示例用户...
+2025-11-16 16:49:20,420 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:49:20,422 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:49:20,424 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:49:20,424 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:49:20,426 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2025-11-16 16:49:20,429 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2025-11-16 16:49:20,431 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2025-11-16 16:49:20,433 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2025-11-16 16:49:20,437 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2025-11-16 16:49:20,439 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2025-11-16 16:49:20,616 - __main__ - INFO - 启动AI对话助手 v1.0.0
+2025-11-16 16:49:20,617 - __main__ - INFO - 服务地址: http://0.0.0.0:8000
+2025-11-16 16:49:20,834 - backend.utils.database - INFO - 开始初始化示例用户...
+2025-11-16 16:49:20,837 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:49:20,838 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:49:20,838 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:49:20,838 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:49:20,839 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2025-11-16 16:49:20,842 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2025-11-16 16:49:20,843 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2025-11-16 16:49:20,845 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2025-11-16 16:49:20,846 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2025-11-16 16:49:20,848 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2025-11-16 16:50:13,270 - identity_routes - INFO - 未启用腾讯云实名核验，使用本地校验通过
+2025-11-16 16:50:13,281 - auth_routes - INFO - 开始注册用户: xxgyyds
+2025-11-16 16:50:13,286 - auth_routes - INFO - 检查用户名 xxgyyds 是否存在: False
+2025-11-16 16:50:13,289 - auth_routes - INFO - 检查邮箱 123456@qqq.com 是否存在: False
+2025-11-16 16:50:13,289 - auth_routes - INFO - 开始创建用户: xxgyyds
+2025-11-16 16:50:13,295 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2025-11-16 16:50:13,325 - backend.utils.db_core - INFO - 成功添加用户: xxgyyds, 角色: 使用者, 用户ID: 15
+2025-11-16 16:50:13,327 - auth_routes - INFO - 用户创建结果: user_id=15
+2025-11-16 16:50:13,329 - auth_routes - INFO - New user registered: xxgyyds
+2025-11-16 16:53:37,277 - backend.utils.db_core - INFO - 密码学库导入成功
+2025-11-16 16:53:37,283 - auth_routes - INFO - UserDatabase imported from: D:\接单\1000\论坛网站第4版(1)\backend\utils\db_users_core.py
+2025-11-16 16:53:37,284 - auth_routes - INFO - UserDatabase methods: ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_connection', '_init_db', '_kdf', '_load_or_generate_system_keys', 'add_user', 'ban_user', 'delete_user', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2025-11-16 16:53:37,288 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:53:37,293 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:53:37,295 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:53:37,296 - auth_routes - INFO - user_db instance type: <class 'backend.utils.db_users_core.ExtendedUserDatabase'>
+2025-11-16 16:53:37,297 - auth_routes - INFO - user_db methods: ['add_user', 'ban_user', 'db_path', 'delete_user', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'private_key', 'public_key', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2025-11-16 16:53:37,313 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:53:37,316 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:53:37,320 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:53:37,322 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:53:37,325 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:53:37,327 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:53:37,332 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:53:37,333 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:53:37,340 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:53:37,343 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:53:37,363 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:53:37,364 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:53:37,364 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:53:37,795 - backend.utils.database - INFO - 创建主数据库实例，使用路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:53:37,798 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:53:37,799 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:53:37,799 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:53:37,801 - backend.utils.database - INFO - 关注表初始化成功
+2025-11-16 16:53:37,802 - backend.utils.database - INFO - 开始初始化示例用户...
+2025-11-16 16:53:37,804 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:53:37,805 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:53:37,806 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:53:37,806 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:53:37,807 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2025-11-16 16:53:37,809 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2025-11-16 16:53:37,811 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2025-11-16 16:53:37,812 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2025-11-16 16:53:37,814 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2025-11-16 16:53:37,815 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2025-11-16 16:53:37,970 - __main__ - INFO - 启动AI对话助手 v1.0.0
+2025-11-16 16:53:37,970 - __main__ - INFO - 服务地址: http://0.0.0.0:8000
+2025-11-16 16:53:38,163 - backend.utils.database - INFO - 开始初始化示例用户...
+2025-11-16 16:53:38,166 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:53:38,167 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:53:38,167 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:53:38,167 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:53:38,170 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2025-11-16 16:53:38,172 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2025-11-16 16:53:38,174 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2025-11-16 16:53:38,175 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2025-11-16 16:53:38,176 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2025-11-16 16:53:38,179 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2025-11-16 16:56:58,093 - backend.utils.db_core - INFO - 密码学库导入成功
+2025-11-16 16:56:58,097 - auth_routes - INFO - UserDatabase imported from: D:\接单\1000\论坛网站第4版(1)\backend\utils\db_users_core.py
+2025-11-16 16:56:58,098 - auth_routes - INFO - UserDatabase methods: ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_connection', '_init_db', '_kdf', '_load_or_generate_system_keys', 'add_user', 'ban_user', 'delete_user', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2025-11-16 16:56:58,101 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:56:58,103 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:56:58,104 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:56:58,105 - auth_routes - INFO - user_db instance type: <class 'backend.utils.db_users_core.ExtendedUserDatabase'>
+2025-11-16 16:56:58,105 - auth_routes - INFO - user_db methods: ['add_user', 'ban_user', 'db_path', 'delete_user', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'private_key', 'public_key', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2025-11-16 16:56:58,131 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:56:58,132 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:56:58,139 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:56:58,141 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:56:58,148 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:56:58,149 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:56:58,155 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:56:58,160 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:56:58,167 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:56:58,168 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:56:58,190 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:56:58,191 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:56:58,192 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:56:58,635 - backend.utils.database - INFO - 创建主数据库实例，使用路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:56:58,638 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:56:58,639 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:56:58,639 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:56:58,644 - backend.utils.database - INFO - 关注表初始化成功
+2025-11-16 16:56:58,645 - backend.utils.database - INFO - 开始初始化示例用户...
+2025-11-16 16:56:58,649 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:56:58,650 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:56:58,651 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:56:58,651 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:56:58,652 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2025-11-16 16:56:58,654 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2025-11-16 16:56:58,655 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2025-11-16 16:56:58,657 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2025-11-16 16:56:58,658 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2025-11-16 16:56:58,660 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2025-11-16 16:56:58,791 - __main__ - INFO - 启动AI对话助手 v1.0.0
+2025-11-16 16:56:58,791 - __main__ - INFO - 服务地址: http://0.0.0.0:8000
+2025-11-16 16:56:58,976 - backend.utils.database - INFO - 开始初始化示例用户...
+2025-11-16 16:56:58,978 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:56:58,979 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 16:56:58,980 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:56:58,980 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 16:56:58,981 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2025-11-16 16:56:58,983 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2025-11-16 16:56:58,984 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2025-11-16 16:56:58,986 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2025-11-16 16:56:58,988 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2025-11-16 16:56:58,989 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2025-11-16 16:58:11,419 - identity_routes - INFO - 使用腾讯云实名核验配置，模拟核验通过
+2025-11-16 16:58:11,434 - auth_routes - INFO - 开始注册用户: 123456
+2025-11-16 16:58:11,437 - auth_routes - INFO - 检查用户名 123456 是否存在: False
+2025-11-16 16:58:11,442 - auth_routes - INFO - 检查邮箱 1234561@qq.com 是否存在: False
+2025-11-16 16:58:11,442 - auth_routes - INFO - 开始创建用户: 123456
+2025-11-16 16:58:11,444 - backend.utils.db_core - WARNING - 电话号码已被使用: 19912345678
+2025-11-16 16:58:11,444 - auth_routes - INFO - 用户创建结果: user_id=None
+2025-11-16 16:58:11,445 - auth_routes - ERROR - Error during registration: 
+2025-11-16 16:58:25,348 - identity_routes - INFO - 使用腾讯云实名核验配置，模拟核验通过
+2025-11-16 16:58:25,355 - auth_routes - INFO - 开始注册用户: 789456123
+2025-11-16 16:58:25,357 - auth_routes - INFO - 检查用户名 789456123 是否存在: False
+2025-11-16 16:58:25,358 - auth_routes - INFO - 检查邮箱 789456123@qq.com 是否存在: False
+2025-11-16 16:58:25,358 - auth_routes - INFO - 开始创建用户: 789456123
+2025-11-16 16:58:25,360 - backend.utils.db_core - WARNING - 电话号码已被使用: 19912345678
+2025-11-16 16:58:25,360 - auth_routes - INFO - 用户创建结果: user_id=None
+2025-11-16 16:58:25,360 - auth_routes - ERROR - Error during registration: 
+2025-11-16 16:58:47,478 - identity_routes - INFO - 使用腾讯云实名核验配置，模拟核验通过
+2025-11-16 16:58:47,489 - auth_routes - INFO - 开始注册用户: 789456123
+2025-11-16 16:58:47,492 - auth_routes - INFO - 检查用户名 789456123 是否存在: False
+2025-11-16 16:58:47,494 - auth_routes - INFO - 检查邮箱 789456123@qq.com 是否存在: False
+2025-11-16 16:58:47,496 - auth_routes - INFO - 开始创建用户: 789456123
+2025-11-16 16:58:47,499 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2025-11-16 16:58:47,508 - backend.utils.db_core - INFO - 成功添加用户: 789456123, 角色: 使用者, 用户ID: 16
+2025-11-16 16:58:47,508 - auth_routes - INFO - 用户创建结果: user_id=16
+2025-11-16 16:58:47,509 - auth_routes - INFO - New user registered: 789456123
+2025-11-16 17:00:25,294 - identity_routes - INFO - 身份证校验码不通过
+2025-11-16 17:01:36,108 - identity_routes - INFO - 使用腾讯云实名核验配置，模拟核验通过
+2025-11-16 17:01:36,120 - auth_routes - INFO - 开始注册用户: 753159
+2025-11-16 17:01:36,125 - auth_routes - INFO - 检查用户名 753159 是否存在: False
+2025-11-16 17:01:36,133 - auth_routes - INFO - 检查邮箱 461873561@qq.com 是否存在: False
+2025-11-16 17:01:36,134 - auth_routes - INFO - 开始创建用户: 753159
+2025-11-16 17:01:36,140 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2025-11-16 17:01:36,159 - backend.utils.db_core - INFO - 成功添加用户: 753159, 角色: 使用者, 用户ID: 17
+2025-11-16 17:01:36,165 - auth_routes - INFO - 用户创建结果: user_id=17
+2025-11-16 17:01:36,175 - auth_routes - INFO - New user registered: 753159
+2025-11-16 17:02:02,664 - backend.utils.db_core - INFO - 密码学库导入成功
+2025-11-16 17:02:02,669 - auth_routes - INFO - UserDatabase imported from: D:\接单\1000\论坛网站第4版(1)\backend\utils\db_users_core.py
+2025-11-16 17:02:02,669 - auth_routes - INFO - UserDatabase methods: ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_connection', '_init_db', '_kdf', '_load_or_generate_system_keys', 'add_user', 'ban_user', 'delete_user', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2025-11-16 17:02:02,672 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:02:02,675 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:02:02,676 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:02:02,677 - auth_routes - INFO - user_db instance type: <class 'backend.utils.db_users_core.ExtendedUserDatabase'>
+2025-11-16 17:02:02,678 - auth_routes - INFO - user_db methods: ['add_user', 'ban_user', 'db_path', 'delete_user', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'private_key', 'public_key', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2025-11-16 17:02:02,690 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:02:02,691 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:02:02,694 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:02:02,697 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:02:02,700 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:02:02,702 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:02:02,705 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:02:02,706 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:02:02,711 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:02:02,712 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:02:02,732 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:02:02,733 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:02:02,734 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:02:03,213 - backend.utils.database - INFO - 创建主数据库实例，使用路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:02:03,220 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:02:03,222 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:02:03,223 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:02:03,225 - backend.utils.database - INFO - 关注表初始化成功
+2025-11-16 17:02:03,227 - backend.utils.database - INFO - 开始初始化示例用户...
+2025-11-16 17:02:03,233 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:02:03,235 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:02:03,236 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:02:03,236 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:02:03,240 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2025-11-16 17:02:03,242 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2025-11-16 17:02:03,245 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2025-11-16 17:02:03,247 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2025-11-16 17:02:03,249 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2025-11-16 17:02:03,250 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2025-11-16 17:02:03,379 - __main__ - INFO - 启动AI对话助手 v1.0.0
+2025-11-16 17:02:03,379 - __main__ - INFO - 服务地址: http://0.0.0.0:8000
+2025-11-16 17:02:03,548 - backend.utils.database - INFO - 开始初始化示例用户...
+2025-11-16 17:02:03,553 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:02:03,554 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:02:03,554 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:02:03,554 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:02:03,557 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2025-11-16 17:02:03,558 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2025-11-16 17:02:03,562 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2025-11-16 17:02:03,563 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2025-11-16 17:02:03,565 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2025-11-16 17:02:03,566 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2025-11-16 17:02:49,134 - identity_routes - INFO - 身份证校验码不通过
+2025-11-16 17:02:49,134 - identity_routes - INFO - 实名核验返回原始JSON: {"provider": "local", "error": "invalid_id", "name": "牟浩轩", "id_number": "510182200406210010"}
+2025-11-16 17:02:50,788 - identity_routes - INFO - 身份证校验码不通过
+2025-11-16 17:02:50,789 - identity_routes - INFO - 实名核验返回原始JSON: {"provider": "local", "error": "invalid_id", "name": "牟浩轩", "id_number": "510182200406210010"}
+2025-11-16 17:03:29,603 - identity_routes - INFO - 使用腾讯云实名核验配置，模拟核验通过
+2025-11-16 17:03:29,606 - identity_routes - INFO - 实名核验返回原始JSON: {"RequestId": "SIMULATED", "Result": {"Matched": true, "Confidence": 0.99}, "Name": "牟浩轩", "IdNumber": "510182200506210010"}
+2025-11-16 17:03:29,620 - auth_routes - INFO - 开始注册用户: 123456789
+2025-11-16 17:03:29,627 - auth_routes - INFO - 检查用户名 123456789 是否存在: False
+2025-11-16 17:03:29,633 - auth_routes - INFO - 检查邮箱 457943764@qq.com 是否存在: False
+2025-11-16 17:03:29,634 - auth_routes - INFO - 开始创建用户: 123456789
+2025-11-16 17:03:29,643 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2025-11-16 17:03:29,671 - backend.utils.db_core - INFO - 成功添加用户: 123456789, 角色: 使用者, 用户ID: 18
+2025-11-16 17:03:29,673 - auth_routes - INFO - 用户创建结果: user_id=18
+2025-11-16 17:03:29,675 - auth_routes - INFO - New user registered: 123456789
+2025-11-16 17:08:04,685 - backend.utils.db_core - INFO - 密码学库导入成功
+2025-11-16 17:08:04,689 - auth_routes - INFO - UserDatabase imported from: D:\接单\1000\论坛网站第4版(1)\backend\utils\db_users_core.py
+2025-11-16 17:08:04,690 - auth_routes - INFO - UserDatabase methods: ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_connection', '_init_db', '_kdf', '_load_or_generate_system_keys', 'add_user', 'ban_user', 'delete_user', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2025-11-16 17:08:04,694 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:08:04,696 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:08:04,697 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:08:04,697 - auth_routes - INFO - user_db instance type: <class 'backend.utils.db_users_core.ExtendedUserDatabase'>
+2025-11-16 17:08:04,698 - auth_routes - INFO - user_db methods: ['add_user', 'ban_user', 'db_path', 'delete_user', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'private_key', 'public_key', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2025-11-16 17:08:04,714 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:08:04,715 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:08:04,718 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:08:04,719 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:08:04,722 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:08:04,722 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:08:04,727 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:08:04,727 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:08:04,730 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:08:04,731 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:08:04,749 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:08:04,750 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:08:04,750 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:08:05,193 - backend.utils.database - INFO - 创建主数据库实例，使用路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:08:05,195 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:08:05,196 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:08:05,196 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:08:05,199 - backend.utils.database - INFO - 关注表初始化成功
+2025-11-16 17:08:05,200 - backend.utils.database - INFO - 开始初始化示例用户...
+2025-11-16 17:08:05,202 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:08:05,203 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:08:05,204 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:08:05,204 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:08:05,205 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2025-11-16 17:08:05,206 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2025-11-16 17:08:05,207 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2025-11-16 17:08:05,208 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2025-11-16 17:08:05,211 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2025-11-16 17:08:05,213 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2025-11-16 17:08:05,332 - __main__ - INFO - 启动AI对话助手 v1.0.0
+2025-11-16 17:08:05,332 - __main__ - INFO - 服务地址: http://0.0.0.0:8000
+2025-11-16 17:08:05,520 - backend.utils.database - INFO - 开始初始化示例用户...
+2025-11-16 17:08:05,522 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:08:05,525 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:08:05,525 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:08:05,525 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:08:05,526 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2025-11-16 17:08:05,527 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2025-11-16 17:08:05,529 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2025-11-16 17:08:05,530 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2025-11-16 17:08:05,532 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2025-11-16 17:08:05,533 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2025-11-16 17:09:01,264 - identity_routes - INFO - 身份证校验码不通过
+2025-11-16 17:09:01,266 - identity_routes - INFO - 实名核验返回原始JSON: {"provider": "local", "error": "invalid_id", "name": "牟浩轩", "id_number": "510182200406210010"}
+2025-11-16 17:09:45,511 - backend.utils.db_core - INFO - 密码学库导入成功
+2025-11-16 17:09:45,515 - auth_routes - INFO - UserDatabase imported from: D:\接单\1000\论坛网站第4版(1)\backend\utils\db_users_core.py
+2025-11-16 17:09:45,515 - auth_routes - INFO - UserDatabase methods: ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_connection', '_init_db', '_kdf', '_load_or_generate_system_keys', 'add_user', 'ban_user', 'delete_user', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2025-11-16 17:09:45,518 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:09:45,519 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:09:45,520 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:09:45,521 - auth_routes - INFO - user_db instance type: <class 'backend.utils.db_users_core.ExtendedUserDatabase'>
+2025-11-16 17:09:45,521 - auth_routes - INFO - user_db methods: ['add_user', 'ban_user', 'db_path', 'delete_user', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'private_key', 'public_key', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2025-11-16 17:09:45,532 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:09:45,532 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:09:45,536 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:09:45,536 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:09:45,539 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:09:45,540 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:09:45,543 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:09:45,544 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:09:45,547 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:09:45,548 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:09:45,566 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:09:45,567 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:09:45,567 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:09:46,014 - backend.utils.database - INFO - 创建主数据库实例，使用路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:09:46,016 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:09:46,017 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:09:46,017 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:09:46,018 - backend.utils.database - INFO - 关注表初始化成功
+2025-11-16 17:09:46,019 - backend.utils.database - INFO - 开始初始化示例用户...
+2025-11-16 17:09:46,022 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:09:46,022 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:09:46,023 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:09:46,023 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:09:46,024 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2025-11-16 17:09:46,025 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2025-11-16 17:09:46,026 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2025-11-16 17:09:46,027 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2025-11-16 17:09:46,028 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2025-11-16 17:09:46,029 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2025-11-16 17:09:46,142 - __main__ - INFO - 启动AI对话助手 v1.0.0
+2025-11-16 17:09:46,142 - __main__ - INFO - 服务地址: http://0.0.0.0:8000
+2025-11-16 17:09:46,290 - backend.utils.database - INFO - 开始初始化示例用户...
+2025-11-16 17:09:46,293 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:09:46,293 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:09:46,293 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:09:46,294 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:09:46,295 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2025-11-16 17:09:46,296 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2025-11-16 17:09:46,297 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2025-11-16 17:09:46,298 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2025-11-16 17:09:46,299 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2025-11-16 17:09:46,300 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2025-11-16 17:10:17,264 - identity_routes - ERROR - 未安装 tencentcloud-sdk-python，请先安装依赖
+2025-11-16 17:13:39,931 - backend.utils.db_core - INFO - 密码学库导入成功
+2025-11-16 17:13:39,937 - auth_routes - INFO - UserDatabase imported from: D:\接单\1000\论坛网站第4版(1)\backend\utils\db_users_core.py
+2025-11-16 17:13:39,937 - auth_routes - INFO - UserDatabase methods: ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_connection', '_init_db', '_kdf', '_load_or_generate_system_keys', 'add_user', 'ban_user', 'delete_user', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2025-11-16 17:13:39,941 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:13:39,943 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:13:39,944 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:13:39,945 - auth_routes - INFO - user_db instance type: <class 'backend.utils.db_users_core.ExtendedUserDatabase'>
+2025-11-16 17:13:39,945 - auth_routes - INFO - user_db methods: ['add_user', 'ban_user', 'db_path', 'delete_user', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'private_key', 'public_key', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2025-11-16 17:13:39,956 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:13:39,957 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:13:39,960 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:13:39,961 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:13:39,964 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:13:39,964 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:13:39,967 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:13:39,968 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:13:39,971 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:13:39,972 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:13:40,003 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:13:40,004 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:13:40,004 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:13:40,511 - backend.utils.database - INFO - 创建主数据库实例，使用路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:13:40,514 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:13:40,515 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:13:40,515 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:13:40,517 - backend.utils.database - INFO - 关注表初始化成功
+2025-11-16 17:13:40,518 - backend.utils.database - INFO - 开始初始化示例用户...
+2025-11-16 17:13:40,520 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:13:40,521 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:13:40,521 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:13:40,521 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:13:40,523 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2025-11-16 17:13:40,524 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2025-11-16 17:13:40,525 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2025-11-16 17:13:40,526 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2025-11-16 17:13:40,528 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2025-11-16 17:13:40,529 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2025-11-16 17:13:40,654 - __main__ - INFO - 启动AI对话助手 v1.0.0
+2025-11-16 17:13:40,654 - __main__ - INFO - 服务地址: http://0.0.0.0:8000
+2025-11-16 17:13:40,831 - backend.utils.database - INFO - 开始初始化示例用户...
+2025-11-16 17:13:40,835 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:13:40,836 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:13:40,836 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:13:40,836 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:13:40,837 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2025-11-16 17:13:40,838 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2025-11-16 17:13:40,840 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2025-11-16 17:13:40,841 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2025-11-16 17:13:40,842 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2025-11-16 17:13:40,843 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2025-11-16 17:13:44,078 - identity_routes - INFO - 实名核验返回原始JSON: {"Result": "-2", "Description": "非法身份证号（长度、校验位等不正确）", "RequestId": "9cd4b573-eec9-45db-80b4-7a53e06dfbfd"}
+2025-11-16 17:14:05,464 - identity_routes - INFO - 实名核验返回原始JSON: {"Result": "-2", "Description": "非法身份证号（长度、校验位等不正确）", "RequestId": "8c3542db-1b29-4657-a74c-71f8c4280765"}
+2025-11-16 17:14:45,750 - identity_routes - INFO - 实名核验返回原始JSON: {"Result": "0", "Description": "姓名和身份证号一致", "RequestId": "4739f654-b279-482f-997d-64b93d328a0b"}
+2025-11-16 17:15:01,045 - identity_routes - INFO - 实名核验返回原始JSON: {"Result": "0", "Description": "姓名和身份证号一致", "RequestId": "dd179b34-fec1-4c51-b812-c2234739a652"}
+2025-11-16 17:17:48,565 - backend.utils.db_core - INFO - 密码学库导入成功
+2025-11-16 17:17:48,570 - auth_routes - INFO - UserDatabase imported from: D:\接单\1000\论坛网站第4版(1)\backend\utils\db_users_core.py
+2025-11-16 17:17:48,572 - auth_routes - INFO - UserDatabase methods: ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_connection', '_init_db', '_kdf', '_load_or_generate_system_keys', 'add_user', 'ban_user', 'delete_user', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2025-11-16 17:17:48,574 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:17:48,576 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:17:48,577 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:17:48,578 - auth_routes - INFO - user_db instance type: <class 'backend.utils.db_users_core.ExtendedUserDatabase'>
+2025-11-16 17:17:48,578 - auth_routes - INFO - user_db methods: ['add_user', 'ban_user', 'db_path', 'delete_user', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'private_key', 'public_key', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2025-11-16 17:17:48,589 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:17:48,590 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:17:48,593 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:17:48,594 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:17:48,601 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:17:48,602 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:17:48,605 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:17:48,606 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:17:48,609 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:17:48,610 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:17:48,632 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:17:48,633 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:17:48,633 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:17:49,140 - backend.utils.database - INFO - 创建主数据库实例，使用路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:17:49,142 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:17:49,143 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:17:49,143 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:17:49,144 - backend.utils.database - INFO - 关注表初始化成功
+2025-11-16 17:17:49,146 - backend.utils.database - INFO - 开始初始化示例用户...
+2025-11-16 17:17:49,148 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:17:49,149 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:17:49,149 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:17:49,150 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:17:49,151 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2025-11-16 17:17:49,153 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2025-11-16 17:17:49,153 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2025-11-16 17:17:49,155 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2025-11-16 17:17:49,156 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2025-11-16 17:17:49,157 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2025-11-16 17:17:49,295 - __main__ - INFO - 启动AI对话助手 v1.0.0
+2025-11-16 17:17:49,295 - __main__ - INFO - 服务地址: http://0.0.0.0:8000
+2025-11-16 17:17:49,485 - backend.utils.database - INFO - 开始初始化示例用户...
+2025-11-16 17:17:49,490 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:17:49,491 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:17:49,491 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:17:49,491 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:17:49,493 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2025-11-16 17:17:49,494 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2025-11-16 17:17:49,495 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2025-11-16 17:17:49,497 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2025-11-16 17:17:49,499 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2025-11-16 17:17:49,500 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2025-11-16 17:18:03,883 - identity_routes - INFO - 实名核验返回原始JSON: {"Result": "0", "Description": "姓名和身份证号一致", "RequestId": "91523dfc-eed2-4b3e-bbef-019f8c8f7903"}
+2025-11-16 17:19:09,920 - identity_routes - INFO - 实名核验返回原始JSON: {"Result": "-2", "Description": "非法身份证号（长度、校验位等不正确）", "RequestId": "801830c9-b3b2-4516-884d-11c2b998e194"}
+2025-11-16 17:19:30,161 - identity_routes - INFO - 实名核验返回原始JSON: {"Result": "0", "Description": "姓名和身份证号一致", "RequestId": "593e881f-d1ab-48d3-b2ce-485c98775847"}
+2025-11-16 17:19:30,179 - auth_routes - INFO - 开始注册用户: 789456123
+2025-11-16 17:19:30,185 - auth_routes - INFO - 检查用户名 789456123 是否存在: False
+2025-11-16 17:19:30,189 - auth_routes - INFO - 检查邮箱 15986532@qq.com 是否存在: False
+2025-11-16 17:19:30,192 - auth_routes - INFO - 开始创建用户: 789456123
+2025-11-16 17:19:30,197 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2025-11-16 17:19:30,233 - backend.utils.db_core - INFO - 成功添加用户: 789456123, 角色: 使用者, 用户ID: 19
+2025-11-16 17:19:30,235 - auth_routes - INFO - 用户创建结果: user_id=19
+2025-11-16 17:19:30,238 - auth_routes - INFO - New user registered: 789456123
+2025-11-16 17:26:24,788 - backend.utils.db_core - INFO - 密码学库导入成功
+2025-11-16 17:26:24,801 - auth_routes - INFO - UserDatabase imported from: D:\接单\1000\论坛网站第4版(1)\backend\utils\db_users_core.py
+2025-11-16 17:26:24,801 - auth_routes - INFO - UserDatabase methods: ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_connection', '_init_db', '_kdf', '_load_or_generate_system_keys', 'add_user', 'ban_user', 'delete_user', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2025-11-16 17:26:24,813 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:26:24,815 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:26:24,816 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:26:24,816 - auth_routes - INFO - user_db instance type: <class 'backend.utils.db_users_core.ExtendedUserDatabase'>
+2025-11-16 17:26:24,816 - auth_routes - INFO - user_db methods: ['add_user', 'ban_user', 'db_path', 'delete_user', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'private_key', 'public_key', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2025-11-16 17:26:24,827 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:26:24,829 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:26:24,835 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:26:24,836 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:26:24,851 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:26:24,854 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:26:24,861 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:26:24,863 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:26:24,870 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:26:24,873 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:26:24,920 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:26:24,922 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:26:24,923 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:26:25,349 - backend.utils.database - INFO - 创建主数据库实例，使用路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:26:25,352 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:26:25,352 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:26:25,353 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:26:25,356 - backend.utils.database - INFO - 关注表初始化成功
+2025-11-16 17:26:25,358 - backend.utils.database - INFO - 开始初始化示例用户...
+2025-11-16 17:26:25,363 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:26:25,364 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:26:25,364 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:26:25,365 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:26:25,369 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2025-11-16 17:26:25,372 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2025-11-16 17:26:25,375 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2025-11-16 17:26:25,376 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2025-11-16 17:26:25,381 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2025-11-16 17:26:25,383 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2025-11-16 17:26:25,562 - __main__ - INFO - 启动AI对话助手 v1.0.0
+2025-11-16 17:26:25,563 - __main__ - INFO - 服务地址: http://0.0.0.0:8000
+2025-11-16 17:26:25,705 - backend.utils.database - INFO - 开始初始化示例用户...
+2025-11-16 17:26:25,710 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:26:25,711 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:26:25,712 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:26:25,712 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:26:25,713 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2025-11-16 17:26:25,715 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2025-11-16 17:26:25,716 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2025-11-16 17:26:25,717 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2025-11-16 17:26:25,718 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2025-11-16 17:26:25,719 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2025-11-16 17:27:16,710 - identity_routes - INFO - 实名核验返回原始JSON: {"Result": "0", "Description": "姓名和身份证号一致", "RequestId": "56a68b71-6180-4369-83a6-f92e383c7a8c"}
+2025-11-16 17:27:16,726 - auth_routes - INFO - 开始注册用户: 764315356
+2025-11-16 17:27:16,731 - auth_routes - INFO - 检查用户名 764315356 是否存在: False
+2025-11-16 17:27:16,737 - auth_routes - INFO - 检查邮箱 456786431865@qq.com 是否存在: False
+2025-11-16 17:27:16,738 - auth_routes - INFO - 开始创建用户: 764315356
+2025-11-16 17:27:16,744 - backend.utils.db_core - ERROR - 添加用户失败: no such column: id_card
+2025-11-16 17:27:16,746 - auth_routes - INFO - 用户创建结果: user_id=None
+2025-11-16 17:27:16,747 - auth_routes - ERROR - Error during registration: 
+2025-11-16 17:27:33,220 - identity_routes - INFO - 实名核验返回原始JSON: {"Result": "0", "Description": "姓名和身份证号一致", "RequestId": "31276f07-af6c-4852-b74e-c1f63b91f65a"}
+2025-11-16 17:27:33,231 - auth_routes - INFO - 开始注册用户: 7338638
+2025-11-16 17:27:33,237 - auth_routes - INFO - 检查用户名 7338638 是否存在: False
+2025-11-16 17:27:33,242 - auth_routes - INFO - 检查邮箱 456786431865@qq.com 是否存在: False
+2025-11-16 17:27:33,243 - auth_routes - INFO - 开始创建用户: 7338638
+2025-11-16 17:27:33,249 - backend.utils.db_core - ERROR - 添加用户失败: no such column: id_card
+2025-11-16 17:27:33,250 - auth_routes - INFO - 用户创建结果: user_id=None
+2025-11-16 17:27:33,251 - auth_routes - ERROR - Error during registration: 
+2025-11-16 17:28:53,598 - backend.utils.db_core - INFO - 密码学库导入成功
+2025-11-16 17:28:53,603 - auth_routes - INFO - UserDatabase imported from: D:\接单\1000\论坛网站第4版(1)\backend\utils\db_users_core.py
+2025-11-16 17:28:53,604 - auth_routes - INFO - UserDatabase methods: ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_connection', '_init_db', '_kdf', '_load_or_generate_system_keys', 'add_user', 'ban_user', 'delete_user', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2025-11-16 17:28:53,634 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:28:53,639 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:28:53,642 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:28:53,643 - auth_routes - INFO - user_db instance type: <class 'backend.utils.db_users_core.ExtendedUserDatabase'>
+2025-11-16 17:28:53,644 - auth_routes - INFO - user_db methods: ['add_user', 'ban_user', 'db_path', 'delete_user', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'private_key', 'public_key', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2025-11-16 17:28:53,661 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:28:53,661 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:28:53,667 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:28:53,668 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:28:53,674 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:28:53,675 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:28:53,679 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:28:53,679 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:28:53,682 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:28:53,683 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:28:53,706 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:28:53,707 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:28:53,707 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:28:54,173 - backend.utils.database - INFO - 创建主数据库实例，使用路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:28:54,175 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:28:54,176 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:28:54,176 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:28:54,177 - backend.utils.database - INFO - 关注表初始化成功
+2025-11-16 17:28:54,179 - backend.utils.database - INFO - 开始初始化示例用户...
+2025-11-16 17:28:54,183 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:28:54,184 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:28:54,185 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:28:54,186 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:28:54,188 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2025-11-16 17:28:54,190 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2025-11-16 17:28:54,192 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2025-11-16 17:28:54,194 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2025-11-16 17:28:54,195 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2025-11-16 17:28:54,196 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2025-11-16 17:28:54,332 - __main__ - INFO - 启动AI对话助手 v1.0.0
+2025-11-16 17:28:54,332 - __main__ - INFO - 服务地址: http://0.0.0.0:8000
+2025-11-16 17:28:54,468 - backend.utils.database - INFO - 开始初始化示例用户...
+2025-11-16 17:28:54,472 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:28:54,473 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:28:54,473 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:28:54,473 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:28:54,474 - sample_users_initializer - INFO - 用户已存在，跳过添加: 洪汉博
+2025-11-16 17:28:54,478 - sample_users_initializer - INFO - 用户已存在，跳过添加: 石皓文
+2025-11-16 17:28:54,479 - sample_users_initializer - INFO - 用户已存在，跳过添加: 张心泽
+2025-11-16 17:28:54,480 - sample_users_initializer - INFO - 用户已存在，跳过添加: 郑伊萍
+2025-11-16 17:28:54,482 - sample_users_initializer - INFO - 用户已存在，跳过添加: 笪媛媛
+2025-11-16 17:28:54,484 - sample_users_initializer - INFO - 用户已存在，跳过添加: 孟尚婉
+2025-11-16 17:29:04,305 - identity_routes - INFO - 实名核验返回原始JSON: {"Result": "0", "Description": "姓名和身份证号一致", "RequestId": "24199215-6107-4472-a2b7-dd2df930c2fd"}
+2025-11-16 17:29:04,320 - auth_routes - INFO - 开始注册用户: 7338638
+2025-11-16 17:29:04,325 - auth_routes - INFO - 检查用户名 7338638 是否存在: False
+2025-11-16 17:29:04,329 - auth_routes - INFO - 检查邮箱 456786431865@qq.com 是否存在: False
+2025-11-16 17:29:04,330 - auth_routes - INFO - 开始创建用户: 7338638
+2025-11-16 17:29:04,336 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2025-11-16 17:29:04,359 - backend.utils.db_core - INFO - 成功添加用户: 7338638, 角色: 使用者, 用户ID: 20
+2025-11-16 17:29:04,361 - auth_routes - INFO - 用户创建结果: user_id=20
+2025-11-16 17:29:04,364 - auth_routes - INFO - New user registered: 7338638
+2025-11-16 17:37:19,234 - backend.utils.db_core - INFO - [db_users] 找到用户 123 的密码哈希，开始验证
+2025-11-16 17:37:19,236 - backend.utils.db_core - INFO - [db_users] 密码哈希: {"version": 2, "mode": "aes_gc...
+2025-11-16 17:37:19,237 - backend.utils.db_core - INFO - 密码验证 - 版本: 2
+2025-11-16 17:37:19,237 - backend.utils.db_core - INFO - 使用高级加密验证方法
+2025-11-16 17:37:19,238 - backend.utils.db_core - INFO - 使用AES-GCM加密模式验证
+2025-11-16 17:37:19,241 - backend.utils.db_core - INFO - AES-GCM解密验证结果: True
+2025-11-16 17:37:19,243 - auth_routes - INFO - User 123 logged in successfully
+2025-11-16 17:37:28,047 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2025-11-16 17:37:28,051 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:37:28,052 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:37:28,055 - backend.api.article_routes - INFO - [文章列表成功] 返回 10 篇文章，总计 12 篇
+2025-11-16 17:37:29,809 - backend.api.article_routes - INFO - [文章详情] 获取文章详情 - ID: 12
+2025-11-16 17:37:29,812 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:37:29,813 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:37:29,819 - backend.api.article_routes - INFO - [文章详情成功] 返回文章详情 - ID: 12, 标题: 测试123456
+2025-11-16 17:37:29,821 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 12
+2025-11-16 17:37:29,824 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:37:29,826 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:37:29,828 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:37:29,829 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:37:29,829 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:37:29,832 - comment_routes - INFO - [获取评论成功] 文章ID: 12, 评论数量: 0
+2025-11-16 17:37:31,261 - utils.db_core - INFO - 密码学库导入成功
+2025-11-16 17:37:31,268 - utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:37:31,269 - utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:37:31,269 - utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:37:31,271 - backend.utils.auth - INFO - 用户认证成功: 123, 角色: 使用者
+2025-11-16 17:37:31,271 - backend.api.article_routes - INFO - [文章点赞] 用户点赞文章 - 用户: 123, 文章ID: 12
+2025-11-16 17:37:31,274 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:37:31,275 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:37:31,279 - backend.api.article_routes - INFO - [文章点赞成功] 文章ID: 12, 新点赞数: 2
+2025-11-16 17:37:31,709 - backend.utils.auth - INFO - 用户认证成功: 123, 角色: 使用者
+2025-11-16 17:37:31,710 - backend.api.article_routes - INFO - [文章有帮助] 用户标记文章有帮助 - 用户: 123, 文章ID: 12
+2025-11-16 17:37:31,713 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:37:31,713 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:37:31,719 - backend.api.article_routes - INFO - [文章有帮助成功] 文章ID: 12, 新有帮助数: 3
+2025-11-16 17:37:32,440 - backend.utils.auth - INFO - 用户认证成功: 123, 角色: 使用者
+2025-11-16 17:37:32,440 - backend.api.article_routes - INFO - [文章没帮助] 用户标记文章没帮助 - 用户: 123, 文章ID: 12
+2025-11-16 17:37:32,443 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:37:32,446 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:37:32,452 - backend.api.article_routes - INFO - [文章没帮助成功] 文章ID: 12, 新没帮助数: 2
+2025-11-16 17:37:32,464 - backend.utils.auth - INFO - 用户认证成功: 123, 角色: 使用者
+2025-11-16 17:37:32,464 - backend.api.article_routes - INFO - [文章有帮助] 用户标记文章有帮助 - 用户: 123, 文章ID: 12
+2025-11-16 17:37:32,467 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:37:32,468 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:37:32,474 - backend.api.article_routes - INFO - [文章有帮助成功] 文章ID: 12, 新有帮助数: 4
+2025-11-16 17:37:39,752 - backend.utils.auth - INFO - 用户认证成功: 123, 角色: 使用者
+2025-11-16 17:37:39,755 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:37:39,756 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:37:39,758 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:37:39,759 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:37:39,759 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:37:39,765 - comment_routes - INFO - [评论添加成功] 评论ID: 5, 用户: 123, 文章ID: 12
+2025-11-16 17:37:39,771 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 12
+2025-11-16 17:37:39,774 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:37:39,775 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:37:39,778 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:37:39,779 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:37:39,779 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:37:39,781 - comment_routes - INFO - [获取评论成功] 文章ID: 12, 评论数量: 0
+2025-11-16 17:37:50,687 - backend.utils.auth - INFO - 用户认证成功: 123, 角色: 使用者
+2025-11-16 17:37:50,688 - backend.api.article_routes - INFO - [文章提交] 收到新的文章提交请求 - 用户名: 123, 角色: 使用者
+2025-11-16 17:37:50,692 - backend.api.article_routes - INFO - [文章提交] 文章信息 - 标题: '测试贴子789456...', 长度: 10, 内容长度: 6, 分类: 外科互助分享
+2025-11-16 17:37:50,695 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:37:50,696 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:37:50,696 - backend.api.article_routes - INFO - [文章存储] 准备添加文章到数据库 - 用户: 123
+2025-11-16 17:37:50,701 - backend.utils.db_articles - INFO - 成功添加文章: 测试贴子789456 (ID: 13) - 作者: 123 - 分类: 外科互助分享
+2025-11-16 17:37:50,705 - backend.api.article_routes - INFO - [文章存储成功] 文章已成功添加到数据库 - ID: 13, 用户: 123
+2025-11-16 17:37:58,144 - backend.utils.db_core - INFO - [db_users] 找到用户 admin 的密码哈希，开始验证
+2025-11-16 17:37:58,145 - backend.utils.db_core - INFO - [db_users] 密码哈希: {"version": 2, "mode": "aes_gc...
+2025-11-16 17:37:58,146 - backend.utils.db_core - INFO - 密码验证 - 版本: 2
+2025-11-16 17:37:58,146 - backend.utils.db_core - INFO - 使用高级加密验证方法
+2025-11-16 17:37:58,146 - backend.utils.db_core - INFO - 使用AES-GCM加密模式验证
+2025-11-16 17:37:58,147 - backend.utils.db_core - INFO - AES-GCM解密验证结果: False
+2025-11-16 17:37:58,148 - auth_routes - WARNING - Invalid password for user: admin
+2025-11-16 17:37:58,148 - auth_routes - ERROR - Error during login: 
+2025-11-16 17:38:01,758 - backend.utils.db_core - INFO - [db_users] 找到用户 admin 的密码哈希，开始验证
+2025-11-16 17:38:01,758 - backend.utils.db_core - INFO - [db_users] 密码哈希: {"version": 2, "mode": "aes_gc...
+2025-11-16 17:38:01,758 - backend.utils.db_core - INFO - 密码验证 - 版本: 2
+2025-11-16 17:38:01,758 - backend.utils.db_core - INFO - 使用高级加密验证方法
+2025-11-16 17:38:01,758 - backend.utils.db_core - INFO - 使用AES-GCM加密模式验证
+2025-11-16 17:38:01,759 - backend.utils.db_core - INFO - AES-GCM解密验证结果: True
+2025-11-16 17:38:01,759 - auth_routes - INFO - User admin logged in successfully
+2025-11-16 17:38:04,117 - backend.utils.auth - INFO - 用户认证成功: admin, 角色: 管理员
+2025-11-16 17:38:04,120 - admin_routes - INFO - Pending articles requested by admin: admin, page: 1
+2025-11-16 17:38:04,254 - backend.utils.auth - INFO - 用户认证成功: admin, 角色: 管理员
+2025-11-16 17:38:04,254 - backend.utils.auth - INFO - 用户认证成功: admin, 角色: 管理员
+2025-11-16 17:38:04,257 - admin_routes - INFO - Pending articles requested by admin: admin, page: 1
+2025-11-16 17:38:04,258 - backend.api.article_routes - INFO - [文章举报] 获取文章举报信息 - 文章ID: 13, 用户: admin
+2025-11-16 17:38:04,261 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:38:04,263 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:38:04,265 - backend.api.article_routes - INFO - [文章举报成功] 文章 13 有 0 条举报
+2025-11-16 17:38:04,270 - backend.api.article_routes - INFO - [文章详情] 获取文章详情 - ID: 13
+2025-11-16 17:38:04,274 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:38:04,274 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:38:04,279 - backend.api.article_routes - INFO - [文章详情成功] 返回文章详情 - ID: 13, 标题: 测试贴子789456
+2025-11-16 17:38:07,466 - backend.utils.auth - INFO - 用户认证成功: admin, 角色: 管理员
+2025-11-16 17:38:07,477 - backend.utils.db_articles - INFO - 成功更新文章状态: 13，状态: approved
+2025-11-16 17:38:07,478 - admin_routes - INFO - Article audited: 13 by admin: admin, status: approved
+2025-11-16 17:38:11,904 - backend.utils.auth - INFO - 用户认证成功: admin, 角色: 管理员
+2025-11-16 17:38:11,905 - comment_routes - INFO - [获取待审核评论] 用户: admin
+2025-11-16 17:38:11,908 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:38:11,909 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:38:11,910 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:38:11,914 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:38:11,914 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:38:11,915 - comment_routes - INFO - [获取待审核评论成功] 找到 1 条待审核评论
+2025-11-16 17:38:13,025 - backend.utils.auth - INFO - 用户认证成功: admin, 角色: 管理员
+2025-11-16 17:38:13,026 - comment_routes - INFO - [审核评论] 用户: admin, 评论ID: 5, 操作: approve
+2025-11-16 17:38:13,029 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:38:13,030 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:38:13,031 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:38:13,034 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:38:13,035 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:38:13,040 - comment_routes - INFO - [审核评论成功] 评论ID: 5, 操作: 通过, 审核人: admin
+2025-11-16 17:38:16,635 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2025-11-16 17:38:16,639 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:38:16,640 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:38:16,642 - backend.api.article_routes - INFO - [文章列表成功] 返回 10 篇文章，总计 13 篇
+2025-11-16 17:38:18,026 - backend.api.article_routes - INFO - [文章详情] 获取文章详情 - ID: 13
+2025-11-16 17:38:18,029 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:38:18,030 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:38:18,035 - backend.api.article_routes - INFO - [文章详情成功] 返回文章详情 - ID: 13, 标题: 测试贴子789456
+2025-11-16 17:38:18,039 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 13
+2025-11-16 17:38:18,043 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:38:18,043 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:38:18,046 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:38:18,047 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:38:18,048 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:38:18,050 - comment_routes - INFO - [获取评论成功] 文章ID: 13, 评论数量: 0
+2025-11-16 17:38:18,055 - backend.utils.auth - INFO - 用户认证成功: admin, 角色: 管理员
+2025-11-16 17:38:18,055 - follow_routes - INFO - 检查关注状态 - 关注者: admin, 被关注者: 123
+2025-11-16 17:38:18,057 - follow_routes - INFO - 关注状态检查结果: True
+2025-11-16 17:38:22,171 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2025-11-16 17:38:22,173 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:38:22,175 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:38:22,177 - backend.api.article_routes - INFO - [文章列表成功] 返回 10 篇文章，总计 13 篇
+2025-11-16 17:38:23,158 - backend.api.article_routes - INFO - [文章详情] 获取文章详情 - ID: 12
+2025-11-16 17:38:23,161 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:38:23,162 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:38:23,167 - backend.api.article_routes - INFO - [文章详情成功] 返回文章详情 - ID: 12, 标题: 测试123456
+2025-11-16 17:38:23,171 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 12
+2025-11-16 17:38:23,173 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:38:23,174 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:38:23,176 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:38:23,177 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:38:23,177 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:38:23,180 - comment_routes - INFO - [获取评论成功] 文章ID: 12, 评论数量: 1
+2025-11-16 17:38:23,184 - backend.utils.auth - INFO - 用户认证成功: admin, 角色: 管理员
+2025-11-16 17:38:23,185 - follow_routes - INFO - 检查关注状态 - 关注者: admin, 被关注者: 123
+2025-11-16 17:38:23,186 - follow_routes - INFO - 关注状态检查结果: True
+2025-11-16 17:38:25,574 - backend.utils.auth - INFO - 用户认证成功: admin, 角色: 管理员
+2025-11-16 17:38:25,576 - comment_routes - INFO - [评论点赞] 切换评论点赞 - 用户: admin, 评论ID: 5
+2025-11-16 17:38:25,578 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:38:25,579 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:38:25,581 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:38:25,583 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:38:25,583 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:38:25,591 - comment_routes - INFO - [评论点赞成功] 点赞 - 用户: admin, 评论ID: 5, 点赞数: 1
+2025-11-16 17:38:26,990 - backend.utils.auth - INFO - 用户认证成功: admin, 角色: 管理员
+2025-11-16 17:38:26,991 - follow_routes - INFO - 取消关注 - 关注者: admin, 被关注者: 123
+2025-11-16 17:38:26,996 - follow_routes - INFO - 取消关注成功: admin -> 123
+2025-11-16 17:38:27,640 - backend.utils.auth - INFO - 用户认证成功: admin, 角色: 管理员
+2025-11-16 17:38:27,640 - follow_routes - INFO - 用户关注 - 关注者: admin, 被关注者: 123
+2025-11-16 17:38:27,648 - follow_routes - INFO - 关注成功: admin -> 123
+2025-11-16 17:38:28,989 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2025-11-16 17:38:28,991 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: D:\接单\1000\论坛网站第4版(1)\backend\database\forum.db
+2025-11-16 17:38:28,992 - backend.utils.db_core - INFO - 系统密钥加载成功
+2025-11-16 17:38:28,994 - backend.api.article_routes - INFO - [文章列表成功] 返回 10 篇文章，总计 13 篇
+2025-11-16 17:38:43,831 - psychology_routes - INFO - 开始分析聊天记录，共15条消息
+2025-11-16 17:38:43,831 - privacy_guard - INFO - 隐私保护模块初始化成功
+2025-11-16 17:38:43,832 - privacy_guard - INFO - 开始匿名化处理聊天记录，共15条消息
+2025-11-16 17:38:43,912 - privacy_guard - INFO - 聊天记录匿名化完成，共替换5处敏感信息
+2025-11-16 17:38:43,913 - psychology_routes - INFO - 聊天记录已匿名化处理
+2025-11-16 17:38:43,913 - gds_tester - INFO - GDS测试模块初始化成功
+2025-11-16 17:38:43,928 - psychology_analyzer - INFO - DeepSeek API客户端初始化成功，使用模型: deepseek-chat
+2025-11-16 17:38:43,928 - psychology_analyzer - INFO - 开始分析聊天记录，共15条消息
+2025-11-16 17:38:43,928 - psychology_analyzer - INFO - 构建聊天摘要完成，包含8条消息
+2025-11-16 17:38:43,929 - psychology_analyzer - INFO - 调用DeepSeek API生成分析结果
+2025-11-16 17:39:02,581 - psychology_analyzer - INFO - 分析完成，生成30个回答
+2025-11-16 17:39:02,582 - gds_tester - INFO - 开始计算GDS得分，共30个回答
+2025-11-16 17:39:02,583 - gds_tester - INFO - GDS得分计算完成，总分: 29，抑郁等级: 中重度抑郁
+2025-11-16 17:39:02,584 - psychology_report - INFO - 开始生成心理评估报告，用户ID: anonymous，得分: 29，抑郁程度: 中重度抑郁
+2025-11-16 17:39:02,585 - psychology_report - INFO - 心理评估报告生成完成，包含30个问题的回答和35条建议
+2025-11-16 17:39:02,585 - psychology_routes - INFO - 分析完成，得分：29，抑郁程度：中重度抑郁
+2025-11-16 17:40:14,689 - identity_routes - INFO - 实名核验返回原始JSON: {"Result": "-2", "Description": "非法身份证号（长度、校验位等不正确）", "RequestId": "64cef2ae-ee4f-4e21-b519-398df8fbd200"}
+2025-11-16 17:40:22,529 - identity_routes - INFO - 实名核验返回原始JSON: {"Result": "0", "Description": "姓名和身份证号一致", "RequestId": "628d5a06-8b13-4439-9c00-6144d4f52f8e"}
+2025-11-16 17:40:22,534 - auth_routes - INFO - 开始注册用户: 789456789
+2025-11-16 17:40:22,535 - auth_routes - INFO - 检查用户名 789456789 是否存在: False
+2025-11-16 17:40:22,537 - auth_routes - INFO - 检查邮箱 45679865456@qq.com 是否存在: False
+2025-11-16 17:40:22,537 - auth_routes - INFO - 开始创建用户: 789456789
+2025-11-16 17:40:22,538 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2025-11-16 17:40:22,542 - backend.utils.db_core - INFO - 成功添加用户: 789456789, 角色: 使用者, 用户ID: 21
+2025-11-16 17:40:22,543 - auth_routes - INFO - 用户创建结果: user_id=21
+2025-11-16 17:40:22,543 - auth_routes - INFO - New user registered: 789456789

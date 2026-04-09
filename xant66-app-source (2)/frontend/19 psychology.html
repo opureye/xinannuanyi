@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信安暖驿-老年抑郁智能评估系统</title>
+    <link rel="stylesheet" href="assets/font-awesome/css/all.min.css">
+  <!-- 引用公共CSS文件 -->
+  <link rel="stylesheet" href="css/common_styles.css">
+  <!-- 引用外部CSS文件 -->
+  <link rel="stylesheet" href="css/psychology_styles.css">
+  <!-- 添加utils.js引用 -->
+  <script src="js/utils.js" type="module"></script>
+  <!-- 添加api.js引用 -->
+  <script src="js/api.js" type="module"></script>
+  <!-- 添加心理学模块脚本 -->
+  <script src="js/psychology_script.js" type="module"></script>
+</head>
+<body>  
+    <nav class="navbar">
+    <a href="1 me.html" class="nav-btn">🏠 网站首页</a>
+    <a href="5 welcome.html" class="nav-btn">📷 互助论坛</a>
+    <a href="3 writing.html" class="nav-btn">✨ 帖子上传</a>
+    <a href="13 myspace.html" class="nav-btn">👤 个人主页</a>
+    <a href="4 login.html" class="nav-btn">🔑 重新登录</a>
+    </nav>
+    <header>
+        <div class="container">
+            <!-- 移除原有的logo -->
+            <h1><i class="fas fa-brain"></i> 老年抑郁智能评估系统</h1>
+            <p>基于GDS-30量表的聊天记录分析工具</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="upload-section" class="card">
+            <h2><i class="fas fa-upload"></i> 上传聊天记录</h2>
+            <p>支持上传多个JSON文件</p>
+            <div class="upload-area" id="upload-area">
+                <p>点击或拖拽JSON文件到此处</p>
+                <input type="file" id="file-input" accept=".json" hidden>
+                <button id="browse-btn" class="btn-primary">浏览文件</button>
+            </div>
+            <p>json文件格式：</p>
+            <div class="code-block">
+<pre>[{
+  "sender": "姓名1",
+  "message": "消息1",
+  "timestamp": "年-月-日 时:分:秒"
+}, {
+  "sender": "姓名2",
+  "message": "消息2",
+  "timestamp": "2025-01-01 00:00:00"
+}]</pre>
+            </div>
+            <div id="file-info" class="file-info hidden"></div>
+        </section>
+
+        <section id="settings-section" class="card">
+            <h2><i class="fas fa-cog"></i> 分析设置</h2>
+            <div class="settings-group">
+                <label for="analysis-mode">分析模式:</label>
+                <select id="analysis-mode" class="form-control">
+                    <option value="openai">OpenAI API 分析</option>
+                    <option value="local_ai">本地AI分析</option>
+                </select>
+            </div>
+            <div class="settings-group">
+                <label for="user-id">用户:</label>
+                <input type="text" id="user-id" class="form-control" placeholder=" ">
+            </div>
+            <button id="start-analysis" class="btn-primary btn-large" disabled>
+                <i class="fas fa-play"></i> 开始分析
+            </button>
+        </section>
+
+        <section id="progress-section" class="card hidden">
+            <h2><i class="fas fa-spinner"></i> 分析进度</h2>
+            <div class="progress-bar">
+                <div id="progress-bar-fill" class="progress-bar-fill" style="width: 0%"></div>
+            </div>
+            <div id="progress-steps" class="progress-steps">
+                <div class="step active" data-step="1">加载文件</div>
+                <div class="step" data-step="2">匿名处理</div>
+                <div class="step" data-step="3">AI分析</div>
+                <div class="step" data-step="4">生成报告</div>
+            </div>
+            <div id="progress-message" class="progress-message">准备开始分析...</div>
+        </section>
+
+        <section id="results-section" class="card hidden">
+            <h2><i class="fas fa-chart-pie"></i> 评估结果</h2>
+            <div class="result-summary">
+                <div class="result-item">
+                    <h3>GDS-30总分</h3>
+                    <p id="total-score" class="score">- / 30</p>
+                </div>
+                <div class="result-item">
+                    <h3>抑郁程度</h3>
+                    <p id="depression-level" class="level">-</p>
+                </div>
+                <div class="result-item">
+                    <h3>分析时间</h3>
+                    <p id="analysis-time">-</p>
+                </div>
+            </div>
+            
+            <div class="report-section">
+                <h3><i class="fas fa-file-alt"></i> 详细报告</h3>
+                <div id="report-content" class="report-content">
+                    <!-- 报告内容将在这里显示 -->
+                </div>
+                <button id="download-report" class="btn-secondary">
+                    <i class="fas fa-download"></i> 下载报告
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>老年抑郁智能评估系统 &copy; 2025 | 基于GDS-30抑郁量表开发|版权所有：浙江传媒学院“信安暖驿”项目组</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>互助网-文章查看</title>
+    <!-- 引用公共CSS文件 -->
+    <link rel="stylesheet" href="css/common_styles.css">
+    <!-- 引入外部CSS文件 -->
+    <link rel="stylesheet" href="./css/article_styles.css">
+    <!-- 保留基础脚本 -->
+    <script type="module" src="js/sdk_utils.js"></script>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <a href="1 me.html" class="nav-btn">🏠 网站首页</a>
+        <a href="5 welcome.html" class="nav-btn">📷 互助论坛</a>
+        <a href="3 writing.html" class="nav-btn">✨ 帖子上传</a>
+        <a href="13 myspace.html" class="nav-btn">👤 个人主页</a>
+        <a href="4 login.html" class="nav-btn">🔑 重新登录</a>
+    </nav>
+    
+    <!-- 文章内容容器 -->
+    <article class="article" id="article-container">
+        <!-- 文章内容将动态插入此处 -->
+        <div class="loading-message">
+            <p>正在加载文章内容...</p>
+        </div>
+    </article>
+
+    <!-- 互动区域 -->
+    <div class="interaction">
+        <div class="like-btn" onclick="toggleLike()">
+            <span id="like-icon">🤍</span>
+            <span id="like-count">0</span> 点赞
+        </div>
+        <div class="helpful-btn" onclick="markHelpful()">
+            <span id="helpful-icon">☑️</span>
+            <span id="helpful-count">0</span> 有帮助
+        </div>
+        <div class="unhelpful-btn" onclick="markUnhelpful()">
+            <span id="unhelpful-icon">❎</span>
+            <span id="unhelpful-count">0</span> 没帮助
+        </div>
+        <div class="complain-btn" onclick="complainArticle()">
+            <span id="complain-icon">⚠️</span>
+            <span id="complain-count">0</span> 举报
+        </div>
+        <!-- 跳转到投诉页面的按钮 -->
+        <a href="18 complaint.html" class="audit-btn">📄 详细举报</a>
+    </div>
+
+    <!-- 评论区域 -->
+    <div class="comments-section">
+        <h3>评论区</h3>
+        <div class="add-comment">
+            <textarea id="comment-input" placeholder="发表你的看法..." maxlength="1000"></textarea>
+            <div class="comment-form-footer">
+                <span class="char-count">0/1000</span>
+                <button id="submit-comment-btn">发表评论</button>
+            </div>
+        </div>
+        <div id="comments-list" class="comments-list">
+            <!-- 评论列表将在这里动态加载 -->
+        </div>
+    </div>
+    
+    <!-- 加载页面特定脚本 -->
+    <script type="module" src="./js/article_script.js"></script>
+    
+    <!-- 以模块方式加载AI侧边栏脚本 -->
+    <script type="module" src="./js/ai_sidebar.js"></script>
+</body>
+
+</html>

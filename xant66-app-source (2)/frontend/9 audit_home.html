@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信安暖驿-审核主页</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="assets/font-awesome/css/all.min.css" rel="stylesheet">
+    <!-- 引用公共CSS文件 -->
+    <link rel="stylesheet" href="css/common_styles.css">
+    <!-- 引入外部CSS文件 -->
+    <link rel="stylesheet" href="css/audit_home_styles.css">
+</head>
+
+<body class="bg-gradient-to-r from-blue-100 to-cyan-100 font-sans">
+    <!-- 修改导航栏部分 -->
+    <nav class="navbar">
+        <a href="1 me.html" class="nav-btn">🏠 网站首页</a>
+        <a href="5 welcome.html" class="nav-btn">📷 互助论坛</a>
+        <a href="3 writing.html" class="nav-btn">✨ 帖子上传</a>
+        <a href="13 myspace.html" class="nav-btn">👤 个人主页</a>
+        <a href="4 login.html" class="nav-btn">🔑 重新登录</a>
+    </nav>
+    <!-- 移除原有的header部分 -->
+    <main class="container mx-auto p-8 animate-fadeIn">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">欢迎来到审核主页</h1>
+        <p class="text-gray-600 mb-8">在这里你可以快速导航到各个审核相关页面，高效完成审核工作。</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <a href="10 ai_management.html"
+                class="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                <div class="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-robot text-2xl text-blue-500"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800">前往AI管理页面</h3>
+                <p class="text-gray-600 mt-2">管理和配置审核相关的AI工具。</p>
+            </a>
+            <a href="7 judging.html"
+                class="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                <div class="bg-green-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-file-lines text-2xl text-green-500"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800">前往帖子审核页面</h3>
+                <p class="text-gray-600 mt-2">对用户发布的帖子进行审核。</p>
+            </a>
+            <a href="11 account_audit.html"
+                class="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                <div class="bg-yellow-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-user-check text-2xl text-yellow-500"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800">前往账号审核页面</h3>
+                <p class="text-gray-600 mt-2">审核新注册用户的账号信息。</p>
+            </a>
+            <a href="12 comment_audit.html"
+                class="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                <div class="bg-purple-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                    <i class="fa-solid fa-comment-dots text-2xl text-purple-500"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800">前往评论审核页面</h3>
+                <p class="text-gray-600 mt-2">审查用户发表的评论内容。</p>
+            </a>
+        </div>
+    </main>
+    <!-- 加载页面特定脚本 -->
+    <script type="module" src="js/audit_home_script.js"></script>
+</body>
+
+</html>

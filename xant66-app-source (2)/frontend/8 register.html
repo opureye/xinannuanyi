@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信安暖驿-注册</title>
+    <!-- 引用公共CSS文件 -->
+    <link rel="stylesheet" href="css/common_styles.css">
+    <!-- 引用外部CSS文件 -->
+    <link rel="stylesheet" href="css/register_styles.css">
+    <!-- 删除重复的脚本引用 -->
+</head>
+<body>
+    <div class="register-container glass-container">
+        <h2>欢迎注册</h2>
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="nickname">昵称</label>
+                <input type="text" id="nickname" required placeholder="请输入昵称">
+            </div>
+            <div class="form-group">
+                <label for="phone">电话号码</label>
+                <input type="tel" id="phone" required placeholder="请输入电话号码">
+            </div>
+            <div class="form-group">
+                <label for="email">电子邮箱</label>
+                <input type="email" id="email" required placeholder="请输入电子邮箱">
+            </div>
+            <div class="form-group">
+                <label for="password">请设置密码</label>
+                <input type="password" id="password" required placeholder="请输入密码">
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">请再次输入密码</label>
+                <input type="password" id="confirmPassword" required placeholder="请再次输入密码">
+            </div>
+            <button type="submit">立即注册</button>
+        </form>
+        <div class="login-link">
+            已有账号？<a href="4 login.html">立即登录</a>
+        </div>
+    </div>
+
+    <!-- 实名认证弹窗 -->
+    <div id="realnameModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <h3>实名认证</h3>
+            <p class="modal-tip">为保障账户安全，请输入真实姓名与身份证号完成认证。</p>
+            <div class="form-group">
+                <label for="realNameInput">姓名</label>
+                <input type="text" id="realNameInput" placeholder="请输入真实姓名">
+            </div>
+            <div class="form-group">
+                <label for="idNumberInput">身份证号</label>
+                <input type="text" id="idNumberInput" placeholder="请输入18位身份证号">
+            </div>
+            <div class="modal-actions">
+                <button type="button" id="cancelVerifyBtn" class="btn-secondary">取消</button>
+                <button type="button" id="confirmVerifyBtn" class="btn-primary">认证并注册</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 保留这一个脚本引用 -->
+    <script type="module" src="js/register_script.js"></script>
+</body>
+</html>

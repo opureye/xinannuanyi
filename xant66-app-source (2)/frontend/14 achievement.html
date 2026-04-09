@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人成就 - 论坛网站</title>
+    <!-- 引入Font Awesome -->
+    <link rel="stylesheet" href="assets/font-awesome/css/all.min.css">
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="css/common_styles.css">
+    <link rel="stylesheet" href="css/achievement_styles.css">
+    <!-- 引入SDK工具库 -->
+    <script type="module" src="js/sdk_utils.js"></script>
+    <!-- 引入工具函数 -->
+    <script type="module" src="js/utils.js"></script>
+    <!-- 引入API模块 -->
+    <script type="module" src="js/api.js"></script>
+    <!-- 引入成就脚本 -->
+    <script type="module" src="js/achievement_script.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <a href="1 me.html" class="nav-btn">🏠 网站首页</a>
+        <a href="5 welcome.html" class="nav-btn">📷 互助论坛</a>
+        <a href="3 writing.html" class="nav-btn">✨ 帖子上传</a>
+        <a href="13 myspace.html" class="nav-btn">👤 个人主页</a>
+        <a href="4 login.html" class="nav-btn">🔑 重新登录</a>
+    </nav>
+
+    <!-- 主内容区域 -->
+    <main class="container">
+        <h1>我的成就</h1>
+        
+        <!-- 成就统计概览 -->
+        <div class="achievement-stats"></div>
+        
+        <!-- 成就列表 -->
+        <div class="achievement-list">
+            <!-- 成就项会通过JavaScript动态生成 -->
+            <div class="loading">加载成就中...</div>
+        </div>
+    </main>
+
+    <!-- 底部信息 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 版权所有：浙江传媒学院“信安暖驿”团队</p>
+        </div>
+    </footer>
+
+    <!-- AI侧边栏模块 -->
+    <div class="ai-sidebar" id="aiSidebar">
+        <!-- AI侧边栏内容会通过JavaScript动态生成 -->
+    </div>
+
+    <script type="module" src="js/sdk_utils.js"></script>
+    <script type="module" src="js/utils.js"></script>
+    <script type="module" src="js/api.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/achievement_script.js"></script>
+    <script type="module" src="js/ai_sidebar.js"></script>
+</body>
+</html>

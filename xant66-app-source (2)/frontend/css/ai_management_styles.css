@@ -1,0 +1,53 @@
+/* 导入通用样式 */
+@import url('common_styles.css');
+
+/* 页面特定样式 */
+body {
+    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), 
+                url('../images/苍穹4.png') center/cover fixed;
+    font-family: 'Noto Sans SC', '微软雅黑', sans-serif;
+    line-height: 1.6;
+    color: var(--secondary);
+    min-height: 100vh;
+    padding: 40px;
+}
+
+/* 响应式设计 - 保留页面特定响应式调整 */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        top: 10px;
+        right: 10px;
+        left: 10px;
+    }
+    .nav-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+}
+
+/* AI管理页面特定样式 */
+/* 已在common_styles.css中定义.profile和.token-input、submit-btn样式 */
+
+/* 可以添加页面特有的样式 */
+.ai-token-section {
+    margin-top: 30px;
+}
+
+.ai-status {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgba(42, 157, 143, 0.1);
+    color: var(--secondary);
+}

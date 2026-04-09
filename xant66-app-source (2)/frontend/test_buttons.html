@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>按钮测试</title>
+    <style>
+        .approve-btn {
+            background-color: #10b981;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 8px;
+        }
+        .reject-btn {
+            background-color: #ef4444;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .approve-btn:hover {
+            background-color: #059669;
+        }
+        .reject-btn:hover {
+            background-color: #dc2626;
+        }
+    </style>
+</head>
+<body>
+    <h1>按钮点击测试</h1>
+    <div id="test-area">
+        <div class="comment-item" data-comment-id="1">
+            <p>测试评论内容</p>
+            <div class="comment-actions">
+                <button class="approve-btn" data-comment-id="1">通过</button>
+                <button class="reject-btn" data-comment-id="1">拒绝</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="log"></div>
+    
+    <script>
+        // 测试事件绑定
+        function bindCommentActions() {
+            console.log('开始绑定事件...');
+            
+            const approveButtons = document.querySelectorAll('.approve-btn');
+            const rejectButtons = document.querySelectorAll('.reject-btn');
+            
+            console.log('找到通过按钮数量:', approveButtons.length);
+            console.log('找到拒绝按钮数量:', rejectButtons.length);
+            
+            approveButtons.forEach((button, index) => {
+                console.log(`绑定通过按钮 ${index}:`, button);
+                button.addEventListener('click', function(e) {
+                    console.log('通过按钮被点击!', e.target);
+                    const commentId = this.dataset.commentId;
+                    console.log('评论ID:', commentId);
+                    document.getElementById('log').innerHTML += `<p>通过按钮被点击，评论ID: ${commentId}</p>`;
+                    handleCommentAudit(commentId, 'approve');
+                });
+            });
+            
+            rejectButtons.forEach((button, index) => {
+                console.log(`绑定拒绝按钮 ${index}:`, button);
+                button.addEventListener('click', function(e) {
+                    console.log('拒绝按钮被点击!', e.target);
+                    const commentId = this.dataset.commentId;
+                    console.log('评论ID:', commentId);
+                    document.getElementById('log').innerHTML += `<p>拒绝按钮被点击，评论ID: ${commentId}</p>`;
+                    handleCommentAudit(commentId, 'reject');
+                });
+            });
+        }
+        
+        function handleCommentAudit(commentId, action) {
+            console.log(`处理评论审核: ID=${commentId}, 操作=${action}`);
+            document.getElementById('log').innerHTML += `<p>处理评论审核: ID=${commentId}, 操作=${action}</p>`;
+        }
+        
+        // 页面加载完成后绑定事件
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('页面加载完成，开始绑定事件');
+            bindCommentActions();
+        });
+    </script>
+</body>
+</html>

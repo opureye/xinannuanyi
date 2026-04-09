@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: xant66-app
+    restart: unless-stopped
+    ports:
+      - "8001:8001"
+    environment:
+      - APP_NAME=AI对话助手
+      - APP_VERSION=1.0.0
+      - DEBUG=false
+      - HOST=0.0.0.0
+      - PORT=8001
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY:-your-production-secret-key-change-me}
+      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY:-}
+      - DEEPSEEK_BASE_URL=${DEEPSEEK_BASE_URL:-https://api.deepseek.com}
+      - DEFAULT_MODEL=${DEFAULT_MODEL:-deepseek-chat}
+      - LOG_LEVEL=INFO
+      - ENABLE_TENCENT_IDENTITY_VERIFY=${ENABLE_TENCENT_IDENTITY_VERIFY:-false}
+      - TENCENTCLOUD_SECRET_ID=${TENCENTCLOUD_SECRET_ID:-}
+      - TENCENTCLOUD_SECRET_KEY=${TENCENTCLOUD_SECRET_KEY:-}
+      - TENCENTCLOUD_REGION=${TENCENTCLOUD_REGION:-ap-guangzhou}
+    volumes:
+      - ./data/database:/app/database
+      - ./data/logs:/app/logs
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8001/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  database:
+  logs:

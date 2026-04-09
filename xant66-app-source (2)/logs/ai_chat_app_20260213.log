@@ -1,0 +1,534 @@
+2026-02-13 15:10:56,238 - backend.utils.db_core - INFO - 密码学库导入成功
+2026-02-13 15:10:56,246 - auth_routes - INFO - UserDatabase imported from: /app/backend/utils/db_users_core.py
+2026-02-13 15:10:56,246 - auth_routes - INFO - UserDatabase methods: ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_connection', '_init_db', '_kdf', '_load_or_generate_system_keys', 'add_user', 'ban_user', 'delete_user', 'disable_connection_pool', 'enable_connection_pool', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2026-02-13 15:10:56,254 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-13 15:10:56,254 - backend.utils.db_core - INFO - 生成新的系统密钥
+2026-02-13 15:10:56,254 - backend.utils.db_core - INFO - 系统密钥已生成并保存到: /app/database/system_keys.json
+2026-02-13 15:10:56,260 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-13 15:10:56,260 - auth_routes - INFO - user_db instance type: <class 'backend.utils.db_users_core.ExtendedUserDatabase'>
+2026-02-13 15:10:56,260 - auth_routes - INFO - user_db methods: ['add_user', 'ban_user', 'db_path', 'delete_user', 'disable_connection_pool', 'enable_connection_pool', 'get_all_users', 'get_total_users_count', 'get_user_by_email', 'get_user_by_id', 'get_user_by_username', 'get_user_collection_count', 'get_user_count', 'get_user_followers_count', 'get_user_following_count', 'get_user_post_count', 'get_user_posts', 'get_user_profile', 'private_key', 'public_key', 'search_users', 'unban_user', 'update_user_profile', 'verify_user']
+2026-02-13 15:10:56,270 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-13 15:10:56,270 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-13 15:10:56,272 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-13 15:10:56,272 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-13 15:10:56,274 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-13 15:10:56,274 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-13 15:10:56,276 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-13 15:10:56,277 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-13 15:10:56,278 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-13 15:10:56,278 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-13 15:10:56,293 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-13 15:10:56,293 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-13 15:10:56,293 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-13 15:10:56,305 - lock_manager - INFO - [lock_manager] 锁表初始化成功
+2026-02-13 15:10:56,305 - lock_manager - INFO - [lock_manager] 初始化锁管理器，使用的数据库路径: /app/database/forum.db
+2026-02-13 15:10:56,538 - backend.utils.database - INFO - 创建主数据库实例，使用路径: /app/database/forum.db
+2026-02-13 15:10:56,539 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-13 15:10:56,539 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-13 15:10:56,539 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-13 15:10:56,543 - backend.utils.db_core - INFO - 已启用数据库连接池，大小: 5
+2026-02-13 15:10:56,543 - backend.utils.db_integration - INFO - 数据库连接池已启用
+2026-02-13 15:10:56,552 - backend.utils.db_achievements_enhanced - INFO - 已初始化25个默认成就
+2026-02-13 15:10:56,552 - backend.utils.db_integration - INFO - 成就管理器已初始化
+2026-02-13 15:10:56,552 - backend.utils.db_integration - INFO - 数据库功能集成完成
+2026-02-13 15:10:56,553 - backend.utils.database - INFO - 关注表初始化成功
+2026-02-13 15:10:56,553 - backend.utils.database - INFO - 开始初始化示例用户...
+2026-02-13 15:10:56,553 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-13 15:10:56,554 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-13 15:10:56,554 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-13 15:10:56,554 - sample_users_initializer - INFO - 初始化SampleUserInitializer，使用数据库路径: /app/database/forum.db
+2026-02-13 15:10:56,554 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,558 - backend.utils.db_core - INFO - 成功添加用户: 洪汉博, 角色: 管理员, 用户ID: 1
+2026-02-13 15:10:56,558 - sample_users_initializer - INFO - 成功添加示例用户: 洪汉博
+2026-02-13 15:10:56,559 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,561 - backend.utils.db_core - INFO - 成功添加用户: 石皓文, 角色: 管理员, 用户ID: 2
+2026-02-13 15:10:56,561 - sample_users_initializer - INFO - 成功添加示例用户: 石皓文
+2026-02-13 15:10:56,562 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,564 - backend.utils.db_core - INFO - 成功添加用户: 张心泽, 角色: 管理员, 用户ID: 3
+2026-02-13 15:10:56,564 - sample_users_initializer - INFO - 成功添加示例用户: 张心泽
+2026-02-13 15:10:56,565 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,567 - backend.utils.db_core - INFO - 成功添加用户: 郑伊萍, 角色: 管理员, 用户ID: 4
+2026-02-13 15:10:56,567 - sample_users_initializer - INFO - 成功添加示例用户: 郑伊萍
+2026-02-13 15:10:56,568 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,571 - backend.utils.db_core - INFO - 成功添加用户: 笪媛媛, 角色: 管理员, 用户ID: 5
+2026-02-13 15:10:56,571 - sample_users_initializer - INFO - 成功添加示例用户: 笪媛媛
+2026-02-13 15:10:56,572 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,574 - backend.utils.db_core - INFO - 成功添加用户: 孟尚婉, 角色: 使用者, 用户ID: 6
+2026-02-13 15:10:56,574 - sample_users_initializer - INFO - 成功添加示例用户: 孟尚婉
+2026-02-13 15:10:56,575 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,578 - backend.utils.db_core - INFO - 成功添加用户: 陈宇轩, 角色: 使用者, 用户ID: 7
+2026-02-13 15:10:56,578 - sample_users_initializer - INFO - 成功添加示例用户: 陈宇轩
+2026-02-13 15:10:56,579 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,583 - backend.utils.db_core - INFO - 成功添加用户: 李明哲, 角色: 使用者, 用户ID: 8
+2026-02-13 15:10:56,583 - sample_users_initializer - INFO - 成功添加示例用户: 李明哲
+2026-02-13 15:10:56,584 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,587 - backend.utils.db_core - INFO - 成功添加用户: 王浩宇, 角色: 使用者, 用户ID: 9
+2026-02-13 15:10:56,587 - sample_users_initializer - INFO - 成功添加示例用户: 王浩宇
+2026-02-13 15:10:56,588 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,590 - backend.utils.db_core - INFO - 成功添加用户: 刘嘉豪, 角色: 使用者, 用户ID: 10
+2026-02-13 15:10:56,590 - sample_users_initializer - INFO - 成功添加示例用户: 刘嘉豪
+2026-02-13 15:10:56,591 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,593 - backend.utils.db_core - INFO - 成功添加用户: 张子轩, 角色: 使用者, 用户ID: 11
+2026-02-13 15:10:56,593 - sample_users_initializer - INFO - 成功添加示例用户: 张子轩
+2026-02-13 15:10:56,594 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,596 - backend.utils.db_core - INFO - 成功添加用户: 杨博文, 角色: 使用者, 用户ID: 12
+2026-02-13 15:10:56,596 - sample_users_initializer - INFO - 成功添加示例用户: 杨博文
+2026-02-13 15:10:56,597 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,599 - backend.utils.db_core - INFO - 成功添加用户: 黄俊凯, 角色: 使用者, 用户ID: 13
+2026-02-13 15:10:56,600 - sample_users_initializer - INFO - 成功添加示例用户: 黄俊凯
+2026-02-13 15:10:56,600 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,603 - backend.utils.db_core - INFO - 成功添加用户: 吴泽宇, 角色: 使用者, 用户ID: 14
+2026-02-13 15:10:56,603 - sample_users_initializer - INFO - 成功添加示例用户: 吴泽宇
+2026-02-13 15:10:56,604 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,606 - backend.utils.db_core - INFO - 成功添加用户: 周星辰, 角色: 使用者, 用户ID: 15
+2026-02-13 15:10:56,606 - sample_users_initializer - INFO - 成功添加示例用户: 周星辰
+2026-02-13 15:10:56,607 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,610 - backend.utils.db_core - INFO - 成功添加用户: 徐浩然, 角色: 使用者, 用户ID: 16
+2026-02-13 15:10:56,610 - sample_users_initializer - INFO - 成功添加示例用户: 徐浩然
+2026-02-13 15:10:56,611 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,613 - backend.utils.db_core - INFO - 成功添加用户: 孙嘉乐, 角色: 使用者, 用户ID: 17
+2026-02-13 15:10:56,613 - sample_users_initializer - INFO - 成功添加示例用户: 孙嘉乐
+2026-02-13 15:10:56,614 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,616 - backend.utils.db_core - INFO - 成功添加用户: 马天宇, 角色: 使用者, 用户ID: 18
+2026-02-13 15:10:56,616 - sample_users_initializer - INFO - 成功添加示例用户: 马天宇
+2026-02-13 15:10:56,617 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,619 - backend.utils.db_core - INFO - 成功添加用户: 朱梓晨, 角色: 使用者, 用户ID: 19
+2026-02-13 15:10:56,619 - sample_users_initializer - INFO - 成功添加示例用户: 朱梓晨
+2026-02-13 15:10:56,620 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,623 - backend.utils.db_core - INFO - 成功添加用户: 胡文杰, 角色: 使用者, 用户ID: 20
+2026-02-13 15:10:56,623 - sample_users_initializer - INFO - 成功添加示例用户: 胡文杰
+2026-02-13 15:10:56,623 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,625 - backend.utils.db_core - INFO - 成功添加用户: 林泽宇, 角色: 使用者, 用户ID: 21
+2026-02-13 15:10:56,626 - sample_users_initializer - INFO - 成功添加示例用户: 林泽宇
+2026-02-13 15:10:56,626 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,629 - backend.utils.db_core - INFO - 成功添加用户: 李雨桐, 角色: 使用者, 用户ID: 22
+2026-02-13 15:10:56,629 - sample_users_initializer - INFO - 成功添加示例用户: 李雨桐
+2026-02-13 15:10:56,631 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,634 - backend.utils.db_core - INFO - 成功添加用户: 王若曦, 角色: 使用者, 用户ID: 23
+2026-02-13 15:10:56,634 - sample_users_initializer - INFO - 成功添加示例用户: 王若曦
+2026-02-13 15:10:56,635 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,637 - backend.utils.db_core - INFO - 成功添加用户: 张梓涵, 角色: 使用者, 用户ID: 24
+2026-02-13 15:10:56,638 - sample_users_initializer - INFO - 成功添加示例用户: 张梓涵
+2026-02-13 15:10:56,638 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,641 - backend.utils.db_core - INFO - 成功添加用户: 刘梦瑶, 角色: 使用者, 用户ID: 25
+2026-02-13 15:10:56,641 - sample_users_initializer - INFO - 成功添加示例用户: 刘梦瑶
+2026-02-13 15:10:56,641 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,643 - backend.utils.db_core - INFO - 成功添加用户: 陈欣怡, 角色: 使用者, 用户ID: 26
+2026-02-13 15:10:56,644 - sample_users_initializer - INFO - 成功添加示例用户: 陈欣怡
+2026-02-13 15:10:56,644 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,646 - backend.utils.db_core - INFO - 成功添加用户: 杨雨薇, 角色: 使用者, 用户ID: 27
+2026-02-13 15:10:56,646 - sample_users_initializer - INFO - 成功添加示例用户: 杨雨薇
+2026-02-13 15:10:56,647 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,649 - backend.utils.db_core - INFO - 成功添加用户: 黄诗涵, 角色: 使用者, 用户ID: 28
+2026-02-13 15:10:56,649 - sample_users_initializer - INFO - 成功添加示例用户: 黄诗涵
+2026-02-13 15:10:56,650 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,652 - backend.utils.db_core - INFO - 成功添加用户: 吴雨萱, 角色: 使用者, 用户ID: 29
+2026-02-13 15:10:56,652 - sample_users_initializer - INFO - 成功添加示例用户: 吴雨萱
+2026-02-13 15:10:56,653 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,655 - backend.utils.db_core - INFO - 成功添加用户: 周思彤, 角色: 使用者, 用户ID: 30
+2026-02-13 15:10:56,655 - sample_users_initializer - INFO - 成功添加示例用户: 周思彤
+2026-02-13 15:10:56,656 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,658 - backend.utils.db_core - INFO - 成功添加用户: 徐佳宁, 角色: 使用者, 用户ID: 31
+2026-02-13 15:10:56,658 - sample_users_initializer - INFO - 成功添加示例用户: 徐佳宁
+2026-02-13 15:10:56,658 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,660 - backend.utils.db_core - INFO - 成功添加用户: 孙雅琪, 角色: 使用者, 用户ID: 32
+2026-02-13 15:10:56,660 - sample_users_initializer - INFO - 成功添加示例用户: 孙雅琪
+2026-02-13 15:10:56,661 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,664 - backend.utils.db_core - INFO - 成功添加用户: 马语桐, 角色: 使用者, 用户ID: 33
+2026-02-13 15:10:56,664 - sample_users_initializer - INFO - 成功添加示例用户: 马语桐
+2026-02-13 15:10:56,665 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,667 - backend.utils.db_core - INFO - 成功添加用户: 朱欣悦, 角色: 使用者, 用户ID: 34
+2026-02-13 15:10:56,667 - sample_users_initializer - INFO - 成功添加示例用户: 朱欣悦
+2026-02-13 15:10:56,668 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,670 - backend.utils.db_core - INFO - 成功添加用户: 胡静怡, 角色: 使用者, 用户ID: 35
+2026-02-13 15:10:56,671 - sample_users_initializer - INFO - 成功添加示例用户: 胡静怡
+2026-02-13 15:10:56,671 - backend.utils.db_core - INFO - 尝试使用高级加密方法处理密码
+2026-02-13 15:10:56,674 - backend.utils.db_core - INFO - 成功添加用户: 林婉清, 角色: 使用者, 用户ID: 36
+2026-02-13 15:10:56,674 - sample_users_initializer - INFO - 成功添加示例用户: 林婉清
+2026-02-13 15:27:24,470 - backend.utils.db_core - INFO - [db_users] 找到用户 张梓涵 的密码哈希，开始验证
+2026-02-13 15:27:24,471 - backend.utils.db_core - INFO - [db_users] 密码哈希: {"version": 2, "mode": "aes_gc...
+2026-02-13 15:27:24,471 - backend.utils.db_core - INFO - 密码验证 - 版本: 2
+2026-02-13 15:27:24,471 - backend.utils.db_core - INFO - 使用高级加密验证方法
+2026-02-13 15:27:24,471 - backend.utils.db_core - INFO - 使用AES-GCM加密模式验证
+2026-02-13 15:27:24,471 - backend.utils.db_core - INFO - AES-GCM解密验证结果: True
+2026-02-13 15:27:24,471 - auth_routes - INFO - User 张梓涵 logged in successfully
+2026-02-13 15:27:29,083 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-02-13 15:27:29,084 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-13 15:27:29,084 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-13 15:27:29,085 - backend.api.article_routes - INFO - [文章列表成功] 返回 0 篇文章，总计 0 篇
+2026-02-13 15:38:11,854 - backend.utils.db_core - INFO - [db_users] 找到用户 朱欣悦 的密码哈希，开始验证
+2026-02-13 15:38:11,854 - backend.utils.db_core - INFO - [db_users] 密码哈希: {"version": 2, "mode": "aes_gc...
+2026-02-13 15:38:11,854 - backend.utils.db_core - INFO - 密码验证 - 版本: 2
+2026-02-13 15:38:11,854 - backend.utils.db_core - INFO - 使用高级加密验证方法
+2026-02-13 15:38:11,854 - backend.utils.db_core - INFO - 使用AES-GCM加密模式验证
+2026-02-13 15:38:11,854 - backend.utils.db_core - INFO - AES-GCM解密验证结果: True
+2026-02-13 15:38:11,854 - auth_routes - INFO - User 朱欣悦 logged in successfully
+2026-02-13 15:38:13,625 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-02-13 15:38:13,625 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-13 15:38:13,626 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-13 15:38:13,626 - backend.api.article_routes - INFO - [文章列表成功] 返回 0 篇文章，总计 0 篇
+2026-02-13 15:38:18,305 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-02-13 15:38:18,306 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-13 15:38:18,307 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-13 15:38:18,307 - backend.api.article_routes - INFO - [文章列表成功] 返回 0 篇文章，总计 0 篇
+2026-02-13 15:38:18,352 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-02-13 15:38:18,352 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-13 15:38:18,353 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-13 15:38:18,353 - backend.api.article_routes - INFO - [文章列表成功] 返回 0 篇文章，总计 0 篇
+2026-02-13 15:38:36,409 - utils.db_core - INFO - 密码学库导入成功
+2026-02-13 15:38:36,416 - utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-13 15:38:36,417 - utils.db_core - INFO - 系统密钥加载成功
+2026-02-13 15:38:36,417 - utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-13 15:38:36,417 - backend.utils.auth - INFO - 用户认证成功: 朱欣悦, 角色: 使用者
+2026-02-13 15:38:36,417 - backend.api.article_routes - INFO - [文章提交] 收到新的文章提交请求 - 用户名: 朱欣悦, 角色: 使用者
+2026-02-13 15:38:36,417 - backend.api.article_routes - INFO - [文章提交] 文章信息 - 标题: '胆囊结石反复疼痛，纠结要不要手术，求外科病友真实建议！...', 长度: 27, 内容长度: 188, 分类: 外科互助分享
+2026-02-13 15:38:36,419 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-13 15:38:36,419 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-13 15:38:36,419 - backend.api.article_routes - INFO - [文章存储] 准备添加文章到数据库 - 用户: 朱欣悦
+2026-02-13 15:38:36,419 - backend.utils.db_articles - INFO - [DB操作] 开始添加文章 - 作者: 朱欣悦, 标题: '胆囊结石反复疼痛，纠结要不要手术，求外科病友真实建议！...', 分类: 外科互助分享
+2026-02-13 15:38:36,420 - backend.utils.db_articles - INFO - [DB操作成功] 文章已成功添加 - ID: 1, 作者ID: 34
+2026-02-13 15:38:36,420 - backend.api.article_routes - INFO - [文章存储成功] 文章已成功添加到数据库 - ID: 1, 用户: 朱欣悦
+2026-02-13 15:38:45,667 - backend.utils.db_core - INFO - [db_users] 找到用户 石皓文 的密码哈希，开始验证
+2026-02-13 15:38:45,667 - backend.utils.db_core - INFO - [db_users] 密码哈希: {"version": 2, "mode": "aes_gc...
+2026-02-13 15:38:45,667 - backend.utils.db_core - INFO - 密码验证 - 版本: 2
+2026-02-13 15:38:45,668 - backend.utils.db_core - INFO - 使用高级加密验证方法
+2026-02-13 15:38:45,668 - backend.utils.db_core - INFO - 使用AES-GCM加密模式验证
+2026-02-13 15:38:45,668 - backend.utils.db_core - INFO - AES-GCM解密验证结果: True
+2026-02-13 15:38:45,668 - auth_routes - INFO - User 石皓文 logged in successfully
+2026-02-13 15:38:47,007 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-02-13 15:38:47,008 - admin_routes - INFO - Pending articles requested by admin: 石皓文, page: 1
+2026-02-13 15:38:47,333 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-02-13 15:38:47,334 - admin_routes - INFO - Pending articles requested by admin: 石皓文, page: 1
+2026-02-13 15:38:47,344 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-02-13 15:38:47,344 - backend.api.article_routes - INFO - [文章举报] 获取文章举报信息 - 文章ID: 1, 用户: 石皓文
+2026-02-13 15:38:47,345 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-13 15:38:47,345 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-13 15:38:47,345 - backend.api.article_routes - INFO - [文章举报成功] 文章 1 有 0 条举报
+2026-02-13 15:38:47,393 - backend.api.article_routes - INFO - [文章详情] 获取文章详情 - ID: 1
+2026-02-13 15:38:47,394 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-13 15:38:47,394 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-13 15:38:47,394 - backend.api.article_routes - INFO - [文章详情成功] 返回文章详情 - ID: 1, 标题: 胆囊结石反复疼痛，纠结要不要手术，求外科病友真实建议！
+2026-02-13 15:38:48,860 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-02-13 15:38:48,863 - backend.utils.db_articles - INFO - 成功更新文章状态: 1，状态: approved
+2026-02-13 15:38:48,863 - admin_routes - INFO - Article audited: 1 by admin: 石皓文, status: approved
+2026-02-13 15:38:51,604 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-02-13 15:38:51,605 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-13 15:38:51,605 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-13 15:38:51,605 - backend.api.article_routes - INFO - [文章列表成功] 返回 1 篇文章，总计 1 篇
+2026-02-13 15:38:53,041 - backend.api.article_routes - INFO - [文章详情] 获取文章详情 - ID: 1
+2026-02-13 15:38:53,042 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-13 15:38:53,042 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-13 15:38:53,042 - backend.api.article_routes - INFO - [文章详情成功] 返回文章详情 - ID: 1, 标题: 胆囊结石反复疼痛，纠结要不要手术，求外科病友真实建议！
+2026-02-13 15:38:53,043 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 1
+2026-02-13 15:38:53,043 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-13 15:38:53,044 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-13 15:38:53,044 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-13 15:38:53,044 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-13 15:38:53,044 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-13 15:38:53,045 - comment_routes - INFO - [获取评论成功] 文章ID: 1, 评论数量: 0
+2026-02-13 15:38:53,096 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-02-13 15:38:53,097 - follow_routes - INFO - 检查关注状态 - 关注者: 石皓文, 被关注者: 朱欣悦
+2026-02-13 15:38:53,098 - follow_routes - INFO - 关注状态检查结果: False
+2026-02-14 01:16:17,236 - backend.utils.db_core - INFO - [db_users] 找到用户 洪汉博 的密码哈希，开始验证
+2026-02-14 01:16:17,237 - backend.utils.db_core - INFO - [db_users] 密码哈希: {"version": 2, "mode": "aes_gc...
+2026-02-14 01:16:17,237 - backend.utils.db_core - INFO - 密码验证 - 版本: 2
+2026-02-14 01:16:17,237 - backend.utils.db_core - INFO - 使用高级加密验证方法
+2026-02-14 01:16:17,237 - backend.utils.db_core - INFO - 使用AES-GCM加密模式验证
+2026-02-14 01:16:17,237 - backend.utils.db_core - INFO - AES-GCM解密验证结果: True
+2026-02-14 01:16:17,237 - auth_routes - INFO - User 洪汉博 logged in successfully
+2026-02-14 01:16:51,508 - backend.utils.db_core - INFO - [db_users] 找到用户 陈宇轩 的密码哈希，开始验证
+2026-02-14 01:16:51,509 - backend.utils.db_core - INFO - [db_users] 密码哈希: {"version": 2, "mode": "aes_gc...
+2026-02-14 01:16:51,509 - backend.utils.db_core - INFO - 密码验证 - 版本: 2
+2026-02-14 01:16:51,509 - backend.utils.db_core - INFO - 使用高级加密验证方法
+2026-02-14 01:16:51,509 - backend.utils.db_core - INFO - 使用AES-GCM加密模式验证
+2026-02-14 01:16:51,509 - backend.utils.db_core - INFO - AES-GCM解密验证结果: True
+2026-02-14 01:16:51,509 - auth_routes - INFO - User 陈宇轩 logged in successfully
+2026-02-14 01:17:04,231 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-02-14 01:17:04,232 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:17:04,232 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:17:04,232 - backend.api.article_routes - INFO - [文章列表成功] 返回 1 篇文章，总计 1 篇
+2026-02-14 01:17:08,556 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 1
+2026-02-14 01:17:08,557 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:17:08,557 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:17:08,558 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:17:08,558 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:17:08,558 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-14 01:17:08,559 - comment_routes - INFO - [获取评论成功] 文章ID: 1, 评论数量: 0
+2026-02-14 01:17:08,559 - backend.api.article_routes - INFO - [文章详情] 获取文章详情 - ID: 1
+2026-02-14 01:17:08,560 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:17:08,560 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:17:08,561 - backend.api.article_routes - INFO - [文章详情成功] 返回文章详情 - ID: 1, 标题: 胆囊结石反复疼痛，纠结要不要手术，求外科病友真实建议！
+2026-02-14 01:17:08,610 - backend.utils.auth - INFO - 用户认证成功: 陈宇轩, 角色: 使用者
+2026-02-14 01:17:08,610 - follow_routes - INFO - 检查关注状态 - 关注者: 陈宇轩, 被关注者: 朱欣悦
+2026-02-14 01:17:08,610 - follow_routes - INFO - 关注状态检查结果: False
+2026-02-14 01:17:52,258 - backend.api.deepseek - ERROR - API请求失败: 无权访问 Deepseek 分组 (request id: 20260214011752143428549SyAnzrZH) (状态码: 403)
+2026-02-14 01:17:52,258 - backend.api.deepseek - WARNING - 请求失败 (尝试 1/3)，1秒后重试: API请求失败: 无权访问 Deepseek 分组 (request id: 20260214011752143428549SyAnzrZH)
+2026-02-14 01:17:54,008 - backend.api.deepseek - ERROR - API请求失败: 无权访问 Deepseek 分组 (request id: 20260214011753907890971qRX0AG7t) (状态码: 403)
+2026-02-14 01:17:54,008 - backend.api.deepseek - WARNING - 请求失败 (尝试 2/3)，2秒后重试: API请求失败: 无权访问 Deepseek 分组 (request id: 20260214011753907890971qRX0AG7t)
+2026-02-14 01:17:56,715 - backend.api.deepseek - ERROR - API请求失败: 无权访问 Deepseek 分组 (request id: 20260214011756605213544L3b6nkge) (状态码: 403)
+2026-02-14 01:17:56,716 - backend.api.deepseek - ERROR - 请求失败，已耗尽所有重试次数: API请求失败: 无权访问 Deepseek 分组 (request id: 20260214011756605213544L3b6nkge)
+2026-02-14 01:17:56,716 - backend.api.deepseek - ERROR - 生成响应失败: API请求失败: 无权访问 Deepseek 分组 (request id: 20260214011756605213544L3b6nkge)
+2026-02-14 01:17:56,716 - backend.main - ERROR - 生成响应失败: API请求失败: 无权访问 Deepseek 分组 (request id: 20260214011756605213544L3b6nkge)
+2026-02-14 01:20:39,588 - backend.utils.auth - INFO - 用户认证成功: 陈宇轩, 角色: 使用者
+2026-02-14 01:20:39,589 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:20:39,589 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:20:39,589 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:20:39,590 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:20:39,590 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-14 01:20:39,591 - comment_routes - INFO - [评论添加成功] 评论ID: 1, 用户: 陈宇轩, 文章ID: 1
+2026-02-14 01:20:39,607 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 1
+2026-02-14 01:20:39,608 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:20:39,608 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:20:39,608 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:20:39,608 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:20:39,609 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-14 01:20:39,609 - comment_routes - INFO - [获取评论成功] 文章ID: 1, 评论数量: 0
+2026-02-14 01:21:27,602 - backend.utils.auth - INFO - 用户认证成功: 洪汉博, 角色: 管理员
+2026-02-14 01:21:27,602 - admin_routes - INFO - Pending articles requested by admin: 洪汉博, page: 1
+2026-02-14 01:24:39,750 - backend.utils.auth - INFO - 用户认证成功: 陈宇轩, 角色: 使用者
+2026-02-14 01:24:39,750 - backend.api.article_routes - INFO - [文章点赞] 用户点赞文章 - 用户: 陈宇轩, 文章ID: 1
+2026-02-14 01:24:39,751 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:24:39,751 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:24:39,751 - backend.api.article_routes - INFO - [文章点赞成功] 文章ID: 1, 新点赞数: 1
+2026-02-14 01:24:41,222 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-02-14 01:24:41,223 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:24:41,223 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:24:41,224 - backend.api.article_routes - INFO - [文章列表成功] 返回 1 篇文章，总计 1 篇
+2026-02-14 01:24:43,143 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-02-14 01:24:43,144 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:24:43,144 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:24:43,145 - backend.api.article_routes - INFO - [文章列表成功] 返回 1 篇文章，总计 1 篇
+2026-02-14 01:26:30,682 - backend.utils.db_core - INFO - [db_users] 找到用户 石皓文 的密码哈希，开始验证
+2026-02-14 01:26:30,682 - backend.utils.db_core - INFO - [db_users] 密码哈希: {"version": 2, "mode": "aes_gc...
+2026-02-14 01:26:30,682 - backend.utils.db_core - INFO - 密码验证 - 版本: 2
+2026-02-14 01:26:30,682 - backend.utils.db_core - INFO - 使用高级加密验证方法
+2026-02-14 01:26:30,683 - backend.utils.db_core - INFO - 使用AES-GCM加密模式验证
+2026-02-14 01:26:30,683 - backend.utils.db_core - INFO - AES-GCM解密验证结果: True
+2026-02-14 01:26:30,683 - auth_routes - INFO - User 石皓文 logged in successfully
+2026-02-14 01:26:38,096 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-02-14 01:26:38,097 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:26:38,097 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:26:38,098 - backend.api.article_routes - INFO - [文章列表成功] 返回 1 篇文章，总计 1 篇
+2026-02-14 01:26:42,463 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 1
+2026-02-14 01:26:42,464 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:26:42,464 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:26:42,465 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:26:42,465 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:26:42,465 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-14 01:26:42,466 - comment_routes - INFO - [获取评论成功] 文章ID: 1, 评论数量: 0
+2026-02-14 01:26:42,466 - backend.api.article_routes - INFO - [文章详情] 获取文章详情 - ID: 1
+2026-02-14 01:26:42,467 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:26:42,467 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:26:42,468 - backend.api.article_routes - INFO - [文章详情成功] 返回文章详情 - ID: 1, 标题: 胆囊结石反复疼痛，纠结要不要手术，求外科病友真实建议！
+2026-02-14 01:26:42,540 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-02-14 01:26:42,540 - follow_routes - INFO - 检查关注状态 - 关注者: 石皓文, 被关注者: 朱欣悦
+2026-02-14 01:26:42,541 - follow_routes - INFO - 关注状态检查结果: False
+2026-02-14 01:26:53,297 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-02-14 01:26:53,298 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:26:53,298 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:26:53,299 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:26:53,299 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:26:53,299 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-14 01:26:53,300 - comment_routes - INFO - [评论添加成功] 评论ID: 2, 用户: 石皓文, 文章ID: 1
+2026-02-14 01:26:53,361 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 1
+2026-02-14 01:26:53,362 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:26:53,362 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:26:53,363 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:26:53,363 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:26:53,363 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-14 01:26:53,364 - comment_routes - INFO - [获取评论成功] 文章ID: 1, 评论数量: 0
+2026-02-14 01:27:10,359 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-02-14 01:27:10,360 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:27:10,360 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:27:10,361 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:27:10,361 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:27:10,361 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-14 01:27:10,363 - comment_routes - INFO - [评论添加成功] 评论ID: 3, 用户: 石皓文, 文章ID: 1
+2026-02-14 01:27:10,434 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 1
+2026-02-14 01:27:10,434 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:27:10,434 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:27:10,435 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:27:10,435 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:27:10,435 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-14 01:27:10,436 - comment_routes - INFO - [获取评论成功] 文章ID: 1, 评论数量: 0
+2026-02-14 01:27:15,505 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-02-14 01:27:15,508 - lock_manager - INFO - [lock_manager] 用户 石皓文 成功获取锁 account_audit_lock
+2026-02-14 01:27:15,509 - admin_routes - INFO - All users requested by admin: 石皓文, page: 1
+2026-02-14 01:27:17,408 - backend.utils.auth - INFO - 用户认证成功: 陈宇轩, 角色: 使用者
+2026-02-14 01:27:17,408 - backend.api.article_routes - INFO - [文章提交] 收到新的文章提交请求 - 用户名: 陈宇轩, 角色: 使用者
+2026-02-14 01:27:17,408 - backend.api.article_routes - INFO - [文章提交] 文章信息 - 标题: '情人节心里不得劲怎么办...', 长度: 11, 内容长度: 31, 分类: 心理科
+2026-02-14 01:27:17,409 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:27:17,409 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:27:17,409 - backend.api.article_routes - INFO - [文章存储] 准备添加文章到数据库 - 用户: 陈宇轩
+2026-02-14 01:27:17,409 - backend.utils.db_articles - INFO - [DB操作] 开始添加文章 - 作者: 陈宇轩, 标题: '情人节心里不得劲怎么办...', 分类: 心理科
+2026-02-14 01:27:17,410 - backend.utils.db_articles - INFO - [DB操作成功] 文章已成功添加 - ID: 2, 作者ID: 7
+2026-02-14 01:27:17,410 - backend.api.article_routes - INFO - [文章存储成功] 文章已成功添加到数据库 - ID: 2, 用户: 陈宇轩
+2026-02-14 01:27:17,412 - backend.utils.auth - INFO - 用户认证成功: 洪汉博, 角色: 管理员
+2026-02-14 01:27:17,413 - admin_routes - INFO - Pending articles requested by admin: 洪汉博, page: 1
+2026-02-14 01:27:17,424 - backend.utils.auth - INFO - 用户认证成功: 洪汉博, 角色: 管理员
+2026-02-14 01:27:17,425 - admin_routes - INFO - Pending articles requested by admin: 洪汉博, page: 1
+2026-02-14 01:27:17,639 - backend.utils.auth - INFO - 用户认证成功: 洪汉博, 角色: 管理员
+2026-02-14 01:27:17,640 - backend.utils.auth - INFO - 用户认证成功: 洪汉博, 角色: 管理员
+2026-02-14 01:27:17,641 - admin_routes - INFO - Pending articles requested by admin: 洪汉博, page: 1
+2026-02-14 01:27:17,641 - backend.api.article_routes - INFO - [文章举报] 获取文章举报信息 - 文章ID: 2, 用户: 洪汉博
+2026-02-14 01:27:17,642 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:27:17,642 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:27:17,643 - backend.api.article_routes - INFO - [文章举报成功] 文章 2 有 0 条举报
+2026-02-14 01:27:17,724 - backend.api.article_routes - INFO - [文章详情] 获取文章详情 - ID: 2
+2026-02-14 01:27:17,725 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:27:17,725 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:27:17,726 - backend.api.article_routes - INFO - [文章详情成功] 返回文章详情 - ID: 2, 标题: 情人节心里不得劲怎么办
+2026-02-14 01:27:20,527 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-02-14 01:27:20,529 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:27:20,529 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:27:20,530 - backend.api.article_routes - INFO - [文章列表成功] 返回 1 篇文章，总计 1 篇
+2026-02-14 01:27:23,107 - backend.utils.auth - INFO - 用户认证成功: 洪汉博, 角色: 管理员
+2026-02-14 01:27:23,110 - backend.utils.db_articles - INFO - 成功更新文章状态: 2，状态: approved
+2026-02-14 01:27:23,110 - admin_routes - INFO - Article audited: 2 by admin: 洪汉博, status: approved
+2026-02-14 01:27:31,840 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-02-14 01:27:31,841 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:27:31,842 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:27:31,842 - backend.api.article_routes - INFO - [文章列表成功] 返回 2 篇文章，总计 2 篇
+2026-02-14 01:27:35,249 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-02-14 01:27:35,249 - admin_routes - INFO - Pending articles requested by admin: 石皓文, page: 1
+2026-02-14 01:27:41,485 - backend.api.article_routes - INFO - [文章详情] 获取文章详情 - ID: 2
+2026-02-14 01:27:41,486 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:27:41,486 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:27:41,486 - backend.api.article_routes - INFO - [文章详情成功] 返回文章详情 - ID: 2, 标题: 情人节心里不得劲怎么办
+2026-02-14 01:27:41,487 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 2
+2026-02-14 01:27:41,488 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:27:41,488 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:27:41,489 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:27:41,489 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:27:41,489 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-14 01:27:41,490 - comment_routes - INFO - [获取评论成功] 文章ID: 2, 评论数量: 0
+2026-02-14 01:27:58,270 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-02-14 01:27:58,273 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:27:58,273 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:27:58,273 - backend.api.article_routes - INFO - [文章列表成功] 返回 2 篇文章，总计 2 篇
+2026-02-14 01:27:59,172 - backend.api.article_routes - INFO - [文章详情] 获取文章详情 - ID: 1
+2026-02-14 01:27:59,173 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:27:59,173 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:27:59,173 - backend.api.article_routes - INFO - [文章详情成功] 返回文章详情 - ID: 1, 标题: 胆囊结石反复疼痛，纠结要不要手术，求外科病友真实建议！
+2026-02-14 01:27:59,175 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 1
+2026-02-14 01:27:59,176 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:27:59,176 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:27:59,177 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:27:59,177 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:27:59,177 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-14 01:27:59,178 - comment_routes - INFO - [获取评论成功] 文章ID: 1, 评论数量: 0
+2026-02-14 01:27:59,230 - backend.utils.auth - INFO - 用户认证成功: 陈宇轩, 角色: 使用者
+2026-02-14 01:27:59,230 - follow_routes - INFO - 检查关注状态 - 关注者: 陈宇轩, 被关注者: 朱欣悦
+2026-02-14 01:27:59,231 - follow_routes - INFO - 关注状态检查结果: False
+2026-02-14 01:28:01,317 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-02-14 01:28:01,318 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:28:01,318 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:28:01,318 - backend.api.article_routes - INFO - [文章列表成功] 返回 2 篇文章，总计 2 篇
+2026-02-14 01:28:02,481 - backend.api.article_routes - INFO - [文章详情] 获取文章详情 - ID: 2
+2026-02-14 01:28:02,482 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:28:02,482 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:28:02,484 - backend.api.article_routes - INFO - [文章详情成功] 返回文章详情 - ID: 2, 标题: 情人节心里不得劲怎么办
+2026-02-14 01:28:02,485 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 2
+2026-02-14 01:28:02,485 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:28:02,485 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:28:02,486 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 01:28:02,486 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 01:28:02,486 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-14 01:28:02,487 - comment_routes - INFO - [获取评论成功] 文章ID: 2, 评论数量: 0
+2026-02-14 01:30:16,212 - backend.api.deepseek - ERROR - API请求失败: 无权访问 Deepseek 分组 (request id: 20260214013016943971507upCFhZz) (状态码: 403)
+2026-02-14 01:30:16,212 - backend.api.deepseek - WARNING - 请求失败 (尝试 1/3)，1秒后重试: API请求失败: 无权访问 Deepseek 分组 (request id: 20260214013016943971507upCFhZz)
+2026-02-14 01:30:18,067 - backend.api.deepseek - ERROR - API请求失败: 无权访问 Deepseek 分组 (request id: 20260214013017951066323aeu9vKj8) (状态码: 403)
+2026-02-14 01:30:18,067 - backend.api.deepseek - WARNING - 请求失败 (尝试 2/3)，2秒后重试: API请求失败: 无权访问 Deepseek 分组 (request id: 20260214013017951066323aeu9vKj8)
+2026-02-14 01:30:20,810 - backend.api.deepseek - ERROR - API请求失败: 无权访问 Deepseek 分组 (request id: 20260214013020711564192iU08ORbr) (状态码: 403)
+2026-02-14 01:30:20,810 - backend.api.deepseek - ERROR - 请求失败，已耗尽所有重试次数: API请求失败: 无权访问 Deepseek 分组 (request id: 20260214013020711564192iU08ORbr)
+2026-02-14 01:30:20,810 - backend.api.deepseek - ERROR - 生成响应失败: API请求失败: 无权访问 Deepseek 分组 (request id: 20260214013020711564192iU08ORbr)
+2026-02-14 01:30:20,810 - backend.main - ERROR - 生成响应失败: API请求失败: 无权访问 Deepseek 分组 (request id: 20260214013020711564192iU08ORbr)
+2026-02-14 02:32:26,060 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 1
+2026-02-14 02:32:26,061 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 02:32:26,061 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 02:32:26,062 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 02:32:26,062 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 02:32:26,062 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-14 02:32:26,063 - comment_routes - INFO - [获取评论成功] 文章ID: 1, 评论数量: 0
+2026-02-14 02:32:26,063 - backend.api.article_routes - INFO - [文章详情] 获取文章详情 - ID: 1
+2026-02-14 02:32:26,064 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 02:32:26,064 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 02:32:26,065 - backend.api.article_routes - INFO - [文章详情成功] 返回文章详情 - ID: 1, 标题: 胆囊结石反复疼痛，纠结要不要手术，求外科病友真实建议！
+2026-02-14 02:32:26,131 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-02-14 02:32:26,132 - follow_routes - INFO - 检查关注状态 - 关注者: 石皓文, 被关注者: 朱欣悦
+2026-02-14 02:32:26,132 - follow_routes - INFO - 关注状态检查结果: False
+2026-02-14 02:32:27,965 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-02-14 02:32:27,966 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 02:32:27,966 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 02:32:27,966 - backend.api.article_routes - INFO - [文章列表成功] 返回 2 篇文章，总计 2 篇
+2026-02-14 02:32:29,994 - backend.api.article_routes - INFO - [文章详情] 获取文章详情 - ID: 2
+2026-02-14 02:32:29,995 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 02:32:29,995 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 02:32:29,996 - backend.api.article_routes - INFO - [文章详情成功] 返回文章详情 - ID: 2, 标题: 情人节心里不得劲怎么办
+2026-02-14 02:32:29,998 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 2
+2026-02-14 02:32:29,998 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 02:32:29,999 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 02:32:29,999 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 02:32:29,999 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 02:32:29,999 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-14 02:32:30,000 - comment_routes - INFO - [获取评论成功] 文章ID: 2, 评论数量: 0
+2026-02-14 02:32:30,058 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-02-14 02:32:30,058 - follow_routes - INFO - 检查关注状态 - 关注者: 石皓文, 被关注者: 陈宇轩
+2026-02-14 02:32:30,058 - follow_routes - INFO - 关注状态检查结果: False
+2026-02-14 02:33:31,792 - backend.utils.auth - INFO - 用户认证成功: 石皓文, 角色: 管理员
+2026-02-14 02:33:31,793 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 02:33:31,793 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 02:33:31,794 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 02:33:31,794 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 02:33:31,794 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-14 02:33:31,795 - comment_routes - INFO - [评论添加成功] 评论ID: 4, 用户: 石皓文, 文章ID: 2
+2026-02-14 02:33:31,854 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 2
+2026-02-14 02:33:31,855 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 02:33:31,855 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 02:33:31,856 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 02:33:31,856 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 02:33:31,856 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-14 02:33:31,857 - comment_routes - INFO - [获取评论成功] 文章ID: 2, 评论数量: 0
+2026-02-14 02:33:39,725 - backend.api.article_routes - INFO - [文章详情] 获取文章详情 - ID: 1
+2026-02-14 02:33:39,727 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 02:33:39,727 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 02:33:39,728 - backend.api.article_routes - INFO - [文章详情成功] 返回文章详情 - ID: 1, 标题: 胆囊结石反复疼痛，纠结要不要手术，求外科病友真实建议！
+2026-02-14 11:41:53,566 - backend.utils.db_core - INFO - [db_users] 找到用户 张心泽 的密码哈希，开始验证
+2026-02-14 11:41:53,566 - backend.utils.db_core - INFO - [db_users] 密码哈希: {"version": 2, "mode": "aes_gc...
+2026-02-14 11:41:53,566 - backend.utils.db_core - INFO - 密码验证 - 版本: 2
+2026-02-14 11:41:53,566 - backend.utils.db_core - INFO - 使用高级加密验证方法
+2026-02-14 11:41:53,567 - backend.utils.db_core - INFO - 使用AES-GCM加密模式验证
+2026-02-14 11:41:53,567 - backend.utils.db_core - INFO - AES-GCM解密验证结果: True
+2026-02-14 11:41:53,567 - auth_routes - INFO - User 张心泽 logged in successfully
+2026-02-14 11:42:09,409 - backend.api.article_routes - INFO - [文章列表] 获取文章列表 - 页码: 1, 每页: 10, 分类: None, 状态: approved, 搜索: None
+2026-02-14 11:42:09,410 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 11:42:09,410 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 11:42:09,411 - backend.api.article_routes - INFO - [文章列表成功] 返回 2 篇文章，总计 2 篇
+2026-02-14 11:42:11,810 - backend.api.article_routes - INFO - [文章详情] 获取文章详情 - ID: 2
+2026-02-14 11:42:11,811 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 11:42:11,811 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 11:42:11,812 - backend.api.article_routes - INFO - [文章详情成功] 返回文章详情 - ID: 2, 标题: 情人节心里不得劲怎么办
+2026-02-14 11:42:11,820 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 2
+2026-02-14 11:42:11,821 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 11:42:11,821 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 11:42:11,822 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 11:42:11,822 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 11:42:11,822 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-14 11:42:11,822 - comment_routes - INFO - [获取评论成功] 文章ID: 2, 评论数量: 0
+2026-02-14 11:42:11,869 - backend.utils.auth - INFO - 用户认证成功: 张心泽, 角色: 管理员
+2026-02-14 11:42:11,869 - follow_routes - INFO - 检查关注状态 - 关注者: 张心泽, 被关注者: 陈宇轩
+2026-02-14 11:42:11,869 - follow_routes - INFO - 关注状态检查结果: False
+2026-02-14 11:42:42,265 - backend.utils.auth - INFO - 用户认证成功: 张心泽, 角色: 管理员
+2026-02-14 11:42:42,266 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 11:42:42,267 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 11:42:42,267 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 11:42:42,267 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 11:42:42,267 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-14 11:42:42,269 - comment_routes - INFO - [评论添加成功] 评论ID: 5, 用户: 张心泽, 文章ID: 2
+2026-02-14 11:42:42,321 - comment_routes - INFO - [获取评论] 获取文章评论 - 文章ID: 2
+2026-02-14 11:42:42,322 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 11:42:42,322 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 11:42:42,323 - backend.utils.db_core - INFO - 数据库初始化成功，文件路径: /app/database/forum.db
+2026-02-14 11:42:42,323 - backend.utils.db_core - INFO - 系统密钥加载成功
+2026-02-14 11:42:42,323 - backend.utils.db_core - INFO - [db_users] 初始化UserDatabase，使用的数据库路径: /app/database/forum.db
+2026-02-14 11:42:42,323 - comment_routes - INFO - [获取评论成功] 文章ID: 2, 评论数量: 0

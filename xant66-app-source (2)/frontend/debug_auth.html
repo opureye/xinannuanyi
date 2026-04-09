@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>认证调试</title>
+</head>
+<body>
+    <h1>认证状态调试</h1>
+    <div id="auth-info"></div>
+    
+    <script>
+        const authToken = sessionStorage.getItem('auth_token') || localStorage.getItem('auth_token');
+        const authInfo = document.getElementById('auth-info');
+        
+        if (authToken) {
+            authInfo.innerHTML = `
+                <p>Token存在: ${authToken.substring(0, 20)}...</p>
+                <button onclick="testAPI()">测试API</button>
+            `;
+        } else {
+            authInfo.innerHTML = '<p>未找到认证token</p>';
+        }
+        
+        async function testAPI() {
+            try {
+                const response = await fetch('http://127.0.0.1:8000/api/comments/pending', {
+                    headers: {
+                        'Authorization': `Bearer ${authToken}`
+                    }
+                });
+                const data = await response.json();
+                console.log('API响应:', data);
+                authInfo.innerHTML += `<p>API响应: ${JSON.stringify(data)}</p>`;
+            } catch (error) {
+                console.error('API错误:', error);
+                authInfo.innerHTML += `<p>API错误: ${error.message}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+/* 文章样式 */
+.article {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.article h1 {
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 文章元数据样式 */
+.article-meta {
+    color: #6c757d;
+    margin: 15px 0;
+    font-size: 0.95em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.article-meta::before {
+    content: "📅";
+    font-size: 1.1em;
+}
+
+/* 文章内容样式 */
+.article-content {
+    color: #495057;
+    font-size: 1.05em;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+.article-content p {
+    margin-bottom: 1.2em;
+    text-indent: 2em;
+    text-align: justify;
+}
+
+/* 交互按钮区域样式 */
+.interaction {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* 互动按钮样式 */
+.like-btn,
+.helpful-btn,
+.unhelpful-btn,
+.complain-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    background: rgba(42, 157, 143, 0.05);
+    transition: all 0.3s ease;
+}
+
+.like-btn:hover,
+.helpful-btn:hover,
+.unhelpful-btn:hover,
+.complain-btn:hover {
+    background: rgba(42, 157, 143, 0.15);
+    transform: translateY(-1px);
+}
+
+/* 审核相关样式 */
+.audit-controls {
+    margin-top: 40px;
+    padding: 25px;
+    background: rgba(248, 249, 250, 0.9);
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    backdrop-filter: blur(5px);
+}
+
+.audit-controls h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.audit-controls h3::before {
+    content: "📝";
+    font-size: 1.2em;
+}
+
+.audit-status {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    display: none;
+    animation: fadeIn 0.3s ease;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-approved {
+    background: rgba(223, 240, 216, 0.9);
+    color: #3c763d;
+}
+
+.status-rejected {
+    background: rgba(242, 222, 222, 0.9);
+    color: #a94442;
+}
+
+/* 举报信息样式 */
+.complaints-section {
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.complaints-section h3 {
+    color: #856404;
+    margin-top: 0;
+}
+
+.complaints-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.complaints-section li {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ffeaa7;
+}
+
+.complaints-section li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* 收藏卡片样式 */
+.collection-card {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(8px);
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collection-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* 收藏列表样式 */
+.collection-list {
+    list-style-type: disc;
+    list-style-position: inside;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.collection-list li {
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background: rgba(233, 196, 106, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.collection-list li:hover {
+    background: rgba(233, 196, 106, 0.2);
+    transform: translateX(5px);
+}
+
+.collection-list a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.collection-list a:hover {
+    color: #1E877A;
+    text-decoration: underline;
+}
+
+/* 帖子和收藏样式 */
+.posts,
+.collections {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(8px);
+    margin-bottom: 40px;
+}
+
+.collection-item,
+.post {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.collection-item:hover,
+.post:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.post h3,
+.collection-item h3 {
+    color: var(--primary);
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+}
+
+.post:hover h3,
+.collection-item:hover h3 {
+    color: #217D6D;
+}
+
+/* 表格样式 */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #E2E8F0;
+    padding: 12px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #F8FAFC;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #F8FAFC;
+}
+
+.data-table tr:hover {
+    background-color: #EFF6FF;
+}
+
+/* 表格响应式处理 */
+.table-container {
+    overflow-x: auto;
+}
+
+.data-table {
+    min-width: 400px;
+}
+
+/* 上传区域样式 */
+.upload-area {
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 3rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.upload-area:hover,
+.upload-area.drag-over {
+    border-color: var(--primary);
+    background-color: #f0f4ff;
+}
+
+.upload-area p {
+    margin: 0 0 1rem 0;
+    color: #666;
+    font-size: 1.1rem;
+    text-indent: 0;
+}
+
+/* 文件信息样式 */
+.file-info {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary);
+}
+
+.file-info .file-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.file-info .file-size {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+}

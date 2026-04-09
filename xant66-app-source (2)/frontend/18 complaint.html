@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>互助网-文章投诉</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="assets/font-awesome/css/all.min.css" rel="stylesheet">
+    <!-- 引用公共CSS文件 -->
+    <link rel="stylesheet" href="css/common_styles.css">
+    <link rel="stylesheet" href="css/complaint_styles.css">
+    <!-- 添加sdk_utils.js引用 -->
+    <script src="js/sdk_utils.js"></script>
+    <!-- 添加complaint_script.js引用 -->
+    <script src="js/complaint_script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="1 me.html" class="nav-btn">🏠 网站首页</a>
+        <a href="5 welcome.html" class="nav-btn">📷 互助论坛</a>
+        <a href="3 writing.html" class="nav-btn">✨ 帖子上传</a>
+        <a href="13 myspace.html" class="nav-btn">👤 个人主页</a>
+        <a href="4 login.html" class="nav-btn">🔑 重新登录</a>
+    </nav>
+    
+    <div class="complaint-form">
+        <h1>举报</h1>
+        <form action="#">
+            <div class="form-group">
+                <label for="author-name">举报的用户或文章</label>
+                <input type="text" id="author-name" name="author-name" required>
+                <span class="error-message"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="complaint-reason">举报理由</label>
+                <textarea id="complaint-reason" name="complaint-reason" rows="6" required></textarea>
+                <span class="error-message"></span>
+                <span class="form-hint">请详细描述举报原因，至少10个字符</span>
+            </div>
+            
+            <button type="submit" class="submit-btn">提交举报</button>
+        </form>
+    </div>
+    <script src="js/complaint_script.js"></script>
+    
+    <!-- 以模块方式加载AI侧边栏脚本 -->
+    <script type="module" src="./js/ai_sidebar.js"></script>
+</body>
+
+</html>
+    

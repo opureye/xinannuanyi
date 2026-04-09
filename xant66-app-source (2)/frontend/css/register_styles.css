@@ -1,0 +1,94 @@
+/* 引入公共样式 */
+@import url('common_styles.css');
+
+/* 注册页面特定样式 */
+body {
+    background: linear-gradient(135deg, rgba(42, 157, 143, 0.15), rgba(42, 157, 143, 0.25)),
+                url('../images/苍穹4.png') center/cover fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* 表单验证错误提示样式 */
+input:invalid {
+    border-color: #e74c3c;
+}
+
+input:valid {
+    border-color: rgba(42, 157, 143, 0.2);
+}
+
+/* 登录链接样式 */
+.login-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #495057;
+}
+
+.login-link a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: #1e7e6e;
+    text-decoration: underline;
+}
+
+/* 实名认证弹窗样式 */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: var(--glass-bg);
+    border-radius: 16px;
+    padding: 24px;
+    width: 90%;
+    max-width: 420px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+}
+
+.modal-tip {
+    color: #6c757d;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background: rgba(42, 157, 143, 0.1);
+    color: var(--secondary);
+    border: 1px solid rgba(42, 157, 143, 0.2);
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}

@@ -1,0 +1,206 @@
+/* 个人空间特有样式 */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 头部和个人信息样式 */
+.header {
+    text-align: center;
+    padding: 80px 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    margin: 80px 0 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.profile {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(8px);
+    margin-bottom: 40px;
+}
+
+.avatar {
+    width: 144px;
+    height: 144px;
+    border-radius: 50%;
+    border: 4px solid white;
+    object-fit: cover;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.05);
+}
+
+/* 标题样式 */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 3em;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: var(--secondary);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--primary);
+    border-left: 4px solid var(--accent);
+    padding-left: 20px;
+    margin: 40px 0;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+/* 按钮样式 */
+.contact {
+    color: var(--primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: rgba(42, 157, 143, 0.1);
+}
+
+.contact:hover {
+    background: rgba(42, 157, 143, 0.2);
+    transform: translateY(-3px);
+}
+
+.portfolio-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, var(--primary) 0%, #217D6D 100%);
+    color: var(--text-light) !important;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(42, 157, 143, 0.2);
+}
+
+.portfolio-link:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(42, 157, 143, 0.3);
+}
+
+/* 分割线样式 */
+.divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--accent) 50%, transparent 100%);
+    margin: 50px 0;
+}
+
+/* 导入通用样式 */
+@import url('common_styles.css');
+
+/* 用户空间页面特定样式 */
+/* 已在common_styles.css中定义main-container、header、profile、avatar、contact、portfolio-link、divider、posts、collections等样式 */
+
+/* 关注按钮样式 */
+.follow-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+}
+
+.follow-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.following {
+    background: #e74c3c !important;
+}
+
+/* 交互元素样式 */
+.likes-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    color: #666;
+}
+
+.helpful-badge {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #27ae60;
+    font-weight: 500;
+}
+
+.access-time {
+    font-size: 0.9em;
+    color: #999;
+    margin-top: 10px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 10px;
+    }
+    body {
+        background-attachment: scroll;
+    }
+    .header {
+        padding: 40px 20px;
+        margin: 60px 0 20px;
+    }
+    .profile,
+    .posts,
+    .collections {
+        padding: 30px 20px;
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    .nav-btn {
+        padding: 6px 15px;
+        font-size: 0.9em;
+    }
+    .achievements-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .achievements-list li {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .follow-btn {
+        width: 100%;
+        justify-content: center;
+        margin: 5px 0;
+    }
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+}

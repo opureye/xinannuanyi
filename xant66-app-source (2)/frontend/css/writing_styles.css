@@ -1,0 +1,188 @@
+/* 引入公共样式 */
+@import url('common_styles.css');
+
+/* 页面特定变量 - writing_styles.css有不同于common_styles的颜色方案 */
+:root {
+    --primary: #7C4DFF;
+    --secondary: #B39DDB;
+    --accent: #FFD740;
+    --text-light: #F5F5F5;
+    --text-dark: #212121;
+    --glass-bg: rgba(255, 255, 255, 0.9);
+}
+
+/* 页面特定样式 */
+body {
+    background: linear-gradient(rgba(25, 25, 35, 0.9), rgba(25, 25, 35, 0.9)),
+                url('../images/苍穹4.png') center/cover fixed;
+    font-family: '微软雅黑', 'Segoe UI', sans-serif;
+    color: var(--text-light);
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    backdrop-filter: blur(12px) brightness(1.1);
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 0 0 3rem;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    margin: 1.2rem auto;
+    border-radius: 2px;
+}
+
+#messageForm {
+    display: grid;
+    gap: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+input, textarea {
+    padding: 1.2rem 1.8rem;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    font-size: 1.1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--text-dark);
+}
+
+input::placeholder, textarea::placeholder {
+    color: #757575;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(124, 77, 255, 0.3);
+    background: white;
+}
+
+button {
+    padding: 1.2rem 2.4rem;
+    background: linear-gradient(135deg, var(--primary) 0%, #673AB7 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    justify-self: center;
+    width: 240px;
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, 
+        transparent 25%, 
+        rgba(255, 255, 255, 0.1) 50%, 
+        transparent 75%);
+    animation: shine 3s infinite;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(124, 77, 255, 0.4);
+}
+
+#messages {
+    display: grid;
+    gap: 2rem;
+}
+
+.message-card {
+    background: rgba(255, 255, 255, 0.97);
+    padding: 1.8rem;
+    border-radius: 16px;
+    color: var(--text-dark);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: cardEntrance 0.6s ease;
+    position: relative;
+    border-left: 4px solid var(--primary);
+}
+
+.message-card::before {
+    content: "💬";
+    position: absolute;
+    left: -15px;
+    top: 20px;
+    background: white;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.message-card strong {
+    color: var(--primary);
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.message-card time {
+    color: #616161;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.message-card p {
+    line-height: 1.6;
+    margin: 0;
+    padding-left: 1rem;
+    border-left: 2px solid var(--secondary);
+}
+
+@keyframes cardEntrance {
+    from { opacity: 0; transform: translateY(30px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes shine {
+    to {
+        transform: translate(50%, 50%) rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    .container {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+    h1 {
+        font-size: 2.2rem;
+    }
+    button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,10 @@
+fastapi==0.115.0
+uvicorn==0.32.0
+pydantic==2.9.2
+pydantic-settings==2.2.0
+PyJWT==2.9.0
+python-multipart==0.0.10
+requests==2.32.3
+python-dotenv==1.0.1
+tencentcloud-sdk-python==3.0.1017
+cryptography==46.0.6
