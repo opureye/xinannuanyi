@@ -32,6 +32,7 @@ body {
     margin-bottom: 30px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 12px;
 }
 
 .article h1 {
@@ -167,9 +168,9 @@ body {
 
 /* 文章导航控件样式 */
 .article-navigation {
-    background: #f8f9fa;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
+    background: #f8fbfc;
+    border: 1px solid #dbe6ed;
+    border-radius: 12px;
     padding: 15px;
     margin-bottom: 20px;
     display: flex;
@@ -191,7 +192,7 @@ body {
 }
 
 .nav-btn-small {
-    background: #007bff;
+    background: #0b7ad1;
     color: white;
     border: none;
     padding: 8px 16px;
@@ -202,7 +203,7 @@ body {
 }
 
 .nav-btn-small:hover {
-    background: #0056b3;
+    background: #0a68b1;
 }
 
 .nav-btn-small:disabled {

@@ -291,6 +291,39 @@
     min-width: 400px;
 }
 
+/* 通用模块容器：审核、管理、分类等页面可复用 */
+.module-panel {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 16px;
+    border: 1px solid rgba(42, 157, 143, 0.12);
+    box-shadow: var(--shadow-soft);
+    padding: 20px;
+}
+
+.module-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+
+.module-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+.soft-empty {
+    text-align: center;
+    border: 1px dashed rgba(42, 157, 143, 0.35);
+    border-radius: 12px;
+    padding: 26px 14px;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.72);
+}
+
 /* 上传区域样式 */
 .upload-area {
     border: 2px dashed #ccc;

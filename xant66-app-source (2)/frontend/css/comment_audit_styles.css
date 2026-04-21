@@ -1,18 +1,22 @@
+@import url('common_styles.css');
+
 /* 保留评论审核特有样式 */
 /* 评论审核特有样式 */
 .comment-container {
-    background: white;
-    padding: 8px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.92);
+    padding: 16px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(42, 157, 143, 0.1);
 }
 
 .comment-item {
-    border: 1px solid #e2e8f0;
+    border: 1px solid #dde7ed;
     padding: 16px;
-    border-radius: 8px;
+    border-radius: 12px;
     margin-bottom: 16px;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    background: #fff;
 }
 
 .comment-item:hover {

@@ -1,134 +1,206 @@
-// 搜索功能
-async function handleSearch(event) {
-    if (event.key === 'Enter') {
-        const searchTerm = event.target.value.toLowerCase().trim();
-        if (searchTerm) {
-            try {
-                // 显示加载状态
-                const articleList = document.querySelector('.article-list');
-                const originalContent = articleList.innerHTML;
-                articleList.innerHTML = '<div class="loading">正在搜索中...</div>';
-                
-                // 调用API进行搜索
-                const response = await fetch(`${window.location.origin}/api/articles/search`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${sessionStorage.getItem('auth_token')}`
-                    },
-                    body: JSON.stringify({ keyword: searchTerm })
-                });
-                
-                const data = await response.json();
-                
-                if (response.ok && data.status === "success") {
-                    // 清空列表
-                    articleList.innerHTML = '';
-                    
-                    if (data.results && data.results.length > 0) {
-                        // 添加搜索结果
-                        data.results.forEach(article => {
-                            const articleItem = document.createElement('div');
-                            articleItem.className = 'article-item';
-                            articleItem.innerHTML = `<a href="6 article.html?id=${article.id}">${article.title}</a>`;
-                            articleList.appendChild(articleItem);
-                        });
-                    } else {
-                        // 显示无结果提示
-                        articleList.innerHTML = '<div class="no-results">未找到匹配的文章</div>';
-                    }
-                } else {
-                    // 恢复原始内容
-                    articleList.innerHTML = originalContent;
-                    alert(data.message || '搜索失败，请稍后重试');
-                }
-            } catch (error) {
-                console.error('搜索失败:', error);
-                // 恢复原始内容
-                const articleList = document.querySelector('.article-list');
-                if (articleList) {
-                    articleList.innerHTML = '搜索过程中发生错误，请检查您的网络连接';
-                }
-            }
-        }
-    }
+import { initReloginButtons } from './auth.js';
+import { debounce, showNotification } from './utils.js';
+
+const state = {
+    articles: [],
+    displayArticles: [],
+    searchTerm: '',
+    sortBy: 'newest'
+};
+
+function formatDate(value) {
+    if (!value) return '发布时间未知';
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return String(value);
+    return date.toLocaleDateString('zh-CN', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+    });
 }
 
-// 加载文章列表
-async function loadArticleList() {
+function getArticleDate(article) {
+    return (
+        article.created_at ||
+        article.createdAt ||
+        article.updated_at ||
+        article.publish_time ||
+        ''
+    );
+}
+
+function getSnippet(article) {
+    const raw = article.content || article.summary || article.body || '';
+    const clean = String(raw).replace(/\s+/g, ' ').trim();
+    if (!clean) return '点击查看完整内容，了解更多互助经验。';
+    return clean.length > 80 ? `${clean.slice(0, 80)}...` : clean;
+}
+
+function createArticleNode(article) {
+    const articleItem = document.createElement('div');
+    articleItem.className = 'article-item';
+    const category = article.category || '未分类';
+    const dateText = formatDate(getArticleDate(article));
+    const author = article.author || article.nickname || article.user_name || '匿名用户';
+
+    articleItem.innerHTML = `
+        <a href="6 article.html?id=${article.id}">${article.title || '未命名帖子'}</a>
+        <div class="article-meta-row">
+            <span class="article-pill">${category}</span>
+            <span>作者：${author}</span>
+            <span>${dateText}</span>
+        </div>
+        <p class="article-snippet">${getSnippet(article)}</p>
+    `;
+    return articleItem;
+}
+
+function updateResultCount() {
+    const resultCount = document.getElementById('resultCount');
+    if (!resultCount) return;
+    const total = state.articles.length;
+    const current = state.displayArticles.length;
+    resultCount.textContent = `共 ${total} 篇，当前显示 ${current} 篇`;
+}
+
+function sortArticles(list) {
+    return [...list].sort((a, b) => {
+        if (state.sortBy === 'title') {
+            return String(a.title || '').localeCompare(String(b.title || ''), 'zh-CN');
+        }
+
+        const aTime = new Date(getArticleDate(a)).getTime() || 0;
+        const bTime = new Date(getArticleDate(b)).getTime() || 0;
+        return state.sortBy === 'oldest' ? aTime - bTime : bTime - aTime;
+    });
+}
+
+function renderArticles() {
+    const articleList = document.querySelector('.article-list');
+    if (!articleList) return;
+    articleList.innerHTML = '';
+
+    if (!state.displayArticles.length) {
+        articleList.innerHTML = '<div class="no-results">没有找到符合条件的帖子</div>';
+        updateResultCount();
+        return;
+    }
+
+    state.displayArticles.forEach((article) => {
+        articleList.appendChild(createArticleNode(article));
+    });
+    updateResultCount();
+}
+
+function applyFilters() {
+    const keyword = state.searchTerm.toLowerCase();
+    const filtered = state.articles.filter((article) => {
+        if (!keyword) return true;
+        const text = `${article.title || ''} ${article.content || ''} ${article.category || ''}`.toLowerCase();
+        return text.includes(keyword);
+    });
+
+    state.displayArticles = sortArticles(filtered);
+    renderArticles();
+}
+
+async function handleServerSearch() {
+    if (!state.searchTerm) {
+        applyFilters();
+        return;
+    }
+
+    const articleList = document.querySelector('.article-list');
+    if (articleList) {
+        articleList.innerHTML = '<div class="loading">正在进行深度搜索...</div>';
+    }
+
+    const token = sessionStorage.getItem('auth_token');
+    const headers = { 'Content-Type': 'application/json' };
+    if (token) headers.Authorization = `Bearer ${token}`;
+
     try {
-        console.log('开始加载文章列表...');
-        const articleList = document.querySelector('.article-list');
-        
-        if (!articleList) {
-            console.error('未找到 .article-list 元素');
+        const response = await fetch(`${window.location.origin}/api/articles/search`, {
+            method: 'POST',
+            headers,
+            body: JSON.stringify({ keyword: state.searchTerm })
+        });
+        const data = await response.json();
+        if (response.ok && data.status === 'success') {
+            state.displayArticles = sortArticles(data.results || []);
+            renderArticles();
+            showNotification(`搜索完成，找到 ${state.displayArticles.length} 篇相关帖子`, 'success');
             return;
         }
-        
-        // 显示加载状态
-        articleList.innerHTML = '<div class="loading">正在加载文章列表...</div>';
-        
-        // 调用API获取文章列表 - 只获取已审核通过的文章
-        console.log('发送API请求到: /api/articles');
+        showNotification(data.message || '搜索失败，已展示本地筛选结果', 'error');
+    } catch (error) {
+        console.error('搜索失败:', error);
+        showNotification('搜索请求失败，已展示本地筛选结果', 'error');
+    }
+
+    applyFilters();
+}
+
+async function loadArticleList() {
+    const articleList = document.querySelector('.article-list');
+    if (!articleList) return;
+
+    articleList.innerHTML = '<div class="loading">正在加载文章列表...</div>';
+    try {
         const response = await fetch(`${window.location.origin}/api/articles`);
-        
-        console.log('API响应状态:', response.status, response.statusText);
-        
         if (!response.ok) {
             throw new Error(`HTTP错误: ${response.status} ${response.statusText}`);
         }
-        
         const data = await response.json();
-        console.log('API响应数据:', data);
-        
-        if (data.status === "success") {
-            // 清空列表
-            articleList.innerHTML = '';
-            
-            if (data.articles && data.articles.length > 0) {
-                console.log(`找到 ${data.articles.length} 篇文章`);
-                // 添加文章列表
-                data.articles.forEach(article => {
-                    const articleItem = document.createElement('div');
-                    articleItem.className = 'article-item';
-                    articleItem.innerHTML = `<a href="6 article.html?id=${article.id}">${article.title}</a>`;
-                    articleList.appendChild(articleItem);
-                });
-                console.log('文章列表加载完成');
-            } else {
-                console.log('没有找到文章');
-                // 显示无文章提示
-                articleList.innerHTML = '<div class="no-results">暂无文章</div>';
-            }
-        } else {
-            console.error('API返回错误状态:', data.status);
-            articleList.innerHTML = '加载文章列表失败';
+        if (data.status !== 'success') {
+            throw new Error('接口返回状态异常');
         }
+        state.articles = data.articles || [];
+        applyFilters();
     } catch (error) {
         console.error('加载文章列表失败:', error);
-        const articleList = document.querySelector('.article-list');
-        if (articleList) {
-            articleList.innerHTML = `加载过程中发生错误: ${error.message}`;
-        }
+        articleList.innerHTML = '<div class="no-results">加载失败，请刷新后重试</div>';
+        showNotification('文章列表加载失败，请检查网络后重试', 'error');
     }
 }
 
-// 页面加载完成后执行
-// 导入退出登录功能
-import { initReloginButtons } from './auth.js';
-
-window.addEventListener('DOMContentLoaded', function() {
-    // 初始化重新登录按钮的事件处理
+window.addEventListener('DOMContentLoaded', () => {
     initReloginButtons();
-    
-    // 获取搜索框
+
     const searchInput = document.getElementById('searchInput');
-    
+    const sortSelect = document.getElementById('sortSelect');
+    const clearSearchBtn = document.getElementById('clearSearchBtn');
+
     if (searchInput) {
-        // 添加搜索事件监听
-        searchInput.addEventListener('keypress', handleSearch);
+        const onTyping = debounce((event) => {
+            state.searchTerm = event.target.value.trim();
+            applyFilters();
+        }, 200);
+        searchInput.addEventListener('input', onTyping);
+        searchInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                state.searchTerm = event.target.value.trim();
+                handleServerSearch();
+            }
+        });
     }
-    
-    // 加载文章列表
+
+    if (sortSelect) {
+        sortSelect.addEventListener('change', (event) => {
+            state.sortBy = event.target.value;
+            applyFilters();
+        });
+    }
+
+    if (clearSearchBtn) {
+        clearSearchBtn.addEventListener('click', () => {
+            state.searchTerm = '';
+            if (searchInput) searchInput.value = '';
+            applyFilters();
+            showNotification('已清空搜索条件');
+        });
+    }
+
     loadArticleList();
 });

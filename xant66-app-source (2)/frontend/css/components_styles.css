@@ -2,13 +2,14 @@
 input,
 textarea {
     width: 100%;
-    padding: 1.1rem 1.5rem;
+    padding: 0.95rem 1.1rem;
     border: 2px solid rgba(42, 157, 143, 0.2);
     border-radius: 12px;
     box-sizing: border-box;
     transition: all 0.3s ease;
     font-size: 1em;
     background: rgba(255, 255, 255, 0.9);
+    min-height: 44px;
 }
 
 input:focus,
@@ -50,6 +51,7 @@ button,
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    min-height: 42px;
 }
 
 button:hover,
@@ -57,6 +59,29 @@ button:hover,
     background: linear-gradient(135deg, #217D6D, #1a73e8);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(42, 157, 143, 0.3);
+}
+
+button:focus-visible,
+.btn:focus-visible,
+.audit-btn:focus-visible,
+.follow-btn:focus-visible {
+    outline: none;
+    box-shadow: var(--ring);
+}
+
+button:active,
+.btn:active {
+    transform: translateY(0);
+}
+
+button:disabled,
+.btn:disabled,
+button[disabled],
+.btn[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none;
+    box-shadow: none;
 }
 
 /* 审核按钮样式 */
@@ -322,16 +347,17 @@ button:hover,
 
 /* 卡片组件样式 */
 .card {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    background: var(--surface);
+    border-radius: 14px;
+    box-shadow: var(--shadow-soft);
     padding: 20px;
     transition: all 0.3s ease;
+    border: 1px solid rgba(42, 157, 143, 0.08);
 }
 
 .card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-medium);
 }
 
 /* 头像样式 */
