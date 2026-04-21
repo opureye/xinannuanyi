@@ -12,6 +12,10 @@ body {
                 url('../images/苍穹4.png') center/cover fixed;
 }
 
+.myspace-page {
+    padding-top: 8px;
+}
+
 /* 成就区域样式 */
 .achievements {
     padding: 40px 32px;
@@ -25,6 +29,10 @@ body {
 .action-buttons {
     text-align: center;
     margin-bottom: 40px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* 个人信息弹窗样式 */

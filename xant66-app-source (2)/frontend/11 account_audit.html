@@ -39,7 +39,7 @@
         <p class="text-gray-600 mb-8">管理和审核网站所有用户账号，包括查看、搜索和强制注销功能。</p>
         
         <!-- 搜索区域 -->
-        <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+        <div class="module-panel mb-8">
             <div class="flex flex-col md:flex-row gap-4">
                 <input
                     type="text"
@@ -57,7 +57,7 @@
         </div>
         
         <!-- 用户列表 -->
-        <div class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="module-panel">
             <h3 class="text-2xl font-bold text-gray-800 mb-4">用户列表</h3>
             <div class="overflow-x-auto">
                 <table id="user-table" class="min-w-full bg-white border border-gray-200">
@@ -75,7 +75,7 @@
                     <tbody>
                         <!-- 用户列表将通过JavaScript动态加载 -->
                         <tr>
-                            <td colspan="7" class="text-center py-10">加载中...</td>
+                            <td colspan="7" class="soft-empty">加载中...</td>
                         </tr>
                     </tbody>
                 </table>
@@ -84,6 +84,7 @@
     </main>
         <!-- 添加AI侧边栏模块 -->
     <script src="./js/ai_sidebar.js" type="module"></script>
+    <script type="module" src="js/ux_enhance.js"></script>
 </body>
 
 </html>

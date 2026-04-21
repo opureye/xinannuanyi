@@ -7,27 +7,29 @@
 /* 可以添加页面特有的样式 */
 .dashboard-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
     margin: 40px 0;
 }
 
 .dashboard-card {
     background: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease;
-    text-align: center;
+    padding: 24px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    border: 1px solid rgba(42, 157, 143, 0.1);
 }
 
 .dashboard-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
 }
 
 .dashboard-card h3 {
     color: var(--secondary);
-    margin-bottom: 15px;
+    margin-bottom: 8px;
 }
 
 .dashboard-card .count {

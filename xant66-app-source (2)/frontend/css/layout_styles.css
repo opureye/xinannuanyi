@@ -1,21 +1,41 @@
 /* 统一导航栏样式 */
 .navbar {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1000;
     display: flex;
-    gap: 15px;
-    padding: 12px 20px;
+    gap: 10px;
+    padding: 10px 14px;
     background: var(--glass-bg);
-    border-radius: 50px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-radius: 999px;
+    box-shadow: var(--shadow-soft);
     backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    max-width: calc(100% - 24px);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* 审核类页面常把导航放进header，改为文档流布局避免遮挡 */
+header .navbar {
+    position: static;
+    transform: none;
+    left: auto;
+    top: auto;
+    max-width: none;
+    width: auto;
+}
+
+/* 含固定导航的页面自动让出顶部空间（由ux_enhance动态设置nav高度） */
+body.has-fixed-nav {
+    padding-top: var(--nav-offset, 108px);
 }
 
 .nav-btn {
-    padding: 8px 20px;
-    border-radius: 25px;
+    padding: 7px 14px;
+    border-radius: 999px;
     background: rgba(42, 157, 143, 0.1);
     color: var(--secondary);
     text-decoration: none;
@@ -23,12 +43,33 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    font-weight: 600;
+    border: 1px solid transparent;
 }
 
 .nav-btn:hover {
     background: var(--primary);
     color: white;
     transform: translateY(-2px);
+}
+
+.nav-btn:focus-visible {
+    outline: none;
+    box-shadow: var(--ring);
+}
+
+.nav-btn.active,
+.nav-btn[aria-current="page"] {
+    background: var(--primary);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.65);
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 12px 0 18px;
 }
 
 /* 统一容器样式 */
@@ -97,16 +138,20 @@
 @media (max-width: 768px) {
     .navbar {
         top: auto;
-        bottom: 20px;
-        right: 20px;
-        left: 20px;
+        left: 50%;
+        bottom: calc(12px + env(safe-area-inset-bottom));
         justify-content: center;
         flex-wrap: wrap;
-        padding: 10px;
+        padding: 8px;
+        width: min(96vw, 720px);
+    }
+
+    body.has-fixed-nav {
+        padding-top: var(--nav-offset, 76px);
     }
     
     .nav-btn {
-        padding: 6px 15px;
+        padding: 6px 12px;
         font-size: 0.9em;
     }
     

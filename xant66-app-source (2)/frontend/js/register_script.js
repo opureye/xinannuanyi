@@ -1,3 +1,5 @@
+import { showNotification } from './utils.js';
+
 // 等待DOM内容加载完成
 document.addEventListener('DOMContentLoaded', function() {
     // 获取表单元素
@@ -11,6 +13,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const cancelVerifyBtn = document.getElementById('cancelVerifyBtn');
     const confirmVerifyBtn = document.getElementById('confirmVerifyBtn');
     
+    const submitButton = registerForm?.querySelector('button[type="submit"]');
+    
+    function setButtonState(button, isSubmitting, loadingText, resetText) {
+        if (!button) return;
+        button.disabled = isSubmitting;
+        button.textContent = isSubmitting ? loadingText : resetText;
+    }
+
     // 表单提交处理
     if (registerForm) {
         registerForm.addEventListener('submit', async function(e) {
@@ -46,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (phoneInput) {
             const phoneRegex = /^1[3-9]\d{9}$/;
             if (!phoneRegex.test(phoneInput.value)) {
-                alert('请输入有效的手机号码');
+                showNotification('请输入有效的手机号码', 'error');
                 phoneInput.focus();
                 return false;
             }
@@ -57,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (emailInput) {
             const emailRegex = /^[^@]+@[^@]+\.[^@]+$/;
             if (!emailRegex.test(emailInput.value)) {
-                alert('请输入有效的电子邮箱地址');
+                showNotification('请输入有效的电子邮箱地址', 'error');
                 emailInput.focus();
                 return false;
             }
@@ -109,10 +119,16 @@ document.addEventListener('DOMContentLoaded', function() {
             const name = (realNameInput?.value || '').trim();
             const idNo = (idNumberInput?.value || '').trim().toUpperCase();
             if (!name || !idNo) {
-                alert('请输入姓名和身份证号');
+                showNotification('请输入姓名和身份证号', 'error');
+                return;
+            }
+            const idRegex = /^[1-9]\d{16}[\dX]$/;
+            if (!idRegex.test(idNo)) {
+                showNotification('身份证格式不正确，请检查后重试', 'error');
                 return;
             }
             try {
+                setButtonState(confirmVerifyBtn, true, '认证中...', '认证并注册');
                 const verifyResp = await fetch('/api/identity/verify', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -141,11 +157,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
 
                 if (!verifyResp.ok || !allowRegister) {
-                    alert(friendlyMsg);
+                    showNotification(friendlyMsg, 'error');
                     return;
                 }
 
                 // 通过核验后提交注册
+                setButtonState(submitButton, true, '准备注册...', '立即注册');
                 const formData = {
                     username: document.getElementById('nickname').value,
                     phone: document.getElementById('phone').value,
@@ -162,16 +179,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
                 const result = await response.json();
                 if (response.ok && result.success) {
-                    alert(result.message || friendlyMsg || '注册成功！');
+                    showNotification(result.message || friendlyMsg || '注册成功！', 'success');
                     closeModal();
-                    window.location.href = '4 login.html';
+                    setTimeout(() => {
+                        window.location.href = '4 login.html';
+                    }, 650);
                 } else {
                     const errorMessage = result.detail || result.message || '注册失败，请稍后重试';
-                    alert(errorMessage);
+                    showNotification(errorMessage, 'error');
                 }
             } catch (error) {
                 console.error('实名认证或注册流程失败:', error);
-                alert('网络异常，请稍后重试');
+                showNotification('网络异常，请稍后重试', 'error');
+            } finally {
+                setButtonState(confirmVerifyBtn, false, '认证中...', '认证并注册');
+                setButtonState(submitButton, false, '准备注册...', '立即注册');
             }
         });
     }

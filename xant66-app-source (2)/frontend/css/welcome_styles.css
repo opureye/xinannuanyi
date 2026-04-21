@@ -5,8 +5,32 @@
 body {
     max-width: 800px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 24px 20px;
     background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('../images/苍穹5.png') center/cover fixed;
+}
+
+.page-title {
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 12px;
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+.category-jump-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(135deg, var(--primary), #1988e0);
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-weight: 600;
+    box-shadow: 0 6px 16px rgba(34, 120, 110, 0.24);
+}
+
+.category-jump-btn:hover {
+    transform: translateY(-1px);
 }
 
 /* 段落优化 */
@@ -222,6 +246,41 @@ body {
     box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.1);
 }
 
+.forum-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: 16px 0 10px;
+    flex-wrap: wrap;
+}
+
+.result-count {
+    color: #5b6774;
+    font-size: 0.92rem;
+}
+
+.toolbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-select {
+    min-height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #d4dde5;
+    border-radius: 10px;
+    background: #fff;
+    color: #324455;
+}
+
+.clear-btn {
+    min-height: 40px;
+    padding: 8px 14px;
+    border-radius: 10px;
+}
+
 /* 文章列表样式 */
 .article-list {
     margin-top: 30px;
@@ -232,13 +291,69 @@ body {
 
 .article-item {
     background: rgba(255, 255, 255, 0.9);
-    border-radius: 8px;
-    padding: 18px 25px;
+    border-radius: 12px;
+    padding: 18px 18px 14px;
     position: relative;
     transition: all 0.3s ease;
     border-left: 3px solid transparent;
+    border: 1px solid rgba(42, 157, 143, 0.08);
 }
 
 .article-item:hover {
     border-left-color: var(--primary);
+}
+
+.article-item a {
+    font-size: 1.04rem;
+    font-weight: 700;
+}
+
+.article-meta-row {
+    margin-top: 10px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    color: #6b7683;
+}
+
+.article-snippet {
+    margin-top: 10px;
+    color: #4d5c6b;
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+.article-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(42, 157, 143, 0.1);
+    color: #256e63;
+}
+
+.no-results {
+    text-align: center;
+    padding: 38px 16px;
+    border-radius: 12px;
+    color: #6b7683;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px dashed rgba(42, 157, 143, 0.35);
+}
+
+@media (max-width: 768px) {
+    .forum-toolbar {
+        align-items: stretch;
+    }
+
+    .toolbar-actions {
+        width: 100%;
+    }
+
+    .sort-select,
+    .clear-btn {
+        flex: 1;
+    }
 }

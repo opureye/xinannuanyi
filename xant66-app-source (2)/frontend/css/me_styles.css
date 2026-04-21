@@ -6,6 +6,44 @@ body {
     background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('../images/苍穹4.png') center/cover fixed;
 }
 
+.brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.brand-logo {
+  height: 56px;
+  width: auto;
+}
+
+.brand-wordmark {
+  height: 56px;
+  width: auto;
+}
+
+.brand-subtitle {
+  font-size: 1.15rem;
+  color: var(--secondary);
+  opacity: 0.9;
+}
+
+.brand-desc {
+  font-size: 1rem;
+  color: #4d5b67;
+  margin-top: 8px;
+}
+
+.intro-text {
+  font-size: 1rem;
+  color: #495057;
+  line-height: 1.92;
+  text-indent: 2em;
+  margin: 10px 0 20px;
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     body {
@@ -21,6 +59,15 @@ body {
     }
     h1 {
         font-size: 2.2em;
+    }
+
+    .brand-logo,
+    .brand-wordmark {
+      height: 42px;
+    }
+
+    .brand-subtitle {
+      font-size: 1rem;
     }
 }
 

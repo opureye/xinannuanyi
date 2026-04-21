@@ -30,10 +30,10 @@
     <!-- 返回按钮，使用class替代内联style -->
     <a href="9 audit_home.html" class="nav-btn back-button">← 返回</a>
     
-    <main class="container mx-auto p-8 animate-fadeIn" style="margin-top: 150px; position: relative; z-index: 1;">
+    <main class="container mx-auto p-8 animate-fadeIn">
         <h2 class="text-4xl font-bold text-gray-800 mb-4">AI管理</h2>
         <p class="text-gray-600 mb-8">在这里你可以更新AI个人访问令牌。</p>
-        <div class="bg-white p-8 rounded-lg shadow-xl">
+        <div class="module-panel">
             <h3 class="text-2xl font-bold text-gray-800 mb-4">更新AI个人访问令牌</h3>
             <input type="text" class="token-input mb-4" placeholder="输入个人访问令牌">
             <button class="submit-btn">确定</button>
@@ -43,6 +43,7 @@
     <!-- 引入Coze SDK和外部JavaScript文件 -->
     <script type="module" src="js/sdk_utils.js"></script>
     <script src="js/ai_management_script.js" type="module"></script>
+    <script type="module" src="js/ux_enhance.js"></script>
     
     <!-- 以模块方式加载AI侧边栏脚本 -->
     <script type="module" src="./js/ai_sidebar.js"></script>

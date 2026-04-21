@@ -58,7 +58,7 @@ h1::after {
     margin-bottom: 3rem;
 }
 
-input, textarea {
+input, textarea, select {
     padding: 1.2rem 1.8rem;
     border: none;
     border-radius: 12px;
@@ -72,7 +72,7 @@ input::placeholder, textarea::placeholder {
     color: #757575;
 }
 
-input:focus, textarea:focus {
+input:focus, textarea:focus, select:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(124, 77, 255, 0.3);
     background: white;
@@ -115,6 +115,44 @@ button:hover {
 #messages {
     display: grid;
     gap: 2rem;
+}
+
+.message {
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    color: #f3f7ff;
+    background: rgba(53, 70, 95, 0.95);
+    border-left: 4px solid #8da3c7;
+    transition: opacity 0.4s ease;
+}
+
+.message-success {
+    background: rgba(20, 111, 91, 0.9);
+    border-left-color: #5ef1cc;
+}
+
+.message-error {
+    background: rgba(142, 41, 41, 0.9);
+    border-left-color: #ff9d9d;
+}
+
+.content-counter {
+    margin-top: -8px;
+    text-align: right;
+    color: rgba(241, 245, 249, 0.85);
+    font-size: 0.86rem;
+}
+
+.content-counter.warning {
+    color: #ffd76f;
+}
+
+.draft-status {
+    margin-top: 6px;
+    text-align: right;
+    color: rgba(210, 224, 249, 0.82);
+    font-size: 0.8rem;
 }
 
 .message-card {

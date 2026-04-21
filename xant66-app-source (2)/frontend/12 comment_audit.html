@@ -29,13 +29,13 @@
         </div>
     </header>
     
-    <a href="9 audit_home.html" class="nav-btn" style="position: fixed; top: 20px; left: 20px;">← 返回</a>
+    <a href="9 audit_home.html" class="nav-btn back-button">← 返回</a>
     
     <main class="container mx-auto p-8 animate-fadeIn">
         <h2 class="text-4xl font-bold text-gray-800 mb-4">评论审核</h2>
         <p class="text-gray-600 mb-8">审查用户发表的评论内容，维护良好的交流环境。</p>
         
-        <div class="comment-container">
+        <div class="comment-container module-panel">
             <h3 class="text-2xl font-bold text-gray-800 mb-4">待审核评论列表</h3>
             <div class="space-y-4">
                 <!-- 评论将通过JavaScript动态加载 -->
@@ -49,6 +49,7 @@
     
     <!-- 添加comment_audit_script.js引用 -->
     <script src="js/comment_audit_script.js"></script>
+    <script type="module" src="js/ux_enhance.js"></script>
     <!-- 添加AI侧边栏模块 -->
     <script src="./js/ai_sidebar.js" type="module"></script>
 </body>

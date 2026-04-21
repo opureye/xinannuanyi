@@ -1,13 +1,13 @@
 // 导入退出登录功能
 import { initReloginButtons } from './auth.js';
+import { debounce, showNotification } from './utils.js';
+
+const DRAFT_KEY = 'writing_draft_v1';
 
 // 页面加载完成后初始化
 window.addEventListener('DOMContentLoaded', function() {
     // 初始化重新登录按钮的事件处理
     initReloginButtons();
-    
-    // 添加页面加载日志
-    console.log('%c[页面加载] 写作页面已加载完成', 'color: blue; font-weight: bold');
     
     // 获取表单元素
     const messageForm = document.getElementById('messageForm');
@@ -24,8 +24,6 @@ window.addEventListener('DOMContentLoaded', function() {
         return;
     }
     
-    console.log('[页面初始化] 所有必要的HTML元素已成功获取');
-    
     // 日志记录函数
     function logAction(level, action, details) {
         const timestamp = new Date().toISOString();
@@ -38,6 +36,74 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     }
     
+    function renderCounter() {
+        let counter = document.getElementById('contentCounter');
+        if (!counter) {
+            counter = document.createElement('div');
+            counter.id = 'contentCounter';
+            counter.className = 'content-counter';
+            contentInput.insertAdjacentElement('afterend', counter);
+        }
+        const current = contentInput.value.trim().length;
+        counter.textContent = `正文 ${current}/10000`;
+        counter.classList.toggle('warning', current > 9000);
+    }
+
+    function setDraftStatus(text) {
+        let status = document.getElementById('draftStatus');
+        if (!status) {
+            status = document.createElement('div');
+            status.id = 'draftStatus';
+            status.className = 'draft-status';
+            const counter = document.getElementById('contentCounter');
+            if (counter) {
+                counter.insertAdjacentElement('afterend', status);
+            } else {
+                contentInput.insertAdjacentElement('afterend', status);
+            }
+        }
+        status.textContent = text;
+    }
+
+    function saveDraft() {
+        const payload = {
+            title: titleInput.value,
+            category: categoryInput.value,
+            content: contentInput.value,
+            savedAt: Date.now()
+        };
+        localStorage.setItem(DRAFT_KEY, JSON.stringify(payload));
+        setDraftStatus(`草稿已自动保存：${new Date(payload.savedAt).toLocaleTimeString('zh-CN')}`);
+    }
+
+    function restoreDraft() {
+        const raw = localStorage.getItem(DRAFT_KEY);
+        if (!raw) return;
+        try {
+            const draft = JSON.parse(raw);
+            if (!draft || (!draft.title && !draft.content)) return;
+            titleInput.value = draft.title || '';
+            categoryInput.value = draft.category || '';
+            contentInput.value = draft.content || '';
+            showNotification('已恢复上次未提交草稿');
+            renderCounter();
+            if (draft.savedAt) {
+                setDraftStatus(`已恢复草稿：${new Date(draft.savedAt).toLocaleString('zh-CN')}`);
+            }
+        } catch (error) {
+            console.error('恢复草稿失败:', error);
+        }
+    }
+
+    function clearDraft() {
+        localStorage.removeItem(DRAFT_KEY);
+        setDraftStatus('草稿已清除');
+    }
+
+    const saveDraftDebounced = debounce(() => {
+        saveDraft();
+    }, 300);
+
     // 提交文章的函数
     async function submitArticle(e) {
         e.preventDefault(); // 阻止表单默认提交
@@ -82,9 +148,9 @@ window.addEventListener('DOMContentLoaded', function() {
         }
         
         // 显示加载状态
-        const originalBtnText = submitBtn.innerHTML;
+        const originalBtnText = submitBtn.textContent;
         submitBtn.disabled = true;
-        submitBtn.innerHTML = '🚀 提交中...';
+        submitBtn.textContent = '🚀 提交中...';
         
         try {
             logAction('info', '发送文章提交请求', { title, category });
@@ -116,11 +182,14 @@ window.addEventListener('DOMContentLoaded', function() {
             const result = await response.json();
             logAction('info', '文章提交成功', { articleId: result.article_id });
             showMessage(result.message || '文章提交成功，等待审核', 'success');
+            showNotification('帖子已提交，正在等待审核', 'success');
             
             // 清空表单
             titleInput.value = '';
             contentInput.value = '';
             categoryInput.value = '';
+            clearDraft();
+            renderCounter();
             
             // 延迟后跳转到正确的页面
             setTimeout(() => {
@@ -129,10 +198,11 @@ window.addEventListener('DOMContentLoaded', function() {
         } catch (error) {
             logAction('error', '文章提交失败', { error: error.message });
             showMessage(`提交失败：${error.message}`, 'error');
+            showNotification(`提交失败：${error.message}`, 'error');
         } finally {
             // 恢复按钮状态
             submitBtn.disabled = false;
-            submitBtn.innerHTML = originalBtnText;
+            submitBtn.textContent = originalBtnText;
         }
     }
     
@@ -154,5 +224,17 @@ window.addEventListener('DOMContentLoaded', function() {
     
     // 添加表单提交事件监听
     messageForm.addEventListener('submit', submitArticle);
+    titleInput.addEventListener('input', saveDraftDebounced);
+    categoryInput.addEventListener('change', saveDraftDebounced);
+    contentInput.addEventListener('input', () => {
+        renderCounter();
+        saveDraftDebounced();
+    });
+
+    restoreDraft();
+    renderCounter();
+    if (!localStorage.getItem(DRAFT_KEY)) {
+        setDraftStatus('草稿自动保存已开启');
+    }
     logAction('INFO', '表单提交事件监听器已注册');
 });

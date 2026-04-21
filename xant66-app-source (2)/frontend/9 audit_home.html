@@ -26,9 +26,9 @@
     <main class="container mx-auto p-8 animate-fadeIn">
         <h1 class="text-4xl font-bold text-gray-800 mb-4">欢迎来到审核主页</h1>
         <p class="text-gray-600 mb-8">在这里你可以快速导航到各个审核相关页面，高效完成审核工作。</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="dashboard-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <a href="10 ai_management.html"
-                class="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                class="dashboard-card">
                 <div class="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
                     <i class="fa-solid fa-robot text-2xl text-blue-500"></i>
                 </div>
@@ -36,7 +36,7 @@
                 <p class="text-gray-600 mt-2">管理和配置审核相关的AI工具。</p>
             </a>
             <a href="7 judging.html"
-                class="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                class="dashboard-card">
                 <div class="bg-green-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
                     <i class="fa-solid fa-file-lines text-2xl text-green-500"></i>
                 </div>
@@ -44,7 +44,7 @@
                 <p class="text-gray-600 mt-2">对用户发布的帖子进行审核。</p>
             </a>
             <a href="11 account_audit.html"
-                class="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                class="dashboard-card">
                 <div class="bg-yellow-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
                     <i class="fa-solid fa-user-check text-2xl text-yellow-500"></i>
                 </div>
@@ -52,7 +52,7 @@
                 <p class="text-gray-600 mt-2">审核新注册用户的账号信息。</p>
             </a>
             <a href="12 comment_audit.html"
-                class="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                class="dashboard-card">
                 <div class="bg-purple-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
                     <i class="fa-solid fa-comment-dots text-2xl text-purple-500"></i>
                 </div>
@@ -63,6 +63,7 @@
     </main>
     <!-- 加载页面特定脚本 -->
     <script type="module" src="js/audit_home_script.js"></script>
+    <script type="module" src="js/ux_enhance.js"></script>
 </body>
 
 </html>
