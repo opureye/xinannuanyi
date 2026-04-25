@@ -11,35 +11,48 @@
     <!-- 删除重复的脚本引用 -->
 </head>
 <body>
-    <div class="register-container glass-container">
-        <h2>欢迎注册</h2>
-        <form id="registerForm">
-            <div class="form-group">
-                <label for="nickname">昵称</label>
-                <input type="text" id="nickname" required placeholder="请输入昵称">
+    <main class="auth-layout">
+        <section class="auth-hero">
+            <p class="eyebrow">Join Community</p>
+            <h1>创建你的互助档案</h1>
+            <p>完成注册后即可发布经验、收藏内容、关注用户，并使用隐私友好的智能辅助能力。</p>
+            <div class="auth-points">
+                <span>实名认证</span>
+                <span>安全存储</span>
+                <span>社区互助</span>
             </div>
-            <div class="form-group">
-                <label for="phone">电话号码</label>
-                <input type="tel" id="phone" required placeholder="请输入电话号码">
+        </section>
+
+        <div class="register-container glass-container">
+            <h2>欢迎注册</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="nickname">昵称</label>
+                    <input type="text" id="nickname" required placeholder="请输入昵称">
+                </div>
+                <div class="form-group">
+                    <label for="phone">电话号码</label>
+                    <input type="tel" id="phone" required placeholder="请输入电话号码">
+                </div>
+                <div class="form-group">
+                    <label for="email">电子邮箱</label>
+                    <input type="email" id="email" required placeholder="请输入电子邮箱">
+                </div>
+                <div class="form-group">
+                    <label for="password">请设置密码</label>
+                    <input type="password" id="password" required placeholder="请输入密码">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">请再次输入密码</label>
+                    <input type="password" id="confirmPassword" required placeholder="请再次输入密码">
+                </div>
+                <button type="submit">立即注册</button>
+            </form>
+            <div class="login-link">
+                已有账号？<a href="4 login.html">立即登录</a>
             </div>
-            <div class="form-group">
-                <label for="email">电子邮箱</label>
-                <input type="email" id="email" required placeholder="请输入电子邮箱">
-            </div>
-            <div class="form-group">
-                <label for="password">请设置密码</label>
-                <input type="password" id="password" required placeholder="请输入密码">
-            </div>
-            <div class="form-group">
-                <label for="confirmPassword">请再次输入密码</label>
-                <input type="password" id="confirmPassword" required placeholder="请再次输入密码">
-            </div>
-            <button type="submit">立即注册</button>
-        </form>
-        <div class="login-link">
-            已有账号？<a href="4 login.html">立即登录</a>
         </div>
-    </div>
+    </main>
 
     <!-- 实名认证弹窗 -->
     <div id="realnameModal" class="modal" aria-hidden="true">

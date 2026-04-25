@@ -2,6 +2,8 @@
 import { apiRequest } from './api.js';
 import { showNotification } from './utils.js';
 
+const DEFAULT_AVATAR = 'assets/default-avatar.svg';
+
 /**
  * 初始化页面
  */
@@ -16,14 +18,10 @@ function initPage() {
         card.addEventListener('click', () => {
             const postId = card.getAttribute('data-id');
             if (postId) {
-                window.location.href = `post_detail.html?id=${postId}`;
+                window.location.href = `6 article.html?id=${postId}`;
             }
         });
     });
-    
-    // 返回顶部按钮
-    const backToTopButton = createBackToTopButton();
-    document.body.appendChild(backToTopButton);
 }
 
 /**
@@ -57,8 +55,15 @@ async function loadUserData() {
  * 显示用户个人资料
  */
 function displayUserProfile(userData) {
-    document.querySelector('.avatar').src = userData.avatar || './images/苍穹5.png';
-    document.querySelector('.avatar').alt = userData.username || '用户头像';
+    const avatar = document.querySelector('.avatar');
+    if (avatar) {
+        avatar.src = userData.avatar || DEFAULT_AVATAR;
+        avatar.alt = userData.username || '用户头像';
+        avatar.onerror = () => {
+            avatar.onerror = null;
+            avatar.src = DEFAULT_AVATAR;
+        };
+    }
     document.querySelector('h1.text-4xl.font-bold.mt-4').textContent = userData.username || '用户名称';
     
     // 查找并更新简介
@@ -152,35 +157,6 @@ function markCurrentNavButton() {
 }
 
 /**
- * 创建返回顶部按钮
- */
-function createBackToTopButton() {
-    const button = document.createElement('button');
-    button.className = 'fixed bottom-8 right-8 bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition-colors z-50';
-    button.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    button.style.display = 'none';
-    
-    // 监听滚动事件
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            button.style.display = 'block';
-        } else {
-            button.style.display = 'none';
-        }
-    });
-    
-    // 点击返回顶部
-    button.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-    
-    return button;
-}
-
-/**
  * 渲染关注列表
  */
 function renderFollowingList(followingList) {
@@ -220,7 +196,7 @@ function createFollowingUserElement(user) {
     userDiv.className = 'following-user';
     
     // 处理头像URL
-    const avatarUrl = user.avatar || './images/苍穹5.png';
+    const avatarUrl = user.avatar || DEFAULT_AVATAR;
     
     // 处理关注时间
     const followedTime = user.followed_at ? formatDate(user.followed_at) : '未知时间';
@@ -230,7 +206,8 @@ function createFollowingUserElement(user) {
             <img src="${avatarUrl}" 
                  alt="${user.username || '用户'}" 
                  class="user-avatar"
-                 onerror="this.src='./images/苍穹5.png'">
+                 loading="lazy"
+                 onerror="this.src='${DEFAULT_AVATAR}'">
             <div class="flex-1">
                 <h3>${user.username || '未知用户'}</h3>
                 <p>${user.bio || '这个用户很神秘，什么都没有留下~'}</p>
@@ -297,7 +274,7 @@ function createPostElement(post) {
         <p class="text-gray-700 mb-4">${post.content.substring(0, 100)}${post.content.length > 100 ? '...' : ''}</p>
         ${post.imageUrl ? `
         <div class="post-image-container mb-4">
-            <img src="${post.imageUrl}" alt="${post.title}" class="w-full h-48 object-cover rounded">
+            <img src="${post.imageUrl}" alt="${post.title}" class="w-full h-48 object-cover rounded" loading="lazy" onerror="this.src='assets/card-placeholder.svg'">
         </div>
         ` : ''}
         <div class="post-stats flex items-center text-sm text-gray-500">

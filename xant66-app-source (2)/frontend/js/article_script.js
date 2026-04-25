@@ -232,7 +232,7 @@ async function complainArticle() {
     const complainCount = document.getElementById('complain-count');
     
     // 在实际应用中，这里应该显示一个举报原因表单
-    alert('感谢您的举报，我们会尽快处理！');
+    showNotification('感谢您的举报，我们会尽快处理！', 'success');
     
     // 由于我们没有为举报创建单独的API端点，这里仅更新UI
     const currentCount = parseInt(complainCount.textContent);

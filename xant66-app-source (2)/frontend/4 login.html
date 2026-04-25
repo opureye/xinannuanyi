@@ -10,24 +10,36 @@
     <link rel="stylesheet" href="css/login_styles.css">
 </head>
 <body>
-    <div class="login-container">
-        <h2>欢迎登录</h2>
-        <div class="register-link-container">
-            没有账号？<a href="8 register.html" class="register-link">立即注册</a>
+    <main class="auth-layout">
+        <section class="auth-hero">
+            <p class="eyebrow">Xin An Nuan Yi</p>
+            <h1>欢迎回到信安暖驿</h1>
+            <p>一个注重隐私保护的医患互助交流社区，帮助用户更安心地分享经验、获取支持。</p>
+            <div class="auth-points">
+                <span>隐私保护</span>
+                <span>互助交流</span>
+                <span>AI 辅助</span>
+            </div>
+        </section>
+
+        <div class="login-container">
+            <h2>登录账号</h2>
+            <div class="register-link-container">
+                没有账号？<a href="8 register.html" class="register-link">立即注册</a>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">用户名</label>
+                    <input type="text" id="username" required placeholder="请输入用户名">
+                </div>
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <input type="password" id="password" required placeholder="请输入密码">
+                </div>
+                <button type="submit" id="loginButton">立即登录</button>
+            </form>
         </div>
-        <form id="loginForm">
-            <div class="form-group">
-                <label for="username">用户名</label>
-                <input type="text" id="username" required placeholder="请输入用户名">
-            </div>
-            <div class="form-group">
-                <label for="password">密码</label>
-                <input type="password" id="password" required placeholder="请输入密码">
-            </div>
-            <!-- 添加ID属性到按钮 -->
-            <button type="submit" id="loginButton">立即登录</button>
-        </form>
-    </div>
+    </main>
 
     <!-- 只保留一个脚本引用，并放在body末尾 -->
     <script type="module" src="js/login_script.js"></script>

@@ -24,13 +24,29 @@ function initActiveNav() {
     });
 }
 
+function initScrollProgress() {
+    const progress = document.createElement('div');
+    progress.className = 'scroll-progress';
+    document.body.appendChild(progress);
+
+    const updateProgress = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const ratio = scrollable > 0 ? window.scrollY / scrollable : 0;
+        progress.style.width = `${Math.min(100, Math.max(0, ratio * 100))}%`;
+    };
+
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+}
+
 function initFixedNavSpacing() {
     const topNav = document.querySelector('body > .navbar');
     if (!topNav) return;
     document.body.classList.add('has-fixed-nav');
 
     const applyOffset = () => {
-        const offset = Math.ceil(topNav.offsetHeight + 28);
+        const offset = Math.ceil(topNav.offsetHeight + 24);
         document.body.style.setProperty('--nav-offset', `${offset}px`);
     };
 
@@ -39,6 +55,14 @@ function initFixedNavSpacing() {
 }
 
 function initSessionEntry() {
+    const legacyFloatingSelector = '.session-entry, .quick-dock, .back-to-top, button.fixed.bottom-8.right-8, button.fixed.bottom-6.right-6';
+    const removeLegacySessionEntry = () => {
+        document.querySelectorAll(legacyFloatingSelector).forEach((entry) => entry.remove());
+    };
+    removeLegacySessionEntry();
+    const observer = new MutationObserver(removeLegacySessionEntry);
+    observer.observe(document.body, { childList: true, subtree: true });
+
     const currentFile = normalizePath(window.location.pathname);
     const isAuthPage = currentFile === '4 login.html' || currentFile === '8 register.html';
     if (isAuthPage) return;
@@ -51,44 +75,57 @@ function initSessionEntry() {
     if (reloginInNav) {
         reloginInNav.remove();
     }
+}
 
-    const sessionEntry = document.createElement('button');
-    sessionEntry.type = 'button';
-    sessionEntry.className = 'session-entry';
-    const hasToken = !!sessionStorage.getItem('auth_token');
-    sessionEntry.textContent = hasToken ? '退出登录' : '去登录';
+function getQuickActions() {
+    return [
+        { href: '1 me.html', label: '首页', icon: '🏠' },
+        { href: '5 welcome.html', label: '论坛', icon: '💬' },
+        { href: '3 writing.html', label: '发帖', icon: '✍️' },
+        { href: '13 myspace.html', label: '我的', icon: '👤' }
+    ];
+}
 
-    sessionEntry.addEventListener('click', () => {
-        if (hasToken) {
+function initCommandPalette() {
+    const modal = document.createElement('div');
+    modal.className = 'experience-modal';
+    modal.innerHTML = `
+        <div class="command-panel" role="dialog" aria-modal="true" aria-label="快捷菜单">
+            <header>
+                <strong>快捷菜单</strong>
+                <span>按 Esc 关闭，快速进入常用模块</span>
+            </header>
+            <div class="command-list">
+                ${getQuickActions().map((action) => `<a href="${action.href}">${action.icon} ${action.label}</a>`).join('')}
+                <button type="button" data-action="logout">🔑 退出登录 / 重新登录</button>
+            </div>
+        </div>
+    `;
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.classList.remove('show');
+        }
+        const action = event.target?.getAttribute?.('data-action');
+        if (action === 'logout') {
             sessionStorage.removeItem('auth_token');
             sessionStorage.removeItem('user_role');
             sessionStorage.removeItem('username');
             localStorage.removeItem('loggedInUser');
-            showNotification('已退出登录');
+            window.location.href = '4 login.html';
         }
-        window.location.href = '4 login.html';
     });
-    document.body.appendChild(sessionEntry);
-}
+    document.body.appendChild(modal);
 
-function initBackToTop() {
-    const backToTop = document.createElement('button');
-    backToTop.type = 'button';
-    backToTop.className = 'back-to-top';
-    backToTop.setAttribute('aria-label', '回到顶部');
-    backToTop.textContent = '↑';
-    document.body.appendChild(backToTop);
-
-    const toggleVisibility = () => {
-        const shouldShow = window.scrollY > 240;
-        backToTop.classList.toggle('show', shouldShow);
-    };
-
-    window.addEventListener('scroll', toggleVisibility, { passive: true });
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            modal.classList.remove('show');
+            return;
+        }
+        if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') {
+            event.preventDefault();
+            modal.classList.toggle('show');
+        }
     });
-    toggleVisibility();
 }
 
 function initSearchShortcut() {
@@ -126,7 +163,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initFixedNavSpacing();
     initSessionEntry();
     initActiveNav();
-    initBackToTop();
+    initScrollProgress();
+    initCommandPalette();
     initSearchShortcut();
     initNetworkHint();
 });

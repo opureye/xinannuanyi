@@ -5,8 +5,11 @@ const state = {
     articles: [],
     displayArticles: [],
     searchTerm: '',
-    sortBy: 'newest'
+    sortBy: 'newest',
+    visibleCount: 8
 };
+
+const PAGE_SIZE = 8;
 
 function formatDate(value) {
     if (!value) return '发布时间未知';
@@ -81,14 +84,33 @@ function renderArticles() {
     articleList.innerHTML = '';
 
     if (!state.displayArticles.length) {
-        articleList.innerHTML = '<div class="no-results">没有找到符合条件的帖子</div>';
+        articleList.innerHTML = `
+            <div class="no-results rich-empty">
+                <i class="fa-regular fa-face-smile"></i>
+                <h3>${state.searchTerm ? '没有找到匹配的帖子' : '暂时没有帖子'}</h3>
+                <p>${state.searchTerm ? '换一个关键词试试，或按回车进行后端深度搜索。' : '发布第一篇互助经验，让更多人看到你的分享。'}</p>
+                <a href="3 writing.html" class="btn">去发布帖子</a>
+            </div>
+        `;
         updateResultCount();
         return;
     }
 
-    state.displayArticles.forEach((article) => {
+    state.displayArticles.slice(0, state.visibleCount).forEach((article) => {
         articleList.appendChild(createArticleNode(article));
     });
+
+    if (state.visibleCount < state.displayArticles.length) {
+        const loadMore = document.createElement('button');
+        loadMore.type = 'button';
+        loadMore.className = 'btn load-more-btn';
+        loadMore.textContent = `继续加载 ${Math.min(PAGE_SIZE, state.displayArticles.length - state.visibleCount)} 篇`;
+        loadMore.addEventListener('click', () => {
+            state.visibleCount += PAGE_SIZE;
+            renderArticles();
+        });
+        articleList.appendChild(loadMore);
+    }
     updateResultCount();
 }
 
@@ -101,6 +123,7 @@ function applyFilters() {
     });
 
     state.displayArticles = sortArticles(filtered);
+    state.visibleCount = PAGE_SIZE;
     renderArticles();
 }
 
@@ -112,7 +135,7 @@ async function handleServerSearch() {
 
     const articleList = document.querySelector('.article-list');
     if (articleList) {
-        articleList.innerHTML = '<div class="loading">正在进行深度搜索...</div>';
+        renderListSkeleton(articleList, '正在进行深度搜索...');
     }
 
     const token = sessionStorage.getItem('auth_token');
@@ -145,7 +168,7 @@ async function loadArticleList() {
     const articleList = document.querySelector('.article-list');
     if (!articleList) return;
 
-    articleList.innerHTML = '<div class="loading">正在加载文章列表...</div>';
+    renderListSkeleton(articleList, '正在加载文章列表...');
     try {
         const response = await fetch(`${window.location.origin}/api/articles`);
         if (!response.ok) {
@@ -159,9 +182,26 @@ async function loadArticleList() {
         applyFilters();
     } catch (error) {
         console.error('加载文章列表失败:', error);
-        articleList.innerHTML = '<div class="no-results">加载失败，请刷新后重试</div>';
+        articleList.innerHTML = `
+            <div class="no-results rich-empty">
+                <i class="fa-solid fa-wifi"></i>
+                <h3>文章列表加载失败</h3>
+                <p>请检查网络或后端服务状态，然后刷新页面重试。</p>
+            </div>
+        `;
         showNotification('文章列表加载失败，请检查网络后重试', 'error');
     }
+}
+
+function renderListSkeleton(container, message) {
+    container.innerHTML = `
+        <div class="forum-skeleton" aria-label="${message}">
+            <div class="loading">${message}</div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+        </div>
+    `;
 }
 
 window.addEventListener('DOMContentLoaded', () => {

@@ -188,56 +188,15 @@ h2::after {
 }
 
 .back-to-top {
-    position: fixed;
-    right: 20px;
-    bottom: 22px;
-    width: 42px;
-    height: 42px;
-    border: none;
-    border-radius: 999px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--primary), #2386f5);
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: var(--shadow-medium);
-    opacity: 0;
-    transform: translateY(16px);
-    pointer-events: none;
-    transition: all 0.25s ease;
-    z-index: 1000;
+    display: none !important;
 }
 
 .back-to-top.show {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
+    display: none !important;
 }
 
 .back-to-top:hover {
-    transform: translateY(-2px);
-}
-
-.session-entry {
-    position: fixed;
-    left: 20px;
-    bottom: 22px;
-    border: none;
-    border-radius: 999px;
-    padding: 10px 14px;
-    background: rgba(38, 70, 83, 0.94);
-    color: #fff;
-    font-size: 0.9rem;
-    cursor: pointer;
-    box-shadow: var(--shadow-medium);
-    z-index: 1000;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.session-entry:hover {
-    transform: translateY(-2px);
+    display: none !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

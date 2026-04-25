@@ -1,20 +1,21 @@
 /* 统一导航栏样式 */
 .navbar {
     position: fixed;
-    top: 16px;
+    top: 14px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
     display: flex;
     gap: 10px;
-    padding: 10px 14px;
+    padding: 8px 10px;
     background: var(--glass-bg);
     border-radius: 999px;
     box-shadow: var(--shadow-soft);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.65);
-    max-width: calc(100% - 24px);
-    flex-wrap: wrap;
+    width: max-content;
+    max-width: calc(100% - 48px);
+    flex-wrap: nowrap;
     justify-content: center;
 }
 
@@ -34,7 +35,7 @@ body.has-fixed-nav {
 }
 
 .nav-btn {
-    padding: 7px 14px;
+    padding: 7px 13px;
     border-radius: 999px;
     background: rgba(42, 157, 143, 0.1);
     color: var(--secondary);
@@ -45,6 +46,7 @@ body.has-fixed-nav {
     gap: 8px;
     font-weight: 600;
     border: 1px solid transparent;
+    white-space: nowrap;
 }
 
 .nav-btn:hover {
@@ -144,6 +146,8 @@ body.has-fixed-nav {
         flex-wrap: wrap;
         padding: 8px;
         width: min(96vw, 720px);
+        max-width: min(96vw, 720px);
+        flex-wrap: wrap;
     }
 
     body.has-fixed-nav {

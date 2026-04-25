@@ -3,8 +3,8 @@
 
 /* 页面特定样式 */
 body {
-    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), 
-                url('../images/苍穹4.png') center/cover fixed;
+    background: radial-gradient(circle at top left, rgba(242, 180, 65, 0.14), transparent 34%),
+                linear-gradient(135deg, #f4fbf9 0%, #edf6ff 58%, #fff8e8 100%);
     font-family: 'Noto Sans SC', '微软雅黑', sans-serif;
     line-height: 1.6;
     color: var(--secondary);
@@ -50,4 +50,26 @@ body {
 .collection-stats {
     font-size: 0.95em;
     color: #6c757d;
+}
+
+.collection-list {
+    width: min(100%, 760px);
+}
+
+.collection-item {
+    border: 1px solid rgba(42, 157, 143, 0.1);
+    border-radius: 16px !important;
+}
+
+.collection-empty {
+    list-style: none;
+    width: 100%;
+    border: 1px dashed rgba(42, 157, 143, 0.32);
+    background: rgba(255, 255, 255, 0.76);
+}
+
+.collection-empty i {
+    color: #f2b441;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
 }

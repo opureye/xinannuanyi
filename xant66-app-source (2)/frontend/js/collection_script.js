@@ -154,7 +154,8 @@ async function loadUserCollections() {
             collectionsContainer.innerHTML = '<li class="text-gray-500 italic text-center py-8">加载收藏中...</li>';
         }
         
-        const collections = await getUserCollections(user.username);
+        const result = await getUserCollections(user.username);
+        const collections = Array.isArray(result) ? result : (result.collections || []);
         
         if (collections.length === 0) {
             showNotification('暂无收藏的帖子', 'info');
@@ -171,10 +172,11 @@ async function loadUserCollections() {
 function createCollectionItem(collection) {
     const li = document.createElement('li');
     li.className = 'collection-item mb-4 p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow';
-    li.dataset.articleId = collection.article_id;
+    const articleId = collection.article_id || collection.item_id || collection.id;
+    li.dataset.articleId = articleId;
     
     const articleLink = document.createElement('a');
-    articleLink.href = `post_detail.html?id=${collection.article_id}`;
+    articleLink.href = `6 article.html?id=${articleId}`;
     articleLink.className = 'flex items-start justify-between w-full text-gray-800';
     
     // 帖子信息部分
@@ -227,7 +229,7 @@ function createCollectionItem(collection) {
     viewButton.title = '查看帖子';
     viewButton.addEventListener('click', (e) => {
         e.stopPropagation();
-        window.location.href = `post_detail.html?id=${collection.article_id}`;
+        window.location.href = `6 article.html?id=${articleId}`;
     });
     
     const removeButton = document.createElement('button');
@@ -239,7 +241,7 @@ function createCollectionItem(collection) {
         
         if (confirm('确定要取消收藏这篇帖子吗？')) {
             try {
-                const success = await removeCollection(collection.article_id);
+                const success = await removeCollection(articleId);
                 if (success) {
                     showNotification('取消收藏成功', 'success');
                     li.remove();
@@ -247,10 +249,7 @@ function createCollectionItem(collection) {
                     // 检查是否还有收藏项，如果没有则显示空状态
                     const collectionList = document.querySelector('.collection-list');
                     if (collectionList && collectionList.children.length === 0) {
-                        const emptyMessage = document.createElement('li');
-                        emptyMessage.className = 'text-gray-500 text-center py-4';
-                        emptyMessage.textContent = '暂无收藏的帖子';
-                        collectionList.appendChild(emptyMessage);
+                        renderEmptyCollection();
                     }
                 } else {
                     showNotification('取消收藏失败，请稍后重试', 'error');
@@ -273,6 +272,34 @@ function createCollectionItem(collection) {
     return li;
 }
 
+function renderEmptyCollection() {
+    const collectionList = document.querySelector('.collection-list');
+    if (!collectionList) return;
+    collectionList.innerHTML = `
+        <li class="empty-state collection-empty">
+            <i class="fa-regular fa-bookmark"></i>
+            <h3>还没有收藏内容</h3>
+            <p>看到有价值的互助帖子后，点收藏就能在这里快速找回。</p>
+            <a href="5 welcome.html" class="btn">去论坛看看</a>
+        </li>
+    `;
+}
+
+function renderCollections(collections) {
+    const collectionList = document.querySelector('.collection-list');
+    if (!collectionList) return;
+
+    collectionList.innerHTML = '';
+    if (!collections || collections.length === 0) {
+        renderEmptyCollection();
+        return;
+    }
+
+    collections.forEach((collection) => {
+        collectionList.appendChild(createCollectionItem(collection));
+    });
+}
+
 /**
  * 格式化日期
  */
@@ -286,10 +313,8 @@ function formatDate(dateString) {
  * 页面初始化
  */
 function initCollectionPage() {
-    initCozeSDK();
     loadUserCollections();
     addSmoothScroll();
-    createBackToTopButton();
     markCurrentNavButton();
 }
 
@@ -317,36 +342,6 @@ function addSmoothScroll() {
             });
         });
     });
-}
-
-/**
- * 创建返回顶部按钮
- */
-function createBackToTopButton() {
-    const button = document.createElement('button');
-    button.className = 'back-to-top fixed bottom-6 right-6 p-3 bg-gray-800 text-white rounded-full shadow-lg opacity-0 transition-opacity duration-300';
-    button.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    
-    // 显示/隐藏按钮
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            button.style.opacity = '1';
-        } else {
-            button.style.opacity = '0';
-        }
-    });
-    
-    // 添加点击事件
-    button.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-    
-    document.body.appendChild(button);
-    
-    return button;
 }
 
 // 初始化页面

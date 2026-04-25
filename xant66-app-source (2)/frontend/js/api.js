@@ -193,6 +193,27 @@ export async function getUserCollections(username) {
 }
 
 /**
+ * 获取公开用户资料
+ * @param {string} username - 用户名
+ * @returns {Promise<Object|null>} - 用户资料
+ */
+export async function getUserInfo(username) {
+    if (!username) return null;
+    const result = await apiRequest(`/api/user/${encodeURIComponent(username)}/profile`, {}, false);
+    return result.user_info || result;
+}
+
+/**
+ * 获取指定用户公开帖子
+ * @param {string} username - 用户名
+ * @returns {Promise<Object>} - 帖子列表响应
+ */
+export async function getUserPosts(username) {
+    if (!username) return { posts: [], total: 0 };
+    return apiRequest(`/api/user/${encodeURIComponent(username)}/posts`, {}, false);
+}
+
+/**
  * 添加收藏
  * @param {number} articleId - 文章ID
  * @returns {Promise<boolean>} - 是否添加成功

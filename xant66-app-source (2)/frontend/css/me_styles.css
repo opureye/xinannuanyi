@@ -3,7 +3,9 @@
 
 /* 个人主页特定样式 */
 body {
-    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('../images/苍穹4.png') center/cover fixed;
+    background:
+      radial-gradient(circle at 18% 0%, rgba(42, 157, 143, 0.14), transparent 34%),
+      linear-gradient(180deg, #f7fbfb 0%, #edf7f6 100%);
 }
 
 .brand-row {
@@ -11,16 +13,16 @@ body {
   align-items: center;
   justify-content: center;
   gap: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .brand-logo {
-  height: 56px;
+  height: 54px;
   width: auto;
 }
 
 .brand-wordmark {
-  height: 56px;
+  height: 58px;
   width: auto;
 }
 
@@ -37,11 +39,12 @@ body {
 }
 
 .intro-text {
-  font-size: 1rem;
+  font-size: 1.02rem;
   color: #495057;
-  line-height: 1.92;
+  line-height: 1.9;
   text-indent: 2em;
-  margin: 10px 0 20px;
+  margin: 0 auto 24px;
+  max-width: 960px;
 }
 
 /* 响应式设计 */
@@ -92,11 +95,11 @@ body {
 
 .intro-slider {
   width: 100%;
-  max-width: 900px;
-  margin: 10px auto 30px;
+  max-width: 860px;
+  margin: 24px auto 34px;
   overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  border-radius: 18px;
+  box-shadow: 0 16px 38px rgba(38, 70, 83, 0.12);
   background: rgba(255,255,255,0.9);
 }
 .intro-slider .slides {
