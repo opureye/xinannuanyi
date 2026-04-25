@@ -27,6 +27,75 @@ user_db = UserDatabase()
 # 创建用户路由器
 user_router = APIRouter()
 
+@user_router.get("/user/{username}/profile", response_model=Dict[str, Any], responses={404: {"model": ErrorResponse}})
+async def get_public_user_profile(username: str):
+    try:
+        user = user_db.get_user_by_username(username)
+        if not user:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="用户不存在")
+
+        post_count = user_db.get_user_post_count(user['id'])
+        collection_count = user_db.get_user_collection_count(user['id'])
+        following_count = user_db.get_user_following_count(user['id'])
+        followers_count = user_db.get_user_followers_count(user['id'])
+
+        return {
+            "success": True,
+            "user_info": {
+                "username": user.get('username', username),
+                "avatar": user.get('avatar', ''),
+                "bio": user.get('bio', ''),
+                "level": user.get('level', 1),
+                "exp": user.get('experience', 0),
+                "posts_count": post_count,
+                "collections_count": collection_count,
+                "following_count": following_count,
+                "followers_count": followers_count,
+                "likes_received": user.get('likes_count', 0),
+                "helpful_posts": user.get('helpful_posts_count', 0),
+                "created_at": user.get('created_at', '')
+            },
+            "message": "用户资料获取成功"
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error retrieving public user profile: {str(e)}")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="获取用户资料时发生错误")
+
+@user_router.get("/user/{username}/posts", response_model=Dict[str, Any], responses={404: {"model": ErrorResponse}})
+async def get_public_user_posts(username: str, page: int = 1, page_size: int = 10):
+    try:
+        user = user_db.get_user_by_username(username)
+        if not user:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="用户不存在")
+
+        offset = (page - 1) * page_size
+        posts = user_db.get_user_posts(user['id'], offset, page_size)
+        total_posts = user_db.get_user_post_count(user['id'])
+        formatted_posts = [{
+            "post_id": post.get('post_id') or post.get('id'),
+            "title": post.get('title', '未命名帖子'),
+            "content": post.get('content', ''),
+            "category": post.get('category', '未分类'),
+            "created_at": post.get('created_at', ''),
+            "likes_count": post.get('likes_count', 0),
+            "comments_count": post.get('comments_count', 0),
+            "status": post.get('status', 'approved')
+        } for post in posts]
+
+        return {
+            "success": True,
+            "posts": formatted_posts,
+            "total": total_posts,
+            "message": "用户帖子获取成功"
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error retrieving public user posts: {str(e)}")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="获取用户帖子时发生错误")
+
 # 获取用户收藏路由
 @user_router.get("/user/{username}/collections", response_model=UserCollectionsResponse, responses={404: {"model": ErrorResponse}})
 async def get_user_collections(

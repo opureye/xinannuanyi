@@ -8,8 +8,8 @@
 
 /* 我的空间页面特定样式 */
 body {
-    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
-                url('../images/苍穹4.png') center/cover fixed;
+    background: radial-gradient(circle at 12% 8%, rgba(42, 157, 143, 0.14), transparent 30%),
+                linear-gradient(135deg, #f4fbf9 0%, #edf6ff 55%, #fff8e8 100%);
 }
 
 .myspace-page {
@@ -33,6 +33,16 @@ body {
     gap: 10px;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.action-buttons .audit-btn {
+    border-radius: 999px;
+    padding: 11px 18px;
+    gap: 8px;
+}
+
+.action-buttons .audit-btn i {
+    font-size: 0.95em;
 }
 
 /* 个人信息弹窗样式 */

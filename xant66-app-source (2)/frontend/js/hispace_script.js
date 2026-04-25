@@ -1,6 +1,7 @@
 // 导入API函数
-// 导入新增的getUserInfo函数
-import { getLoggedInUser, getUserCollections, removeCollection, showNotification, getUserInfo, isFollowing, followUser, unfollowUser } from './api.js';
+import { getLoggedInUser, getUserCollections, removeCollection, getUserInfo, getUserPosts, isFollowing, followUser, unfollowUser } from './api.js';
+
+const DEFAULT_AVATAR = 'assets/default-avatar.svg';
 
 /**
  * 设置关注按钮功能
@@ -66,16 +67,26 @@ async function loadUserInfo() {
         // 更新页面上的用户信息
         document.querySelector('.profile h2').textContent = userInfo.username || username;
         document.querySelector('.profile p:nth-of-type(1)').textContent = userInfo.bio || '暂无简介';
-        document.getElementById('current-level-info').textContent = `当前等级：${userInfo.level || 1}，经验值：${userInfo.exp || 0}`;
+        document.getElementById('current-level-info').textContent = `当前等级：${userInfo.level || 1}，经验值：${userInfo.exp || userInfo.experience || 0}`;
+        const avatar = document.querySelector('.profile .avatar');
+        if (avatar) {
+            avatar.src = userInfo.avatar || DEFAULT_AVATAR;
+            avatar.alt = `${userInfo.username || username}的头像`;
+            avatar.loading = 'lazy';
+            avatar.onerror = () => {
+                avatar.onerror = null;
+                avatar.src = DEFAULT_AVATAR;
+            };
+        }
         
         // 更新个人成就信息
         const achievementsList = document.querySelector('.achievements-list');
         if (achievementsList) {
             achievementsList.innerHTML = `
-                <li class="text-gray-700">发帖数量：${userInfo.posts_count || 0} 篇</li>
-                <li class="text-gray-700">粉丝数：${userInfo.followers_count || 0}个</li>
-                <li class="text-gray-700">总点赞数：${userInfo.likes_received || 0}个</li>
-                <li class="text-gray-700">被标记为有帮助的帖子数：${userInfo.helpful_posts || 0}篇</li>
+                <li class="text-gray-700">发帖数量：${userInfo.posts_count || userInfo.post_count || 0} 篇</li>
+                <li class="text-gray-700">粉丝数：${userInfo.followers_count || 0} 个</li>
+                <li class="text-gray-700">总点赞数：${userInfo.likes_received || userInfo.likes_count || 0} 个</li>
+                <li class="text-gray-700">被标记为有帮助的帖子数：${userInfo.helpful_posts || userInfo.helpful_posts_count || 0} 篇</li>
             `;
         }
         
@@ -101,30 +112,65 @@ async function loadUserInfo() {
     }
 }
 
-/**
- * 初始化页面功能
- */
-async function initPage() {
-    // 初始化Coze SDK
-    initCozeSDK();
-    
-    // 设置关注按钮
-    setupFollowButton();
-    
-    // 设置平滑滚动
-    setupSmoothScroll();
-    
-    // 添加返回顶部按钮
-    addBackToTopButton();
-    
-    // 增强交互体验
-    enhanceInteractions();
-    
-    // 加载用户信息
-    await loadUserInfo();
-    
-    // 加载用户收藏数据
-    loadUserCollections();
+function getTargetUsername() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const loggedInUser = getLoggedInUser();
+    return urlParams.get('username') || (loggedInUser ? loggedInUser.username : '');
+}
+
+function renderPublicPosts(posts) {
+    const postsSection = document.querySelector('.posts');
+    if (!postsSection) return;
+
+    postsSection.innerHTML = '<h2 class="text-2xl font-bold mb-4">帖子</h2>';
+    if (!posts || posts.length === 0) {
+        postsSection.insertAdjacentHTML('beforeend', `
+            <div class="empty-state profile-empty">
+                <i class="fa-regular fa-message"></i>
+                <h3>暂时还没有公开帖子</h3>
+                <p>等这个用户发布内容后，会在这里展示互助经验。</p>
+            </div>
+        `);
+        return;
+    }
+
+    const list = document.createElement('div');
+    list.className = 'public-post-list';
+    posts.forEach((post) => {
+        const postId = post.post_id || post.id;
+        const content = String(post.content || '').replace(/\s+/g, ' ').trim();
+        const item = document.createElement('article');
+        item.className = 'post public-post-card';
+        item.innerHTML = `
+            <div class="article-pill">${post.category || '未分类'}</div>
+            <h3>${post.title || '未命名帖子'}</h3>
+            <p>${content ? `${content.slice(0, 110)}${content.length > 110 ? '...' : ''}` : '暂无正文摘要'}</p>
+            <div class="post-stats">
+                <span><i class="fa-solid fa-thumbs-up"></i> ${post.likes_count || 0} 个赞</span>
+                <span><i class="fa-regular fa-comment"></i> ${post.comments_count || 0} 条评论</span>
+            </div>
+        `;
+        item.addEventListener('click', () => {
+            if (postId) window.location.href = `6 article.html?id=${postId}`;
+        });
+        list.appendChild(item);
+    });
+    postsSection.appendChild(list);
+}
+
+async function loadPublicUserPosts(username) {
+    const postsSection = document.querySelector('.posts');
+    if (postsSection) {
+        postsSection.innerHTML = '<h2 class="text-2xl font-bold mb-4">帖子</h2><div class="loading">正在加载帖子...</div>';
+    }
+
+    try {
+        const result = await getUserPosts(username);
+        renderPublicPosts(result.posts || []);
+    } catch (error) {
+        console.error('加载用户帖子失败:', error);
+        renderPublicPosts([]);
+    }
 }
 
 /**
@@ -162,52 +208,6 @@ function setupSmoothScroll() {
                     behavior: 'smooth'
                 });
             }
-        });
-    });
-}
-
-/**
- * 添加返回顶部按钮
- */
-function addBackToTopButton() {
-    const backToTopButton = document.createElement('button');
-    backToTopButton.textContent = '↑';
-    backToTopButton.id = 'backToTop';
-    backToTopButton.style.position = 'fixed';
-    backToTopButton.style.bottom = '30px';
-    backToTopButton.style.right = '30px';
-    backToTopButton.style.width = '50px';
-    backToTopButton.style.height = '50px';
-    backToTopButton.style.borderRadius = '50%';
-    backToTopButton.style.backgroundColor = '#2A9D8F';
-    backToTopButton.style.color = 'white';
-    backToTopButton.style.border = 'none';
-    backToTopButton.style.fontSize = '24px';
-    backToTopButton.style.cursor = 'pointer';
-    backToTopButton.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
-    backToTopButton.style.opacity = '0';
-    backToTopButton.style.transition = 'opacity 0.3s, transform 0.3s';
-    backToTopButton.style.transform = 'translateY(20px)';
-    backToTopButton.style.zIndex = '999';
-    
-    document.body.appendChild(backToTopButton);
-    
-    // 滚动事件监听
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            backToTopButton.style.opacity = '1';
-            backToTopButton.style.transform = 'translateY(0)';
-        } else {
-            backToTopButton.style.opacity = '0';
-            backToTopButton.style.transform = 'translateY(20px)';
-        }
-    });
-    
-    // 返回顶部点击事件
-    backToTopButton.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
         });
     });
 }
@@ -300,7 +300,8 @@ async function loadUserCollections() {
         collectionsContainer.innerHTML = '<div class="loading">加载中...</div>';
         
         // 获取用户收藏数据
-        const collections = await getUserCollections(user.username);
+        const result = await getUserCollections(user.username);
+        const collections = Array.isArray(result) ? result : (result.collections || []);
         
         // 清空加载提示
         collectionsContainer.innerHTML = '';
@@ -438,24 +439,41 @@ function enhanceInteractions() {
 /**
  * 初始化页面功能
  */
-function initPage() {
-    // 初始化Coze SDK
-    initCozeSDK();
-    
+async function initPage() {
+    const targetUsername = getTargetUsername();
+    if (!targetUsername) {
+        showNotification('请先登录或从用户入口进入主页', 'info');
+        renderPublicPosts([]);
+        return;
+    }
+
     // 设置关注按钮
     setupFollowButton();
     
     // 设置平滑滚动
     setupSmoothScroll();
-    
-    // 添加返回顶部按钮
-    addBackToTopButton();
-    
+
     // 增强交互体验
     enhanceInteractions();
-    
-    // 加载用户收藏数据
-    loadUserCollections();
+
+    await loadUserInfo();
+    await loadPublicUserPosts(targetUsername);
+
+    const loggedInUser = getLoggedInUser();
+    if (loggedInUser && loggedInUser.username === targetUsername) {
+        loadUserCollections();
+    } else {
+        const collectionsContainer = document.querySelector('.collections-list');
+        if (collectionsContainer) {
+            collectionsContainer.innerHTML = `
+                <div class="empty-state profile-empty">
+                    <i class="fa-regular fa-bookmark"></i>
+                    <h3>收藏内容仅自己可见</h3>
+                    <p>保护用户隐私，外部访问时不展示收藏列表。</p>
+                </div>
+            `;
+        }
+    }
 }
 
 // 页面加载完成后初始化

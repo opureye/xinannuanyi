@@ -1,9 +1,11 @@
+import { showNotification } from './utils.js';
+
 // 等待DOM内容加载完成
 window.addEventListener('DOMContentLoaded', function() {
     // 检查认证状态
     const token = sessionStorage.getItem('auth_token');
     if (!token) {
-        alert('请先登录管理员账户');
+        showNotification('请先登录管理员账户', 'error');
         window.location.href = '4 login.html';
         return;
     }

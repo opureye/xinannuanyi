@@ -151,6 +151,50 @@ h2 {
     font-weight: 500;
 }
 
+.public-post-list {
+    display: grid;
+    gap: 16px;
+}
+
+.public-post-card {
+    border: 1px solid rgba(42, 157, 143, 0.12);
+    border-radius: 18px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow: var(--shadow-soft);
+    cursor: pointer;
+}
+
+.public-post-card h3 {
+    margin: 12px 0 8px;
+    color: var(--secondary);
+}
+
+.public-post-card p {
+    color: #536570;
+    line-height: 1.7;
+}
+
+.post-stats {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    color: #6b7683;
+    font-size: 0.92rem;
+}
+
+.profile-empty {
+    margin-top: 10px;
+    border: 1px dashed rgba(42, 157, 143, 0.28);
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.profile-empty i {
+    color: var(--primary);
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
 .access-time {
     font-size: 0.9em;
     color: #999;

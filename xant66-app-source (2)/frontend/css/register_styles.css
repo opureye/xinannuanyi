@@ -3,8 +3,8 @@
 
 /* 注册页面特定样式 */
 body {
-    background: linear-gradient(135deg, rgba(42, 157, 143, 0.15), rgba(42, 157, 143, 0.25)),
-                url('../images/苍穹4.png') center/cover fixed;
+    background: radial-gradient(circle at 18% 14%, rgba(42, 157, 143, 0.16), transparent 32%),
+                linear-gradient(135deg, #eefaf7 0%, #edf6ff 58%, #fff3da 100%);
     display: flex;
     justify-content: center;
     align-items: center;

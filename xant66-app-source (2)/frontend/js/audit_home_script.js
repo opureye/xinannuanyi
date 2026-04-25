@@ -1,5 +1,6 @@
 // 导入认证相关功能
 import { logout, initReloginButtons } from './auth.js';
+import { showNotification } from './utils.js';
 
 // 等待DOM加载完成
 window.addEventListener('DOMContentLoaded', async function() {
@@ -9,7 +10,7 @@ window.addEventListener('DOMContentLoaded', async function() {
         // 检查用户权限
         const token = sessionStorage.getItem('auth_token');
         if (!token) {
-            alert('请先登录');
+            showNotification('请先登录', 'error');
             window.location.href = '4 login.html';
             return;
         }
@@ -29,7 +30,7 @@ window.addEventListener('DOMContentLoaded', async function() {
         console.log('审计页面初始化完成');
     } catch (error) {
         console.error('审计页面初始化错误:', error);
-        alert('页面加载出错，请刷新重试');
+        showNotification('页面加载出错，请刷新重试', 'error');
     }
 });
 
@@ -48,10 +49,10 @@ async function loadNextPendingArticle() {
             const nextArticle = data.articles[0];
             window.location.href = `7 judging.html?id=${nextArticle.id}`;
         } else {
-            alert('当前没有待审核的文章');
+            showNotification('当前没有待审核的文章');
         }
     } catch (error) {
         console.error('加载待审核文章失败:', error);
-        alert('网络错误，请检查您的连接');
+        showNotification('网络错误，请检查您的连接', 'error');
     }
 }

@@ -6,7 +6,8 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 24px 20px;
-    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('../images/苍穹5.png') center/cover fixed;
+    background: radial-gradient(circle at top left, rgba(42, 157, 143, 0.12), transparent 34%),
+                linear-gradient(135deg, #f4fbf9 0%, #edf6ff 52%, #fff8e8 100%);
 }
 
 .page-title {
@@ -341,6 +342,59 @@ body {
     color: #6b7683;
     background: rgba(255, 255, 255, 0.78);
     border: 1px dashed rgba(42, 157, 143, 0.35);
+}
+
+.rich-empty i {
+    display: inline-grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    margin-bottom: 14px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(42, 157, 143, 0.14), rgba(52, 152, 219, 0.16));
+    color: var(--primary);
+    font-size: 1.45rem;
+}
+
+.rich-empty h3 {
+    margin: 0 0 8px;
+    color: var(--secondary);
+}
+
+.rich-empty p {
+    margin: 0 auto 18px;
+    max-width: 420px;
+    line-height: 1.7;
+}
+
+.load-more-btn {
+    align-self: center;
+    margin-top: 8px;
+    padding: 10px 22px;
+    border-radius: 999px;
+}
+
+.forum-skeleton {
+    display: grid;
+    gap: 14px;
+}
+
+.skeleton-card {
+    height: 112px;
+    border-radius: 16px;
+    background:
+        linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.65), transparent),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(232, 247, 244, 0.78));
+    background-size: 220px 100%, 100% 100%;
+    background-position: -220px 0, 0 0;
+    border: 1px solid rgba(42, 157, 143, 0.08);
+    animation: skeletonShine 1.2s ease-in-out infinite;
+}
+
+@keyframes skeletonShine {
+    to {
+        background-position: calc(100% + 220px) 0, 0 0;
+    }
 }
 
 @media (max-width: 768px) {

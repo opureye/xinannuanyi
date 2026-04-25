@@ -1,5 +1,6 @@
 // 导入共享的SDK工具模块
 import { updateAIAccessToken, initAIModule } from './sdk_utils.js';
+import { showNotification } from './utils.js';
 
 // 处理令牌更新表单
 function handleTokenUpdate() {
@@ -16,7 +17,7 @@ function handleTokenUpdate() {
         
         if (updateSuccess) {
           // 显示成功消息
-          alert('DeepSeek API密钥已更新！');
+          showNotification('AI访问令牌已更新', 'success');
           tokenInput.value = '';
           
           // 尝试重新初始化SDK以应用新令牌
@@ -29,10 +30,10 @@ function handleTokenUpdate() {
             console.error('重新初始化AI模块失败:', error);
           }
         } else {
-          alert('更新密钥失败，请检查密钥格式');
+          showNotification('更新密钥失败，请检查格式', 'error');
         }
       } else {
-        alert('请输入有效的API密钥');
+        showNotification('请输入有效的API密钥', 'error');
       }
     });
   }

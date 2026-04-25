@@ -3,8 +3,8 @@
 
 /* 页面特定样式 */
 body {
-    background: linear-gradient(rgba(25, 25, 35, 0.93), rgba(25, 25, 35, 0.93)),
-                url('../images/苍穹4.png') center/cover fixed;
+    background: radial-gradient(circle at top left, rgba(42, 157, 143, 0.18), transparent 34%),
+                linear-gradient(135deg, #172327 0%, #1f2f38 58%, #263645 100%);
     font-family: '微软雅黑', 'Segoe UI', sans-serif;
     color: #ffffff;
     min-height: 100vh;

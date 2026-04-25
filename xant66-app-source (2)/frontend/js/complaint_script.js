@@ -219,3 +219,9 @@ function addFormAnimations() {
         }, 100 + (index * 100));
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    setupFormSubmission();
+    setupFormValidation();
+    addFormAnimations();
+});
